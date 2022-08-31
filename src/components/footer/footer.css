@@ -1,0 +1,5 @@
+footer {
+  grid-area: footer;
+  background-color: var(--primary-color, #5569dc );
+  grid-column: span 12;
+}

@@ -1,0 +1,103 @@
+#navbar-mobile .selected,
+#navbar-tablet .selected,
+#navbar-desktop .selected {
+  text-decoration: underline wavy var(--font-color, white);
+}
+
+#navbar-container-mobile,
+#navbar-container-tablet,
+#navbar-container-desktop {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr 1fr;
+  height: 100%;
+  gap: .25rem;
+}
+
+#navbar-container-mobile{
+  grid-template-areas:
+  "lang . . . . . . . . . . burger";
+}
+
+#navbar-container-tablet,
+#navbar-container-desktop {
+  grid-template-areas:
+  "nav . . . . . . . . . .  lang";
+}
+
+#navbar-mobile,
+#navbar-tablet,
+#navbar-desktop {
+  font-size: 1.5rem;
+  position: relative;
+}
+
+#navbar-container-mobile::after {
+  content: "Dietmar Eisner";
+  position: absolute;
+  top: .5rem;
+  left: 25%;
+  color: var(--font-color, white);
+  font-size: 3rem;
+  z-index: 0;
+}
+
+#navbar-mobile {
+  background-color: var(--primary-color, #5569dc);
+  position: fixed;
+  inset: 0;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 1;
+}
+
+#navbar-tablet,
+#navbar-desktop {
+  grid-area: nav;
+  grid-column: 1 / 12;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#fabars {
+  grid-area: burger;
+  margin: 0 .5rem 0 0;
+  font-size: 2rem;
+  margin: 1rem 1rem;
+}
+
+#language-picker-mobile,
+#language-picker-tablet,
+#language-picker-desktop {
+  grid-area: lang;
+  position: static;
+  margin: 1rem 1rem;
+  border: none;
+  background: transparent;
+  outline: none;
+  color: var(--font-color, white);
+}
+
+#language-picker-mobile option,
+#language-picker-tablet option,
+#language-picker-desktop option {
+  background-color: var(--primary-color, #5569dc);
+}
+
+#language-picker-mobile:focus,
+#language-picker-tablet:focus,
+#language-picker-desktop:focus {
+  border: .1rem solid var(--font-color, white);
+  border-radius: .8rem;
+}
+
+#fabars,
+#language-picker-mobile {
+  z-index: 1;
+}
+
+#language-picker-tablet,
+#language-picker-desktop {
+  grid-column: 12;
+}

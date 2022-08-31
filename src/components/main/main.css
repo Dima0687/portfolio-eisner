@@ -1,0 +1,13 @@
+main {
+  height: 100%;
+  width: 100%;
+  grid-area: main;
+  grid-column: span 12;
+  overflow: hidden;
+}
+
+main section {
+  height: 100%;
+  width: 100%;
+  border: 1px solid red;
+}

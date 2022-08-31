@@ -1,0 +1,10 @@
+#app {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 15% 75% 10%;
+  grid-template-areas:
+  'header'
+  'main'
+  'footer'
+  ;
+}
