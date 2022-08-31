@@ -14,7 +14,7 @@ function Main() {
         identifiers.map( id => <Section 
           key={id}
           id={id}
-        />
+          />
         )
       }
     </main>

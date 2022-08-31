@@ -3,14 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-:not(h1) {
   font-family: 'Niconne', 'Monospace';
-}
-
-h1 {
-  font-family: 'Cardo', 'Monospace';
 }
 
 a {
@@ -30,9 +23,14 @@ body, #root, #app {
   color: var(--font-color, white);
 }
 
-/* colors */
+/* 
+  colors
+  animation 
+*/
 :root {
   --primary-color: #5569dc;
   --font-color: #fff;
+  --anim-duration: 3.5s;
 }
+
 /* reset ends */

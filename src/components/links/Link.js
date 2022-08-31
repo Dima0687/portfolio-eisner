@@ -1,7 +1,7 @@
 // navigation
 import { HashLink } from 'react-router-hash-link';
 
-const Link = ({ id, state, click }) => {
+const Link = ({ id, state, device }) => {
   const { 
     nameOfActiveLink, 
     setNameOfActiveLink,
@@ -19,7 +19,7 @@ const Link = ({ id, state, click }) => {
   return (
       <HashLink 
         smooth
-        to={`/#${id}`}
+        to={`/#${id}-${device}`}
         className={ nameOfActiveLink === wordWithCapital ? 'selected' : null }
         onClick={ changeState }
       >{wordWithCapital}</HashLink>

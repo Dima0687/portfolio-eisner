@@ -33,10 +33,10 @@
 }
 
 #navbar-container-mobile::after {
-  content: "Dietmar Eisner";
+  content: "Portfolio";
   position: absolute;
   top: .5rem;
-  left: 25%;
+  left: 38%;
   color: var(--font-color, white);
   font-size: 3rem;
   z-index: 0;

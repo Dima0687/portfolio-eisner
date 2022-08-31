@@ -1,5 +1,5 @@
 // hooks
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useContext } from 'react';
 
 // data
 import { identifiers } from '../../data/identifiers';
@@ -13,9 +13,12 @@ import './navbar.css';
 // component
 import Link from '../links/Link';
 
+// context
+import { DeviceContext } from '../../context/DeviceContext';
+
 const NavBar = () => {
+  const { device, setDevice } = useContext(DeviceContext);
   const [nameOfActiveLink, setNameOfActiveLink] = useState('');
-  const [device, setDevice] = useState('mobile');
   const [show, setShow] = useState(false);
   const burgerMenu = useRef();
 
@@ -53,10 +56,12 @@ const NavBar = () => {
 
   useEffect(() => {
     handleResize();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [show]);
 
   useEffect(() => {
     window.addEventListener('resize', handleResize);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -71,6 +76,7 @@ const NavBar = () => {
               setNameOfActiveLink, 
               setShow 
             }}
+            device={device}
           />)
         }
       </nav>

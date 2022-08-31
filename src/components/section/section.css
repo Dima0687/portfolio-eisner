@@ -1,0 +1,57 @@
+#welcome-mobile {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "pic" "info";
+  position: relative;
+  font-size: 1.8rem;
+}
+
+#welcome-pic {
+  grid-area: pic;
+  background-image: url("../../images/code-640x426.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#welcome-text-container {
+  grid-area: pic;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: radial-gradient(circle at 50%, #4d4a4a90, transparent );
+}
+
+#welcome-text-container p,
+#welcome-text-container h1 {
+  word-wrap: break-word;
+  text-align: center;
+  font-family: 'Playfair Display';
+  text-shadow: .2rem .2rem .4rem black;
+}
+
+#welcome-text-container #who-am-i-text {
+  font-style: italic;
+}
+
+#welcome-text-container #who-am-i-text #who-am-i {
+  display: inline-block;
+  animation: whoAmI var(--anim-duration) ease-in-out 0s infinite;
+}
+@keyframes whoAmI {
+  from {
+    transform: scale(0);
+  }
+  to{
+    transform: scale(1.15);
+  }
+}
+
+#welcome-info {
+  grid-area: info;
+  background-color: var(--primary-color, #5569dc);
+}
