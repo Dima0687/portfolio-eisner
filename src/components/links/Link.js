@@ -1,28 +1,23 @@
+// hooks
+import { useContext } from 'react';
+
 // navigation
 import { HashLink } from 'react-router-hash-link';
 
+// context
+import { LangContext } from '../../context/LangContext';
 
 const Link = ({ id, lang, state, device }) => {
+  const { fixUmlaut } = useContext(LangContext);
+
   const { 
     nameOfActiveLink, 
-    setNameOfActiveLink, /* currently clicked and active */
+    setNameOfActiveLink,
     setShow 
   } = state;
 
-  function fixUmlaut(id) {
-    if(lang === 'ger'){
-      const aUmlaut = new RegExp(/ae/gi);
-      const uUmlaut = new RegExp(/ue/gi);
-      let gerId = id.replace(aUmlaut, 'ä');
-      gerId = gerId.replace(uUmlaut, 'ü');
-      gerId = gerId.split('-').join(' ');
-      return gerId
-    } else {
-      return id
-    }
-  }
-
   const wordWithCapital = fixUmlaut(id).split('')[0].toUpperCase() + fixUmlaut(id).slice(1);
+ 
   function changeState(e) {
     setShow(false);
     const nameOfClickedLink = e.currentTarget.innerText;

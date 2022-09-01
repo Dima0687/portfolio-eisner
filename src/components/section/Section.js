@@ -12,7 +12,7 @@ import { LangContext } from '../../context/LangContext';
 const Section = (props) => {
   const { id } = props;
   const { device } = useContext(DeviceContext);
-  const { language, filteredProfile: profile } = useContext(LangContext);
+  const { language, filteredProfile: profile, gerUmlautWord} = useContext(LangContext);
   const [num, setNum] = useState(0);
   const [whoAmI, setWhoAmI] = useState(profile?.whoAmI[num]);
   const [timeInMs, setTimeInMs] = useState(3500);
@@ -50,8 +50,10 @@ const Section = (props) => {
           (id === 'skills' || id === 'faehigkeiten') && 
             <Skills
               id={id}
+              device={device}
               idCapital={idFirstLetterCapital}
               profile={profile}
+              gerUmlautWord={gerUmlautWord}
             />
         }
     </section>

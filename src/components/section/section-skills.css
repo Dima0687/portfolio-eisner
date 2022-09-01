@@ -1,6 +1,38 @@
 #skills-mobile,
 #faehigkeiten-mobile {
-  display: flex;
   background-color: var(--primary-color, #5569dc);
-  justify-content: center;
+  text-align: center;
+}
+
+#skills-mobile-container,
+#faehigkeiten-mobile-container  {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-around;
+  align-content: space-between;
+  overflow-y: scroll;
+  font-size: 1.6rem;
+  padding: 1.1rem;
+}
+
+.skills-mobile,
+.faehigkeiten-mobile {
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: .5rem;
+  background-color: #6f83f6;
+  background: transparent;
+  box-shadow: .6rem .6rem 1.4rem 0 rgba(0, 0, 0, .2),
+    -.8rem -.8rem 1.8rem 0 rgba(159, 157, 157, 0.55);
+  border-radius: .4rem;
+}
+
+.skills-mobile h3,
+.faehigkeiten-mobile h3 {
+  font-family: 'Playfair Display';
 }

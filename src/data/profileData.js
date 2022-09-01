@@ -38,55 +38,91 @@ const contact = {
   xing: ''
 }
 
-
+const fontSize = '2.5rem';
 const skills = [
   {
-    skill: 'CSS3',
-    icon: <FaCss3Alt/>
+    title: 'CSS3',
+    icon: <FaCss3Alt
+      color='skyblue'
+      fontSize={fontSize}
+    />
   },
   {
-    skill: 'HTML5',
-    icon: <FaHtml5/>
+    title: 'HTML5',
+    icon: <FaHtml5
+      color='orange'
+      fontSize={fontSize}
+    />
   },
   {
-    skill: 'JavaScript',
-    icon: <SiJavascript/>
+    title: 'JavaScript',
+    icon: <SiJavascript
+      color='yellow'
+      fontSize={fontSize}
+    />
   },
   {
-    skill: 'NPM',
-    icon: <FaNpm/>
+    title: 'NPM',
+    icon: <FaNpm
+      color='red'
+      fontSize={fontSize}
+    />
   },
   {
-    skill: 'NodeJs',
-    icon: <FaNodeJs/>
+    title: 'NodeJs',
+    icon: <FaNodeJs
+      color='#4ea94b'
+      fontSize={fontSize}
+    />
   },
   {
-    skill: 'ExpressJs',
-    icon: <SiExpress/>
+    title: 'ExpressJs',
+    icon: <SiExpress
+      color='black'
+      fontSize={fontSize}
+    />
   },
   {
-    skill: 'MongoDB',
-    icon: <SiMongodb/>
+    title: 'MongoDB',
+    icon: <SiMongodb
+      color='#4ea94b'
+      fontSize={fontSize}
+    />
   },
   {
-    skill: 'React',
-    icon: <FaReact/>
+    title: 'React',
+    icon: <FaReact
+      color='blue'
+      fontSize={fontSize}
+    />
   },
   {
-    skill: 'Sass',
-    icon: <FaSass/>
+    title: 'Sass',
+    icon: <FaSass
+      color='magenta'
+      fontSize={fontSize}
+    />
   },
   {
-    skill: 'GitHub',
-    icon: <FaGithubSquare/>
+    title: 'GitHub',
+    icon: <FaGithubSquare
+      color='black'
+      fontSize={fontSize}
+    />
   },
   {
-    skill: 'Bootstrap',
-    icon: <FaBootstrap/>
+    title: 'Bootstrap',
+    icon: <FaBootstrap
+      color='#563d7c'
+      fontSize={fontSize}
+    />
   },
   {
-    skill: 'Ubuntu',
-    icon: <FaUbuntu/>
+    title: 'Ubuntu',
+    icon: <FaUbuntu
+      color='orange'
+      fontSize={fontSize}
+    />
   },
 ]
 
