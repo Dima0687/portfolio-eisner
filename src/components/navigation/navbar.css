@@ -60,11 +60,11 @@
   align-items: center;
 }
 
-#fabars {
+.menu-button {
   grid-area: burger;
-  margin: 0 .5rem 0 0;
   font-size: 2rem;
   margin: 1rem 1rem;
+  color: var(--font-color, white);
 }
 
 #language-picker-mobile,
@@ -92,7 +92,7 @@
   border-radius: .8rem;
 }
 
-#fabars,
+.menu-button,
 #language-picker-mobile {
   z-index: 1;
 }

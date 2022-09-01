@@ -1,17 +1,21 @@
+// hooks
+import { useContext } from 'react';
+
 // css
 import './main.css'
 
-// data
-import { identifiers } from '../../data/identifiers';
+// context 
+import { LangContext } from '../../context/LangContext';
 
 // components
 import Section from '../section/Section';
 
 function Main() {
+  const { filteredProfile: profile } = useContext(LangContext);
   return (
     <main className="main">
       {
-        identifiers.map( id => <Section 
+        profile.identifiers.map( id => <Section 
           key={id}
           id={id}
           />

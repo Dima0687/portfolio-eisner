@@ -1,0 +1,95 @@
+#welcome-mobile,
+#willkommen-mobile {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "pic" "info";
+  position: relative;
+  font-size: 1.8rem;
+}
+
+#welcome-pic,
+#willkommen-pic {
+  grid-area: pic;
+  background-image: url("../../images/code-640x426.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#welcome-text-container,
+#willkommen-text-container {
+  grid-area: pic;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: radial-gradient(circle at 50%, #4d4a4a90, transparent );
+}
+
+#welcome-text-container p,
+#willkommen-text-container p,
+#welcome-text-container h1,
+#willkommen-text-container h1  {
+  word-wrap: break-word;
+  text-align: center;
+  font-family: 'Playfair Display';
+  text-shadow: .2rem .2rem .4rem black;
+}
+
+#welcome-text-container #who-am-i-text,
+#willkommen-text-container #who-am-i-text {
+  font-style: italic;
+}
+
+#welcome-text-container #who-am-i-text #who-am-i,
+#willkommen-text-container #who-am-i-text #who-am-i {
+  display: inline-block;
+  animation: whoAmI var(--anim-duration, 3.5s) ease-in-out 0s infinite;
+}
+
+@keyframes whoAmI {
+  from {
+    transform: scale(0);
+  }
+  to{
+    transform: scale(1.15);
+  }
+}
+
+#welcome-info,
+#willkommen-info {
+  grid-area: info;
+  background-color: var(--primary-color, #5569dc);
+}
+
+#welcome-info-address,
+#willkommen-info-address {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#welcome-info-city,
+#willkommen-info-city {
+  justify-self: flex-start;
+  margin: auto;
+}
+
+#welcome-info-mailto,
+#willkommen-info-mailto {
+  justify-self: end;
+}
+
+#welcome-social-media,
+#willkommen-social-media {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: .5rem;
+} 

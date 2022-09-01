@@ -10,17 +10,20 @@ import Footer from '../footer/Footer';
 
 // context
 import { DeviceContextProvider } from '../../context/DeviceContext';
+import { LangContextProvider } from '../../context/LangContext';
 
 const App = () => {
   return ( 
     <div id='app'>
-      <DeviceContextProvider>
-        <Header />
-        <Routes>
-          <Route path='/' element={<Main />}/>
-        </Routes>
-      </DeviceContextProvider>
-      <Footer />
+      <LangContextProvider>
+        <DeviceContextProvider>
+          <Header />
+          <Routes>
+            <Route path='/' element={<Main />}/>
+          </Routes>
+        </DeviceContextProvider>
+        <Footer />
+      </LangContextProvider>
     </div>
   );
 }

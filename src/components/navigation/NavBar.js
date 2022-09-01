@@ -1,11 +1,9 @@
 // hooks
 import { useState, useEffect, useRef, useContext } from 'react';
 
-// data
-import { identifiers } from '../../data/identifiers';
-
 // icons
 import { FaBars } from 'react-icons/fa';
+import { VscChromeClose } from 'react-icons/vsc';
 
 // css
 import './navbar.css';
@@ -15,9 +13,11 @@ import Link from '../links/Link';
 
 // context
 import { DeviceContext } from '../../context/DeviceContext';
+import { LangContext } from '../../context/LangContext';
 
 const NavBar = () => {
   const { device, setDevice } = useContext(DeviceContext);
+  const { language, setLanguage, filteredProfile:profile } = useContext(LangContext);
   const [nameOfActiveLink, setNameOfActiveLink] = useState('');
   const [show, setShow] = useState(false);
   const burgerMenu = useRef();
@@ -34,6 +34,10 @@ const NavBar = () => {
     } else {
       burgerMenu.current.style.display = 'none';
     }
+  }
+
+  function handleSelect(e){
+    setLanguage(e.target.value);
   }
 
   function handleResize(){
@@ -68,9 +72,10 @@ const NavBar = () => {
     <div id={`navbar-container-${device}`}>
       <nav id={`navbar-${device}`} ref={burgerMenu}>
         { 
-          identifiers.map( id => <Link
+          profile?.identifiers.map( id => <Link
             key={ id }
             id={ id }
+            lang={language}
             state={{ 
               nameOfActiveLink, 
               setNameOfActiveLink, 
@@ -82,17 +87,27 @@ const NavBar = () => {
       </nav>
       {
         device === 'mobile' && 
-        <FaBars id="fabars" onClick={e => setShow(prev => !prev)}/>
+        !show &&
+        <FaBars className="menu-button" onClick={e => setShow(true)}/>
       }
-      <select id={`language-picker-${device}`}>
+      {
+        device === 'mobile' && 
+        show &&
+        <VscChromeClose className="menu-button" onClick={e => setShow(false)}/>
+      }
+      <select 
+        id={`language-picker-${device}`}
+        value={language}
+        onChange={ e => handleSelect(e)}
+      >
           <option 
-            value="english"
+            value="en"
           >EN</option>
           <option 
-            value="german"
-          >DE</option>
+            value="ger"
+          >GER</option>
           <option
-           value="russian"
+           value="ru"
           >RU</option>
         </select>
     </div>

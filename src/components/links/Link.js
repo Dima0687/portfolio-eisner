@@ -1,13 +1,28 @@
 // navigation
 import { HashLink } from 'react-router-hash-link';
 
-const Link = ({ id, state, device }) => {
+
+const Link = ({ id, lang, state, device }) => {
   const { 
     nameOfActiveLink, 
-    setNameOfActiveLink,
+    setNameOfActiveLink, /* currently clicked and active */
     setShow 
   } = state;
-  const wordWithCapital = id.split('')[0].toUpperCase() + id.slice(1);
+
+  function fixUmlaut(id) {
+    if(lang === 'ger'){
+      const aUmlaut = new RegExp(/ae/gi);
+      const uUmlaut = new RegExp(/ue/gi);
+      let gerId = id.replace(aUmlaut, 'ä');
+      gerId = gerId.replace(uUmlaut, 'ü');
+      gerId = gerId.split('-').join(' ');
+      return gerId
+    } else {
+      return id
+    }
+  }
+
+  const wordWithCapital = fixUmlaut(id).split('')[0].toUpperCase() + fixUmlaut(id).slice(1);
   function changeState(e) {
     setShow(false);
     const nameOfClickedLink = e.currentTarget.innerText;

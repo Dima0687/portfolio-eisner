@@ -1,0 +1,6 @@
+#skills-mobile,
+#faehigkeiten-mobile {
+  display: flex;
+  background-color: var(--primary-color, #5569dc);
+  justify-content: center;
+}
