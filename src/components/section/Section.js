@@ -1,9 +1,10 @@
 // components 
 import Welcome from './Welcome';
 import Skills from './Skills';
+import Contact from './Contact';
 
 // hooks
-import { useContext, useState, useEffect } from 'react';
+import { useContext } from 'react';
 
 // context
 import { DeviceContext } from '../../context/DeviceContext';
@@ -12,29 +13,7 @@ import { LangContext } from '../../context/LangContext';
 const Section = (props) => {
   const { id } = props;
   const { device } = useContext(DeviceContext);
-  const { language, filteredProfile: profile, gerUmlautWord} = useContext(LangContext);
-  const [num, setNum] = useState(0);
-  const [whoAmI, setWhoAmI] = useState(profile?.whoAmI[num]);
-  const [timeInMs, setTimeInMs] = useState(3500);
-  const [idFirstLetterCapital, setIdFirstLetterCapital] = useState(null);
-  useEffect(() => {
-    const idWithCapital = id.split('')[0].toUpperCase() + id.slice(1);
-    setIdFirstLetterCapital(prev => idWithCapital);
-    const root = document.documentElement;
-    root.style.setProperty('--anim-duration', `${timeInMs/1000}s`);
-    
-    let interval = null;
-    if( num < profile?.whoAmI.length){
-      interval = setInterval(() => {
-        setNum(num => num + 1);
-      }, timeInMs);
-    } else {
-      setNum(0);
-    }
-
-    setWhoAmI(prev => profile?.whoAmI[num]);
-    return () => clearInterval(interval);
-  }, [num, language]);
+  const { filteredProfile: profile } = useContext(LangContext);
 
   return (
     <section id={`${id}-${device}`}>
@@ -43,7 +22,7 @@ const Section = (props) => {
             <Welcome 
               id={id}
               profile={profile}
-              whoAmI={whoAmI}
+              device={device}
             />
         }
         {
@@ -51,31 +30,19 @@ const Section = (props) => {
             <Skills
               id={id}
               device={device}
-              idCapital={idFirstLetterCapital}
               profile={profile}
-              gerUmlautWord={gerUmlautWord}
             />
+        }
+        {
+          (id === 'contact' || id === 'kontakt') &&
+           <Contact
+              id={id}
+              device={device}
+              profile={profile}
+           />
         }
     </section>
   );
 }
  
 export default Section;
-
- /* <>
-  <div id={`${id}-pic`}>
-    
-  </div>
-  <div id={`${id}-text-container`}>
-    <p>{profile?.welcomeText?.hello}</p>
-    <h1>{profile?.welcomeText?.name}.</h1>
-    <p id="who-am-i-text">{profile?.welcomeText?.sentencePart1}<br/>
-      <span id="who-am-i">{whoAmI}</span> 
-    <br/>{profile?.welcomeText?.sentencePart2}</p>
-  </div>
-  <div id={`${id}-info`}>
-    <address>
-      test
-    </address>
-  </div>
-</> */

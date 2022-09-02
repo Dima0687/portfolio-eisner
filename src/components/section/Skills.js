@@ -8,17 +8,18 @@ import { LangContext } from '../../context/LangContext';
 import './section-skills.css';
 
 
-const Skills = ({ id, device, idCapital, profile }) => {
+const Skills = ({ id, device, profile }) => {
   const { fixUmlaut } = useContext(LangContext);
   const [heading, setHeading] = useState(
-    fixUmlaut(id).split('')[0].toUpperCase() + fixUmlaut(id).slice(1)
+    fixUmlaut(id)[0].toUpperCase() + fixUmlaut(id).slice(1)
   );
   const { skills } = profile;
   
   useEffect(() => {
     setHeading(
-      fixUmlaut(id).split('')[0].toUpperCase() + fixUmlaut(id).slice(1)
+      fixUmlaut(id)[0].toUpperCase() + fixUmlaut(id).slice(1)
     );
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
   return (

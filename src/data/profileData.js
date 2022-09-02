@@ -27,7 +27,7 @@ const address = {
   city: 'Lüneburg'
 }
 
-const contact = {
+const info = {
   tel: +4915150470411,
   telAsString: '(+49)151/504 704 11',
   email: 'eis0687.dietmar@gmail.com',
@@ -148,7 +148,10 @@ const profile = {
     },
     skills,
     address,
-    contact
+    contact: {
+      callToAction: 'I\'d love to hear from you.',
+      info
+    }
   },
   ger: {
     identifiers: [
@@ -171,7 +174,10 @@ const profile = {
     },
     skills,
     address,
-    contact
+    contact: {
+      callToAction: 'Ich freue mich von dir zu hören.',
+      info
+    }
   },
   ru: {
     identifiers: [
@@ -186,7 +192,10 @@ const profile = {
     },
     skills,
     address,
-    contact
+    contact: {
+      callToAction: '',
+      info
+    }
   }
 }
 

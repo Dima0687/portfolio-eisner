@@ -1,7 +1,7 @@
 #welcome-mobile,
 #willkommen-mobile {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 55% 1fr;
   grid-template-areas: "pic" "info";
   position: relative;
   font-size: 1.8rem;
@@ -12,6 +12,7 @@
   grid-area: pic;
   background-image: url("../../images/code-640x426.jpg");
   background-repeat: no-repeat;
+  background-position: 50% 50%;
   background-size: cover;
 }
 
@@ -59,14 +60,14 @@
   }
 }
 
-#welcome-info,
-#willkommen-info {
+#welcome-mobile-info,
+#willkommen-mobile-info {
   grid-area: info;
   background-color: var(--primary-color, #5569dc);
 }
 
-#welcome-info-address,
-#willkommen-info-address {
+#welcome-mobile-info-address,
+#willkommen-mobile-info-address {
   width: 100%;
   height: 100%;
   display: flex;
@@ -74,19 +75,19 @@
   flex-direction: column;
 }
 
-#welcome-info-city,
-#willkommen-info-city {
+#welcome-mobile-info-city,
+#willkommen-mobile-info-city {
   justify-self: flex-start;
   margin: auto;
 }
 
-#welcome-info-mailto,
-#willkommen-info-mailto {
+#welcome-mobile-info-mailto,
+#willkommen-mobile-info-mailto {
   justify-self: end;
 }
 
-#welcome-social-media,
-#willkommen-social-media {
+#welcome-mobile-social-media,
+#willkommen-mobile-social-media {
   width: 100%;
   display: flex;
   justify-content: center;

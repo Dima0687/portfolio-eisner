@@ -27,7 +27,7 @@
   padding: .5rem;
   background-color: #6f83f6;
   background: transparent;
-  box-shadow: .6rem .6rem 1.4rem 0 rgba(0, 0, 0, .2),
+  box-shadow: .4rem .6rem 1.6rem 0 rgba(0, 0, 0, .3),
     -.8rem -.8rem 1.8rem 0 rgba(159, 157, 157, 0.55);
   border-radius: .4rem;
 }
@@ -35,4 +35,10 @@
 .skills-mobile h3,
 .faehigkeiten-mobile h3 {
   font-family: 'Playfair Display';
+}
+
+#skills-heading,
+#faehigkeiten-heading {
+  padding-bottom: 1rem;
+  font-size: 2rem;
 }

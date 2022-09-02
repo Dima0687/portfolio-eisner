@@ -16,7 +16,7 @@ const Link = ({ id, lang, state, device }) => {
     setShow 
   } = state;
 
-  const wordWithCapital = fixUmlaut(id).split('')[0].toUpperCase() + fixUmlaut(id).slice(1);
+  const wordWithCapital = fixUmlaut(id)[0].toUpperCase() + fixUmlaut(id).slice(1);
  
   function changeState(e) {
     setShow(false);

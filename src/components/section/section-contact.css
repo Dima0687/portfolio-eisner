@@ -1,0 +1,39 @@
+#contact-mobile-info,
+#kontakt-mobile-info {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: var(--primary-color);
+  background-color: #eef0fc;
+  font-size: 1.8rem;
+}
+
+#contact-mobile-info h2,
+#kontakt-mobile-info h2 {
+  padding: 2rem;
+}
+
+#contact-mobile-info-address,
+#kontakt-mobile-info-address {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-mobile-info-mailto,
+#kontakt-mobile-info-mailto {
+  justify-self: center;
+  margin-top: auto;
+}
+
+
+#contact-mobile-social-media,
+#kontakt-mobile-social-media {
+  margin: auto;
+  justify-self: flex-end;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+} 
