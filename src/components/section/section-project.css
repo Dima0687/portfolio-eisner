@@ -69,12 +69,13 @@
 .projekte-mobile-figure-text  {
   width: 100%;
   height: 50%;
-  border: 1px solid green;
 }
 
 .projects-mobile-figure-img,
 .projekte-mobile-figure-img  {
   display: block;
+  object-fit: cover;
+  object-position: center top;
 }
 
 .projects-mobile-figure-text,
@@ -83,6 +84,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   padding-left: .5rem;
+  backdrop-filter: blur(1rem);
 }
 
 .projects-mobile-figure-text h3,

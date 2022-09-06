@@ -61,7 +61,6 @@ const Profile = ({ id, device, profile }) => {
 
   return (
     <div id={`${id}-container`}>
-      { console.log(projects) }
       <h2>{heading}</h2>
       <div id={`${id}-${device}-buttons`}>
         {categories.map((category) => (
