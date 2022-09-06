@@ -1,4 +1,5 @@
-#projects-container {
+#projects-container,
+#projekte-container {
   background-color: #eef0fb;
   color: var(--primary-color);
   width: 100%;
@@ -9,13 +10,15 @@
   border: 1px solid green;
 }
 
-#projects-container h2 {
+#projects-container h2,
+#projekte-container h2 {
   text-align: center;
   padding: 1rem 0 0 0;
   font-size: 2rem;
 }
 
-#projects-mobile-buttons {
+#projects-mobile-buttons,
+#projekte-mobile-buttons {
   width: 100%;
   padding: 1rem;
   display: flex;
@@ -24,7 +27,8 @@
   gap: .5rem;
 }
 
-.projects-buttons {
+.projects-buttons,
+.projekte-buttons {
   padding: .2rem .5rem;
   background-color: var(--primary-color);
   border: none;
@@ -34,11 +38,13 @@
 
 .projects-buttons,
 .project-info-card h3,
-.show-on {
+.projekte-buttons,
+.projekte-info-card h3  {
   font-family: 'Playfair Display';
 }
 
-#projects-mobile-container {
+#projects-mobile-container,
+#projekte-mobile-container {
   border: 1px solid red;
   width: 100%;
   height: 80%;
@@ -50,51 +56,71 @@
   padding: 1rem 0;
 }
 
-.projects-mobile-figure {
+.projects-mobile-figure,
+.projekte-mobile-figure {
   width: 80%;
   min-height: 100%;
   border: 1px solid blue;
 }
 
 .projects-mobile-figure-img,
-.projects-mobile-figure-text {
+.projects-mobile-figure-text,
+.projekte-mobile-figure-img,
+.projekte-mobile-figure-text  {
   width: 100%;
   height: 50%;
   border: 1px solid green;
 }
 
-.projects-mobile-figure-img {
-  display: inline-block;
+.projects-mobile-figure-img,
+.projekte-mobile-figure-img  {
+  display: block;
 }
 
-.projects-mobile-figure-text {
+.projects-mobile-figure-text,
+.projekte-mobile-figure-text {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   padding-left: .5rem;
 }
 
-.projects-mobile-figure-text h3 {
+.projects-mobile-figure-text h3,
+.projekte-mobile-figure-text h3 {
   padding: .5rem 0;
   text-transform: uppercase;
 }
 
+.projects-mobile-figure-text p,
+.projekte-mobile-figure-text p {
+  word-wrap: break-word;
+}
+
 .projects-mobile-figure-text h3,
 .projects-mobile-figure-text p,
-.projects-mobile-figure-text a {
+.projects-mobile-figure-text a,
+.projekte-mobile-figure-text h3,
+.projekte-mobile-figure-text p,
+.projekte-mobile-figure-text a  {
   font-family: 'Playfair Display';
 }
 
-.projects-figure-button-container {
+.projects-figure-button-container,
+.projekte-figure-button-container {
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
 
-.projects-figure-button-container a {
+.projects-figure-button-container a,
+.projekte-figure-button-container a {
   padding: .2rem .4rem;
   background-color: var(--primary-color);
   color: white;
   border: none;
   text-transform: uppercase;
+}
+
+#empty-projects {
+  font-size: 2.2rem;
 }

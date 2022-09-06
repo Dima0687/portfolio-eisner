@@ -157,7 +157,8 @@ const profile = {
       "all",
       "by learning",
       "my own"
-    ]
+    ],
+    noProjects: 'No projects at the moment!'
   },
   ger: {
     identifiers: [
@@ -189,7 +190,8 @@ const profile = {
       "alle",
       "durchs lernen",
       "eigene Projekte"
-    ]
+    ],
+    noProjects: 'Noch keine Projekte'
   },
   ru: {
     identifiers: [
@@ -211,7 +213,8 @@ const profile = {
     aboutMe: ``,
     projectCategories: [
       
-    ]
+    ],
+    noProjects: ''
   }
 }
 

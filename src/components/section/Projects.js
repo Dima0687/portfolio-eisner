@@ -15,6 +15,7 @@ const Profile = ({ id, device, profile }) => {
   const [categories, setCategories] = useState([]);
   const [projects, setProjects] = useState([]);
   const [heading, setHeading] = useState("");
+  const [projectState, setProjectState] = useState('all');
 
   useEffect(() => {
     setCategories(profile.projectCategories);
@@ -24,38 +25,68 @@ const Profile = ({ id, device, profile }) => {
     });
     (async () => {
       try {
-        const data = await (await octokit.request(`GET /user/repos`, {})).data;
-        setProjects(data);
+        const data = (await octokit.request(`GET /user/repos`, {})).data;
+        let filteredData;
+        switch(true) {
+          case ( 
+            projectState === 'my own' || 
+            projectState === 'eigene Projekte'
+          ): 
+          filteredData = data.filter( d => d.topics.includes('own'));
+          setProjects( prev => filteredData);
+
+          break;
+          case (
+            projectState === 'by learning' ||
+            projectState === 'durchs lernen'
+          ):
+          filteredData = data.filter( d => d.topics.includes('tutorial'));
+          setProjects( prev => filteredData);
+          break;
+          default:
+          filteredData = data.filter( d => d.topics.includes('tutorial') ||  d.topics.includes('own'))
+          setProjects( prev => filteredData);
+        }
       } catch (error) {
         console.error(error.status, error.response.data.message);
       }
     })();
-  }, []);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [projectState]);
 
   useEffect(() => {
     setHeading(fixUmlaut(id)[0].toUpperCase() + fixUmlaut(id).slice(1));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
   return (
     <div id={`${id}-container`}>
+      { console.log(projects) }
       <h2>{heading}</h2>
       <div id={`${id}-${device}-buttons`}>
         {categories.map((category) => (
-          <button key={category} id={category} className={`${id}-buttons`}>
+          <button 
+            key={category} 
+            id={category} 
+            className={`${id}-buttons`}
+            onClick={e => setProjectState(e.target.innerHTML)}
+          >
             {category}
           </button>
         ))}
       </div>
       <div id={`${id}-${device}-container`}>
-
-      {console.log(projects)}
-        {projects.map((project) => {
+        { projects.length > 0 ? projects.map((project) => {
           const splittedFullname = project.full_name.split("/");
           const [_name, _project] = splittedFullname;
 
           return (
             <figure key={project.name} className={`${id}-${device}-figure`}>
-              <img src="" alt="" className={`${id}-${device}-figure-img`} />
+              <img 
+                src={`https://raw.githubusercontent.com/${_name}/${_project}/main/${_project}.png`}
+                alt="" 
+                className={`${id}-${device}-figure-img`} 
+              />
               <figcaption className={`${id}-${device}-figure-text`}>
                 <h3>{project.name}</h3>
                 <p>{project.description}</p>
@@ -69,7 +100,7 @@ const Profile = ({ id, device, profile }) => {
                   </a>
                   <a
                     href={`https://${_name.toLowerCase()}.github.io/${_project}`}
-                    target="_blank"
+                    target='_blank'
                     rel="noopener noreferrer"
                   >
                     deployment
@@ -78,7 +109,9 @@ const Profile = ({ id, device, profile }) => {
               </figcaption>
             </figure>
           );
-        })}
+        })
+        : <p id='empty-projects'>{profile.noProjects}</p>
+      }
       </div>
     </div>
   );
