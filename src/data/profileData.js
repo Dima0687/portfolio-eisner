@@ -151,7 +151,13 @@ const profile = {
     contact: {
       callToAction: 'I\'d love to hear from you.',
       info
-    }
+    },
+    aboutMe: ``,
+    projectCategories: [
+      "all",
+      "by learning",
+      "my own"
+    ]
   },
   ger: {
     identifiers: [
@@ -177,7 +183,13 @@ const profile = {
     contact: {
       callToAction: 'Ich freue mich von dir zu hören.',
       info
-    }
+    },
+    aboutMe: ``,
+    projectCategories: [
+      "alle",
+      "durchs lernen",
+      "eigene Projekte"
+    ]
   },
   ru: {
     identifiers: [
@@ -195,7 +207,11 @@ const profile = {
     contact: {
       callToAction: '',
       info
-    }
+    },
+    aboutMe: ``,
+    projectCategories: [
+      
+    ]
   }
 }
 

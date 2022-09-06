@@ -1,6 +1,8 @@
 // components 
 import Welcome from './Welcome';
+import About from './About';
 import Skills from './Skills';
+import Projects from './Projects';
 import Contact from './Contact';
 
 // hooks
@@ -28,6 +30,14 @@ const Section = (props) => {
         {
           (id === 'skills' || id === 'faehigkeiten') && 
             <Skills
+              id={id}
+              device={device}
+              profile={profile}
+            />
+        }
+        {
+          (id === 'projects' || id === 'projekte') && 
+            <Projects 
               id={id}
               device={device}
               profile={profile}
