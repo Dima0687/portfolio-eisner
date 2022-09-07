@@ -1,6 +1,6 @@
-#projects-container,
-#projekte-container,
-#проекты-container {
+#projects-mobile,
+#projekte-mobile,
+#проекты-mobile {
   background-color: var(--secondary-color);
   color: var(--primary-color);
   width: 100%;
@@ -10,16 +10,16 @@
   justify-content: space-between;
 }
 
-#projects-container h2,
-#projekte-container h2,
-#проекты-container h2 {
+#projects-mobile h2,
+#projekte-mobile h2,
+#проекты-mobile h2 {
   text-align: center;
   padding: 1rem 0 0 0;
 }
 
-#projects-container h2,
-#projekte-container h2,
-#проекты-container h2,
+#projects-mobile h2,
+#projekte-mobile h2,
+#проекты-mobile h2,
 #empty-projects {
   font-size: var(--heading-size);
 }

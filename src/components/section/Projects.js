@@ -62,7 +62,7 @@ const Profile = ({ id, device, profile }) => {
   }, [id]);
 
   return (
-    <div id={`${id}-container`}>
+    <>
       <h2>{heading}</h2>
       <div id={`${id}-${device}-buttons`}>
         {categories.map((category) => (
@@ -114,7 +114,7 @@ const Profile = ({ id, device, profile }) => {
         : <p id='empty-projects'>{profile.noProjects}</p>
       }
       </div>
-    </div>
+    </>
   );
 };
 

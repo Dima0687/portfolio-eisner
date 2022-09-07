@@ -27,12 +27,12 @@ const Contact = ({id, device, profile}) => {
   return (
     <div id={`${id}-${device}-info`}>
       { 
-        (id === 'contact' || id === 'kontakt') &&
+        (id === 'contact' || id === 'kontakt' || id === 'контакт') &&
           <h2>{callToAction}</h2>
       }
       <address id={`${id}-${device}-info-address`}>
       { 
-        !(id === 'contact' || id === 'kontakt') &&
+        !(id === 'contact' || id === 'kontakt' || id === 'контакт') &&
           <p id={`${id}-${device}-info-city`}
           >
             {`${address.zip} ${address.city}`}
