@@ -20,7 +20,10 @@ const Section = (props) => {
   return (
     <section id={`${id}-${device}`}>
         {
-          (id === 'welcome' || id === 'willkommen') && 
+          ( id === 'welcome' ||
+            id === 'willkommen' ||
+            id === 'добро-пожаловать'
+          ) && 
             <Welcome 
               id={id}
               profile={profile}
@@ -28,7 +31,21 @@ const Section = (props) => {
             />
         }
         {
-          (id === 'skills' || id === 'faehigkeiten') && 
+          ( id === 'about' ||
+            id === 'ueber-mich' ||
+            id === 'обо-мне'
+          ) &&
+            <About 
+              id={id}
+              profile={profile}
+              device={device}
+            />
+        }
+        {
+          ( id === 'skills' ||
+            id === 'faehigkeiten' ||
+            id === 'навыки'
+          ) && 
             <Skills
               id={id}
               device={device}
@@ -36,7 +53,10 @@ const Section = (props) => {
             />
         }
         {
-          (id === 'projects' || id === 'projekte') && 
+          ( id === 'projects' ||
+            id === 'projekte' || 
+            id === 'проекты' 
+          ) && 
             <Projects 
               id={id}
               device={device}
@@ -44,7 +64,10 @@ const Section = (props) => {
             />
         }
         {
-          (id === 'contact' || id === 'kontakt') &&
+          ( id === 'contact' ||
+            id === 'kontakt' ||
+            id === 'контакт'
+          ) &&
            <Contact
               id={id}
               device={device}

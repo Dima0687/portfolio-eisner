@@ -15,10 +15,15 @@ export const LangContextProvider = ({ children }) => {
       gerId = gerId.replace(uUmlaut, 'ü');
       gerId = gerId.split('-').join(' ');
       return gerId
+    } else if( language === 'ru'){
+      const ruId = id.split('-').join(' ');
+      return ruId
     } else {
       return id
     }
   }
+
+  console.log('langCont', filteredProfile);
   useEffect(() => {
     setFilteredProfile(profile[language]);
   }, [language]);

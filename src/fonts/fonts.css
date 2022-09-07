@@ -170,4 +170,12 @@
        url('./Niconne/niconne-v15-latin-regular.svg#Niconne') format('svg'); /* Legacy iOS */
 }
 
+@font-face {
+  font-family: 'Pacifico';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('./Pacifico/Pacifico-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
 /* fonts ends */

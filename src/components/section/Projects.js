@@ -30,7 +30,8 @@ const Profile = ({ id, device, profile }) => {
         switch(true) {
           case ( 
             projectState === 'my own' || 
-            projectState === 'eigene Projekte'
+            projectState === 'eigene' ||
+            projectState === 'собственные'
           ): 
           filteredData = data.filter( d => d.topics.includes('own'));
           setProjects( prev => filteredData);
@@ -38,7 +39,8 @@ const Profile = ({ id, device, profile }) => {
           break;
           case (
             projectState === 'by learning' ||
-            projectState === 'durchs lernen'
+            projectState === 'durchs lernen' ||
+            projectState === 'через обучение'
           ):
           filteredData = data.filter( d => d.topics.includes('tutorial'));
           setProjects( prev => filteredData);

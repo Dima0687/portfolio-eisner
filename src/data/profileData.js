@@ -19,6 +19,7 @@ import {
 
 
 const name = 'Dietmar Eisner';
+const copy = "2022";
 
 const address = {
   street: 'Hinrich-Wilhelm-Kopf-Straße',
@@ -152,13 +153,34 @@ const profile = {
       callToAction: 'I\'d love to hear from you.',
       info
     },
-    aboutMe: ``,
+    aboutMe: [
+      'I\'m not a designer, but if you give me a design layout. Then I\'m your suitable web developer.',
+
+    'I enjoy bringing your vision of your website to life and making it available to the world',
+    
+    'As a junior web and software developer I still have a few things to learn, but the cornerstone of a developer anyway is the willingness to evolve and always learn new things. So it\'s fortunate that learning is mostly fun for me.',
+    
+    'There\'s an wisdom about this, "You get old like a cow and you\'re still learning". And with every project, I get better and better at what I do.',
+    
+    'Through several difficult phases in my life, I have definitely learned at least one thing. "Live and let live" - this phrase has also become my life motto.',
+    
+    'I am very keen to live by the golden rule. Then respectful interaction is a piece of cake.',
+    
+    '"Treat others as you would want to be treated".',
+    
+    'If I can be of any help, I am always willing to help and share my knowledge.',
+    
+    'Technology has always fascinated me, not fanatically, but I have always had a certain enthusiasm for technology. I was particularly fond of computers, so it was only natural that I should start what was in this case an apprenticeship as a technical assistant in computer science. But life sometimes plays differently and due to young naivety I didn\'t get a degree in this field. However, this did not dampen my interest in programming and so I continued to find time to occupy myself with programming from time to time',
+    
+    'My intention to catch up on my high school diploma in order to then study robotics engineering unfortunately failed miserably because after several attempts to attend a night school, the minimum number of students never materialized. Undeterred by this, I looked for alternatives that might be suitable for me and finally, in retrospect, came to the obvious one, namely software developer. August 2022 was then the time, I completed my one-year training at the Digital Career Institute in the remote and am full of anticipation to apply my learned knowledge!'
+    ],
     projectCategories: [
       "all",
       "by learning",
       "my own"
     ],
-    noProjects: 'No projects at the moment!'
+    noProjects: 'No projects at the moment!',
+    copy
   },
   ger: {
     identifiers: [
@@ -185,36 +207,72 @@ const profile = {
       callToAction: 'Ich freue mich von dir zu hören.',
       info
     },
-    aboutMe: ``,
+    aboutMe: [ 
+    'Ich bin kein Designer, aber wenn du mir ein Design Layout vorlegst. Dann bin ich dein passender Webentwickler.',
+
+    'Ich habe Spaß daran, deine Vision von deiner Webseite zu realisieren und der Welt zugänglich zu machen.',
+    
+    'Als Junior Web und Softwareentwickler habe ich noch ein paar Dinge zu lernen, aber der Grundpfeiler eines Entwicklers ist ohnehin die Bereitschaft sich weiterzuentwickeln und stets neues zu lernen. Ein Glück also, dass mir lernen meistens Spaß macht.',
+    
+    'Es gibt einen passenden Spruch dazu: „Man wird alt wie eine Kuh und lernt immer noch dazu“. Und mit jedem Projekt werde ich besser und besser in dem, was ich tue.',
+    
+    'Durch mehrere schwierige Phasen in meinem Leben habe ich mindestens eins definitiv dazugelernt. „Leben und leben lassen“ – dieser Satz ist auch zu meinem Lebensmotto geworden.',
+    
+    'Ich bin sehr darauf bedacht, nach der goldenen Regel zu leben. Dann ist respektvoller Umgang ein Kinderspiel.',
+    
+    '„Behandle andere, wie auch du behandelt werden willst“.',
+    
+    'Wenn ich weiterhelfen kann, dann bin ich immer bereit zu helfen und mein Wissen zu teilen.',
+    
+    'Technik hat mich schon immer fasziniert, jetzt nicht fanatisch, aber eine gewisse Begeisterung von der Technik habe ich immer gehabt. Vor allem Computer hatten es mir angetan, daher lag es nahe, dass ich eine in dem Fall schulische Ausbildung zum technischen Assistenten für Informatik angefangen hatte. Doch das Leben spielt manchmal anders und durch junge Naivität habe ich keinen Abschluss in diesem Bereich erhalten. Das hat meinem Interesse am Programmieren jedoch keinen Abbruch getan und so habe ich auch weiterhin immer wieder mal Zeit gefunden, um mich mit dem Programmieren zu beschäftigen.',
+    
+    'Meine Absicht mein Abitur nachzuholen, um dann Ingenieur für Robotik zu studieren, ist leider kläglich daran gescheitert, dass nach mehrmaligen Versuchen eine Abendschule zu besuchen nie die Mindestmenge an Schülern zustande gekommen ist. Davon unbeirrt habe ich nach für mich infrage kommenden Alternativen geschaut und bin dann schließlich, im Nachhinein, zu dem offensichtlichen gekommen, nämlich Softwareentwickler. August 2022 war es dann so weit, ich habe meine einjährige Weiterbildung beim Digital Career Institute im Remote abgeschlossen und bin voller Vorfreude mein erlerntes Wissen anzuwenden!'
+    ],
     projectCategories: [
       "alle",
       "durchs lernen",
-      "eigene Projekte"
+      "eigene"
     ],
-    noProjects: 'Noch keine Projekte'
+    noProjects: 'Noch keine Projekte',
+    copy
   },
   ru: {
     identifiers: [
+      "добро-пожаловать",
+      "обо-мне",
+      "навыки",
+      "проекты",
+      "контакт" 
     ],
     whoAmI: [
+      "Сотрудник",
+      "веб-разработчик",
+      "коллега"
     ],
     welcomeText: {
-      hello: 'HALLO, ICH HEIßE',
+      hello: 'Привет, меня зовут',
       name,
-      sentencePart1: 'Dein neuer',
-      sentencePart2: 'nur einen Klick entfernt!'
+      sentencePart1: 'Твой новый',
+      sentencePart2: 'только один клик!'
     },
     skills,
     address,
     contact: {
-      callToAction: '',
+      callToAction: 'Я с нетерпением жду новостей от тебя.',
       info
     },
-    aboutMe: ``,
-    projectCategories: [
-      
+    aboutMe: [
+      'Я не дизайнер, но если ты дашь мне дизайн-макет. Тогда я буду твоим подходящим веб-разработчиком.',
+      'Мне нравится реализовывать твое видение сайта и делать его доступным для всего мира.'
+
     ],
-    noProjects: ''
+    projectCategories: [
+      "все",
+      "через обучение",
+      "собственные"
+    ],
+    noProjects: 'Пока нет проектов',
+    copy
   }
 }
 

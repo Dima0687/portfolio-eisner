@@ -25,7 +25,19 @@ const About = ({ id, device, profile }) => {
 
   return (
     <>
-
+      <h2 id={`${id}-${device}-heading`}> { heading } </h2>
+      <div id={`${id}-${device}-text-container`}>
+        {
+          aboutMe.map( (text, i) => (
+            <p
+              key={i}
+              className={`${id}-${device}-text`}
+            >
+              {text}
+            </p>
+          ))
+        }
+      </div>
     </>
   );
 }

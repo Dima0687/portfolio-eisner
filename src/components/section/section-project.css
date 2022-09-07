@@ -1,24 +1,32 @@
 #projects-container,
-#projekte-container {
-  background-color: #eef0fb;
+#projekte-container,
+#проекты-container {
+  background-color: var(--secondary-color);
   color: var(--primary-color);
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid green;
 }
 
 #projects-container h2,
-#projekte-container h2 {
+#projekte-container h2,
+#проекты-container h2 {
   text-align: center;
   padding: 1rem 0 0 0;
-  font-size: 2rem;
+}
+
+#projects-container h2,
+#projekte-container h2,
+#проекты-container h2,
+#empty-projects {
+  font-size: var(--heading-size);
 }
 
 #projects-mobile-buttons,
-#projekte-mobile-buttons {
+#projekte-mobile-buttons,
+#проекты-mobile-buttons {
   width: 100%;
   padding: 1rem;
   display: flex;
@@ -28,58 +36,90 @@
 }
 
 .projects-buttons,
-.projekte-buttons {
+.projekte-buttons,
+.проекты-buttons {
   padding: .2rem .5rem;
   background-color: var(--primary-color);
   border: none;
-  color: white;
+  color: var(--font-color);
+}
+
+.projects-buttons,
+.projekte-buttons,
+.проекты-buttons,
+.projects-mobile-figure-text h3,
+.projekte-mobile-figure-text h3,
+.проекты-mobile-figure-text h3,
+.projects-figure-button-container a,
+.projekte-figure-button-container a,
+.проекты-figure-button-container a {
   text-transform: uppercase;
 }
 
 .projects-buttons,
-.project-info-card h3,
 .projekte-buttons,
-.projekte-info-card h3  {
-  font-family: 'Playfair Display';
+.проекты-buttons,
+.project-info-card h3,
+.projekte-info-card h3,
+.проекты-info-card h3,
+.projects-mobile-figure-text p,
+.projekte-mobile-figure-text p,
+.проекты-mobile-figure-text p,
+.projects-mobile-figure-text h3,
+.projekte-mobile-figure-text h3,
+.проекты-mobile-figure-text h3,
+.projects-mobile-figure-text a,
+.projekte-mobile-figure-text a,
+.проекты-mobile-figure-text a {
+  font-family: var(--easy-to-read);
 }
 
 #projects-mobile-container,
-#projekte-mobile-container {
-  border: 1px solid red;
+#projekte-mobile-container,
+#проекты-mobile-container {
   width: 100%;
   height: 80%;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
   padding: 1rem 0;
 }
 
 .projects-mobile-figure,
-.projekte-mobile-figure {
+.projekte-mobile-figure,
+.проекты-mobile-figure {
   width: 80%;
   min-height: 100%;
-  border: 1px solid blue;
+  border: 1px solid var(--primary-color);
+  border-radius: 1.2rem;
+  overflow: hidden;
+  box-shadow: .2rem .2rem .4rem var(--primary-color),
+    -.2rem -.2rem .4rem var(--primary-color);
 }
 
 .projects-mobile-figure-img,
-.projects-mobile-figure-text,
 .projekte-mobile-figure-img,
-.projekte-mobile-figure-text  {
+.проекты-mobile-figure-img,
+.projects-mobile-figure-text,
+.projekte-mobile-figure-text,
+.проекты-mobile-figure-text {
   width: 100%;
   height: 50%;
 }
 
 .projects-mobile-figure-img,
-.projekte-mobile-figure-img  {
+.projekte-mobile-figure-img,
+.проекты-mobile-figure-img {
   display: block;
   object-fit: cover;
   object-position: center top;
 }
 
 .projects-mobile-figure-text,
-.projekte-mobile-figure-text {
+.projekte-mobile-figure-text,
+.проекты-mobile-figure-text {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -88,41 +128,30 @@
 }
 
 .projects-mobile-figure-text h3,
-.projekte-mobile-figure-text h3 {
+.projekte-mobile-figure-text h3,
+.проекты-mobile-figure-text h3 {
   padding: .5rem 0;
-  text-transform: uppercase;
 }
 
 .projects-mobile-figure-text p,
-.projekte-mobile-figure-text p {
+.projekte-mobile-figure-text p,
+.проекты-mobile-figure-text p {
   word-wrap: break-word;
 }
 
-.projects-mobile-figure-text h3,
-.projects-mobile-figure-text p,
-.projects-mobile-figure-text a,
-.projekte-mobile-figure-text h3,
-.projekte-mobile-figure-text p,
-.projekte-mobile-figure-text a  {
-  font-family: 'Playfair Display';
-}
-
 .projects-figure-button-container,
-.projekte-figure-button-container {
+.projekte-figure-button-container,
+.проекты-figure-button-container {
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
 
 .projects-figure-button-container a,
-.projekte-figure-button-container a {
+.projekte-figure-button-container a,
+.проекты-figure-button-container a {
   padding: .2rem .4rem;
   background-color: var(--primary-color);
-  color: white;
+  color: var(--font-color);
   border: none;
-  text-transform: uppercase;
-}
-
-#empty-projects {
-  font-size: 2.2rem;
 }

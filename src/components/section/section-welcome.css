@@ -1,5 +1,6 @@
 #welcome-mobile,
-#willkommen-mobile {
+#willkommen-mobile,
+#добро-пожаловать-mobile {
   display: grid;
   grid-template-rows: 55% 1fr;
   grid-template-areas: "pic" "info";
@@ -8,7 +9,8 @@
 }
 
 #welcome-pic,
-#willkommen-pic {
+#willkommen-pic,
+#добро-пожаловать-pic {
   grid-area: pic;
   background-image: url("../../images/code-640x426.jpg");
   background-repeat: no-repeat;
@@ -17,7 +19,8 @@
 }
 
 #welcome-text-container,
-#willkommen-text-container {
+#willkommen-text-container,
+#добро-пожаловать-text-container {
   grid-area: pic;
   position: absolute;
   inset: 0;
@@ -32,21 +35,25 @@
 
 #welcome-text-container p,
 #willkommen-text-container p,
+#добро-пожаловать-text-container p,
 #welcome-text-container h1,
-#willkommen-text-container h1  {
+#willkommen-text-container h1,
+#добро-пожаловать-text-container h1 {
   word-wrap: break-word;
   text-align: center;
-  font-family: 'Playfair Display';
-  text-shadow: .2rem .2rem .4rem black;
+  font-family: var(--easy-to-read);
+  text-shadow: .2rem .2rem .4rem var(--welcome-text-shadow);
 }
 
 #welcome-text-container #who-am-i-text,
-#willkommen-text-container #who-am-i-text {
+#willkommen-text-container #who-am-i-text,
+#добро-пожаловать-container #who-am-i-text {
   font-style: italic;
 }
 
 #welcome-text-container #who-am-i-text #who-am-i,
-#willkommen-text-container #who-am-i-text #who-am-i {
+#willkommen-text-container #who-am-i-text #who-am-i,
+#добро-пожаловать-container  #who-am-i-text #who-am-i {
   display: inline-block;
   animation: whoAmI var(--anim-duration, 3.5s) ease-in-out 0s infinite;
 }
@@ -61,13 +68,15 @@
 }
 
 #welcome-mobile-info,
-#willkommen-mobile-info {
+#willkommen-mobile-info,
+#добро-пожаловать-mobile-info {
   grid-area: info;
   background-color: var(--primary-color, #5569dc);
 }
 
 #welcome-mobile-info-address,
-#willkommen-mobile-info-address {
+#willkommen-mobile-info-address,
+#добро-пожаловать-mobile-info-address {
   width: 100%;
   height: 100%;
   display: flex;
@@ -76,21 +85,48 @@
 }
 
 #welcome-mobile-info-city,
-#willkommen-mobile-info-city {
+#willkommen-mobile-info-city,
+#добро-пожаловать-mobile-info-city {
   justify-self: flex-start;
   margin: auto;
 }
 
 #welcome-mobile-info-mailto,
-#willkommen-mobile-info-mailto {
+#willkommen-mobile-info-mailto,
+#добро-пожаловать-mobile-info-mailto {
   justify-self: end;
 }
 
 #welcome-mobile-social-media,
-#willkommen-mobile-social-media {
+#willkommen-mobile-social-media,
+#добро-пожаловать-mobile-social-media {
   width: 100%;
   display: flex;
   justify-content: center;
   gap: 1rem;
   margin: .5rem;
-} 
+}
+
+#welcome-mobile-download-button,
+#willkommen-mobile-download-button,
+#добро-пожаловать-mobile-download-button {
+  text-transform: uppercase;
+  font-family: var(--easy-to-read);
+  width: 50%;
+  background-color: var(--font-color);
+  border: none;
+  padding: .5rem;
+  align-self: center;
+  color: var(--primary-color);
+  border-radius: .8rem;
+  border: .1rem solid transparent;
+  margin-bottom: .3rem;
+}
+
+#welcome-mobile-download-button:focus,
+#kontakt-mobile-download-button:focus,
+#добро-пожаловать-mobile-download-button:focus {
+  background-color: var(--button-clicked);
+  color: black;
+  border: .1rem solid black;
+}

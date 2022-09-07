@@ -19,6 +19,11 @@ const Contact = ({id, device, profile}) => {
    }
   } = profile;
 
+  function handleDownload() {
+    const url = './pdf/Dietmar_Eisner_CV_Web_Dev.pdf';
+    window.open(url,  "Dietmar_Eisner_CV_Web_Dev, noopener, noreferrer");
+  }
+
   return (
     <div id={`${id}-${device}-info`}>
       { 
@@ -63,7 +68,16 @@ const Contact = ({id, device, profile}) => {
             <BsGithub/>
           </a>
         </div>
-        {/* TODO[] Download Button CV hinzufügen */}
+        {
+          /* TODO[] Download Button CV hinzufügen */
+
+          <button
+            onClick={ handleDownload }
+            id={`${id}-${device}-download-button`}
+          >
+            download cv
+          </button>
+        }
       </address>
     </div>
   );

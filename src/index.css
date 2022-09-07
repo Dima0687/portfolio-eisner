@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Niconne', 'Monospace';
+  font-family: 'Niconne', 'Pacifico', cursive, monospace;
 }
 
 a {
@@ -25,12 +25,36 @@ body, #root, #app {
 
 /* 
   colors
+  sizes
+  fonts
   animation 
 */
 :root {
   --primary-color: #5569dc;
+  --secondary-color: #eef0fc;
+  --button-clicked: #8592de;
   --font-color: #fff;
+  --welcome-text-shadow: #000;
+  --box-shadow-color1: rgba(0, 0, 0, .3);
+  --box-shadow-color2: rgba(159, 157, 157, 0.55);
+  --heading-size: 2.2rem;
+  --easy-to-read: 'Playfair Display';
   --anim-duration: 3.5s;
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+  html {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    width: 85vh;
+    max-width: 100vh;
+    height: 100vw;
+    overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
 }
 
 /* reset ends */

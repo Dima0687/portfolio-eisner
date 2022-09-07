@@ -2,4 +2,7 @@ footer {
   grid-area: footer;
   background-color: var(--primary-color, #5569dc );
   grid-column: span 12;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
