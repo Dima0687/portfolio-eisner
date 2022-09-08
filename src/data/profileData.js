@@ -258,7 +258,7 @@ const profile = {
     skills,
     address,
     contact: {
-      callToAction: 'Я с нетерпением жду новостей от тебя.',
+      callToAction: 'Я с нетерпением жду ответа от тебя.',
       info
     },
     aboutMe: [

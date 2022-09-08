@@ -2,7 +2,9 @@
 import { BsLinkedin, BsGithub } from 'react-icons/bs';
 
 // css for contact section
-import './section-contact.css';
+import './mobile/section-contact.css';
+import './tablet/section-contact.css';
+import './desktop/section-contact.css';
 
 const Contact = ({id, device, profile}) => {
   const {
@@ -69,8 +71,6 @@ const Contact = ({id, device, profile}) => {
           </a>
         </div>
         {
-          /* TODO[] Download Button CV hinzufügen */
-
           <button
             onClick={ handleDownload }
             id={`${id}-${device}-download-button`}

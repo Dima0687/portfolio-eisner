@@ -6,9 +6,11 @@ import { useContext, useState, useEffect } from 'react';
 
 // context
 import { LangContext } from '../../context/LangContext';
+import { DeviceContext } from '../../context/DeviceContext';
 
 const Footer = () => {
   const { filteredProfile: profile } = useContext(LangContext);
+  const { device } = useContext(DeviceContext);
   const sinceYear = profile.copy;
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
   const [showYear, setShowYear] = useState(sinceYear);
@@ -30,7 +32,7 @@ const Footer = () => {
 
   return ( 
     <footer>
-      <h3>&copy; {showYear} {profile.welcomeText.name}</h3>
+      <h3 id={`footer-h3-${device}`}>&copy; {showYear} {profile.welcomeText.name}</h3>
     </footer>
   );
 }

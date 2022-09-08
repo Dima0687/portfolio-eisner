@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-size: var(--heading-size);
 }
 
 #projects-mobile h2,
@@ -17,16 +18,9 @@
   padding: 1rem 0 0 0;
 }
 
-#projects-mobile h2,
-#projekte-mobile h2,
-#проекты-mobile h2,
-#empty-projects {
-  font-size: var(--heading-size);
-}
-
-#projects-mobile-buttons,
-#projekte-mobile-buttons,
-#проекты-mobile-buttons {
+#projects-mobile-buttons-container,
+#projekte-mobile-buttons-container,
+#проекты-mobile-buttons-container {
   width: 100%;
   padding: 1rem;
   display: flex;
@@ -35,18 +29,20 @@
   gap: .5rem;
 }
 
-.projects-buttons,
-.projekte-buttons,
-.проекты-buttons {
+/* mobile, tablet same rules */
+
+.projects-mobile-buttons,
+.projekte-mobile-buttons,
+.проекты-mobile-buttons {
   padding: .2rem .5rem;
   background-color: var(--primary-color);
   border: none;
   color: var(--font-color);
 }
 
-.projects-buttons,
-.projekte-buttons,
-.проекты-buttons,
+.projects-mobile-buttons,
+.projekte-mobile-buttons,
+.проекты-mobile-buttons,
 .projects-mobile-figure-text h3,
 .projekte-mobile-figure-text h3,
 .проекты-mobile-figure-text h3,
@@ -56,12 +52,9 @@
   text-transform: uppercase;
 }
 
-.projects-buttons,
-.projekte-buttons,
-.проекты-buttons,
-.project-info-card h3,
-.projekte-info-card h3,
-.проекты-info-card h3,
+.projects-mobile-buttons,
+.projekte-mobile-buttons,
+.проекты-mobile-buttons,
 .projects-mobile-figure-text p,
 .projekte-mobile-figure-text p,
 .проекты-mobile-figure-text p,
@@ -72,6 +65,7 @@
 .projekte-mobile-figure-text a,
 .проекты-mobile-figure-text a {
   font-family: var(--easy-to-read);
+  font-size: .6em;
 }
 
 #projects-mobile-container,
@@ -115,6 +109,7 @@
   display: block;
   object-fit: cover;
   object-position: center top;
+  box-shadow: 0 .4rem .8rem black;
 }
 
 .projects-mobile-figure-text,
@@ -124,7 +119,6 @@
   flex-direction: column;
   justify-content: space-evenly;
   padding-left: .5rem;
-  backdrop-filter: blur(1rem);
 }
 
 .projects-mobile-figure-text h3,

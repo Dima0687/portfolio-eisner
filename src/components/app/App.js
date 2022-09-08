@@ -21,8 +21,8 @@ const App = () => {
           <Routes>
             <Route path='/' element={<Main />}/>
           </Routes>
+          <Footer />
         </DeviceContextProvider>
-        <Footer />
       </LangContextProvider>
     </div>
   );

@@ -1,0 +1,59 @@
+#skills-desktop,
+#faehigkeiten-desktop,
+#навыки-desktop {
+  background-color: var(--primary-color, #5569dc);
+  text-align: center;
+  font-size: var(--heading-size);
+}
+
+#skills-desktop-container,
+#faehigkeiten-desktop-container,
+#навыки-desktop-container  {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  overflow-y: scroll;
+  font-size: .6em;
+  padding: 1.1rem;
+}
+
+.skills-desktop,
+.faehigkeiten-desktop,
+.навыки-desktop {
+  flex: 1 1 20%;
+  height: 12.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: .5rem;
+  background-color: var(--primary-color);
+  background: transparent;
+  box-shadow: .4rem .6rem 1.6rem 0 var(--box-shadow-color1),
+    -.4rem -.4rem 1.4rem 0 var(--box-shadow-color2);
+  border-radius: .4rem;
+}
+
+.skills-desktop h3,
+.faehigkeiten-desktop h3,
+.навыки-desktop h3{
+  font-family: var(--easy-to-read);
+}
+
+#skills-desktop-heading,
+#faehigkeiten-desktop-heading {
+  font-size: 1em;
+}
+
+#навыки-desktop-heading {
+  font-size: .9em;
+}
+
+#skills-desktop-heading,
+#faehigkeiten-desktop-heading,
+#навыки-desktop-heading {
+  padding-bottom: 1rem;
+  margin-bottom: .5rem;
+  box-shadow: 0 .3rem .6rem rgba(0,0,0,.3);
+}

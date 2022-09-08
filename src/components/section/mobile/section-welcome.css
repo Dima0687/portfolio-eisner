@@ -8,19 +8,19 @@
   font-size: 1.8rem;
 }
 
-#welcome-pic,
-#willkommen-pic,
-#добро-пожаловать-pic {
+#welcome-mobile-pic,
+#willkommen-mobile-pic,
+#добро-пожаловать-mobile-pic {
   grid-area: pic;
-  background-image: url("../../images/code-640x426.jpg");
+  background-image: url("../../../images/code-640x426.jpg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
 }
 
-#welcome-text-container,
-#willkommen-text-container,
-#добро-пожаловать-text-container {
+#welcome-mobile-text-container,
+#willkommen-mobile-text-container,
+#добро-пожаловать-mobile-text-container {
   grid-area: pic;
   position: absolute;
   inset: 0;
@@ -33,38 +33,29 @@
   background-image: radial-gradient(circle at 50%, #4d4a4a90, transparent );
 }
 
-#welcome-text-container p,
-#willkommen-text-container p,
-#добро-пожаловать-text-container p,
-#welcome-text-container h1,
-#willkommen-text-container h1,
-#добро-пожаловать-text-container h1 {
+#welcome-mobile-text-container p,
+#willkommen-mobile-text-container p,
+#добро-пожаловать-mobile-text-container p,
+#welcome-mobile-text-container h1,
+#willkommen-mobile-text-container h1,
+#добро-пожаловать-mobile-text-container h1 {
   word-wrap: break-word;
   text-align: center;
   font-family: var(--easy-to-read);
   text-shadow: .2rem .2rem .4rem var(--welcome-text-shadow);
 }
 
-#welcome-text-container #who-am-i-text,
-#willkommen-text-container #who-am-i-text,
-#добро-пожаловать-container #who-am-i-text {
+#welcome-mobile-text-container #who-am-i-text,
+#willkommen-mobile-text-container #who-am-i-text,
+#добро-пожаловать-mobile-container #who-am-i-text {
   font-style: italic;
 }
 
-#welcome-text-container #who-am-i-text #who-am-i,
-#willkommen-text-container #who-am-i-text #who-am-i,
-#добро-пожаловать-container  #who-am-i-text #who-am-i {
-  display: inline-block;
+#welcome-mobile-text-container #who-am-i-text #who-am-i,
+#willkommen-mobile-text-container #who-am-i-text #who-am-i,
+#добро-пожаловать-mobile-text-container #who-am-i-text #who-am-i {
+  display: block;
   animation: whoAmI var(--anim-duration, 3.5s) ease-in-out 0s infinite;
-}
-
-@keyframes whoAmI {
-  from {
-    transform: scale(0);
-  }
-  to{
-    transform: scale(1.15);
-  }
 }
 
 #welcome-mobile-info,

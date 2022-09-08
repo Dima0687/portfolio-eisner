@@ -6,13 +6,23 @@
   text-align: center;
   color: var(--primary-color);
   background-color: var(--secondary-color);
-  font-size: 1.8rem;
+  font-size: var(--heading-size);
 }
 
 #contact-mobile-info h2,
 #kontakt-mobile-info h2,
 #контакт-mobile-info h2 {
-  padding: 2rem;
+  padding: 2rem 1rem;
+}
+
+#contact-mobile-info h2,
+#kontakt-mobile-info h2{
+  font-size: 1em;
+}
+
+#контакт-mobile-info h2 {
+  font-size: .8em;
+  padding: 2rem 1rem 2.2rem 1rem;
 }
 
 #contact-mobile-info-address,

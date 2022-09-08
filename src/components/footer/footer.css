@@ -6,3 +6,15 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
+#footer-h3-mobile {
+  font-size: 1.8rem;
+}
+
+#footer-h3-tablet {
+  font-size: 2.1rem;
+}
+
+#footer-h3-desktop {
+  font-size: 2.3rem;
+}

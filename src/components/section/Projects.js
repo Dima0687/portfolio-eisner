@@ -5,7 +5,9 @@ import { Octokit } from "octokit";
 import { useState, useEffect, useContext } from "react";
 
 // css
-import "./section-project.css";
+import "./mobile/section-project.css";
+import './tablet/section-project.css';
+import './desktop/section-project.css';
 
 // context
 import { LangContext } from "../../context/LangContext";
@@ -64,12 +66,12 @@ const Profile = ({ id, device, profile }) => {
   return (
     <>
       <h2>{heading}</h2>
-      <div id={`${id}-${device}-buttons`}>
+      <div id={`${id}-${device}-buttons-container`}>
         {categories.map((category) => (
           <button 
             key={category} 
             id={category} 
-            className={`${id}-buttons`}
+            className={`${id}-${device}-buttons`}
             onClick={e => setProjectState(e.target.innerHTML)}
           >
             {category}

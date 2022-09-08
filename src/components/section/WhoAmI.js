@@ -30,7 +30,7 @@ const WhoAmI = () => {
   }, [num, language]);
 
   return (
-    <span id="who-am-i">{whoAmI}</span>
+    <span id="who-am-i"> {whoAmI} </span>
   );
 }
  

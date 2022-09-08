@@ -15,18 +15,15 @@ import Link from '../links/Link';
 import { DeviceContext } from '../../context/DeviceContext';
 import { LangContext } from '../../context/LangContext';
 
+// util
+import { mediaQuerys } from '../../data/mediaQuery';
+
 const NavBar = () => {
   const { device, setDevice } = useContext(DeviceContext);
   const { language, setLanguage, filteredProfile:profile } = useContext(LangContext);
   const [nameOfActiveLink, setNameOfActiveLink] = useState('');
   const [show, setShow] = useState(false);
   const burgerMenu = useRef();
-
-  const mediaQuerys = {
-    mobile: 320,
-    tablet: 768,
-    desktop: 1200
-  }
 
   function handleChangeDisplay(){
     if(show || window.innerWidth >= mediaQuerys.tablet){

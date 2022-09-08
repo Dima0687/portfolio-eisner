@@ -5,7 +5,9 @@ import { useContext, useEffect, useState } from 'react';
 import { LangContext } from '../../context/LangContext';
 
 // css
-import './section-about.css';
+import './mobile/section-about.css';
+import './tablet/section-about.css';
+import './desktop/section-about.css';
 
 const About = ({ id, device, profile }) => {
   const { fixUmlaut } = useContext(LangContext);

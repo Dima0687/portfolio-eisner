@@ -5,8 +5,9 @@ import { useContext, useEffect, useState } from 'react';
 import { LangContext } from '../../context/LangContext';
 
 // css
-import './section-skills.css';
-
+import './mobile/section-skills.css';
+import './tablet/section-skills.css';
+import './desktop/section-skills.css';
 
 const Skills = ({ id, device, profile }) => {
   const { fixUmlaut } = useContext(LangContext);
@@ -24,7 +25,7 @@ const Skills = ({ id, device, profile }) => {
 
   return (
     <>
-      <h2 id={`${id}-heading`}>{heading}</h2>
+      <h2 id={`${id}-${device}-heading`}>{heading}</h2>
       <div  id={`${id}-${device}-container`}>
         {
           skills.map( skill => (
