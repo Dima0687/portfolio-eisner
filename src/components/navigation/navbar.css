@@ -12,6 +12,7 @@
   grid-template-rows: 1fr 1fr;
   height: 100%;
   gap: .25rem;
+  font-size: var(--heading-size);
 }
 
 #navbar-container-mobile{
@@ -28,8 +29,25 @@
 #navbar-mobile,
 #navbar-tablet,
 #navbar-desktop {
-  font-size: 2rem;
   position: relative;
+}
+
+#navbar-mobile,
+#language-picker-mobile,
+#language-picker-mobile option,
+#language-picker-tablet,
+#language-picker-tablet option {
+  font-size: .8em;
+}
+
+#navbar-tablet,
+#language-picker-desktop,
+#language-picker-desktop option {
+  font-size: 1em;
+}
+
+#navbar-desktop {
+  font-size: 1.4em;
 }
 
 #navbar-container-mobile::after {
@@ -62,7 +80,7 @@
 
 .menu-button {
   grid-area: burger;
-  font-size: 2rem;
+  font-size: var(--heading-size);
   margin: 1rem 1rem;
   color: var(--font-color, white);
 }

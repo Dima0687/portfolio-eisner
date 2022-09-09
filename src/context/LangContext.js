@@ -22,8 +22,6 @@ export const LangContextProvider = ({ children }) => {
       return id
     }
   }
-
-  console.log('langCont', filteredProfile);
   useEffect(() => {
     setFilteredProfile(profile[language]);
   }, [language]);

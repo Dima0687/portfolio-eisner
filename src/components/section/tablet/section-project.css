@@ -22,9 +22,9 @@
   font-size: .999em;
 }
 
-#projects-tablet-buttons-container,
-#projekte-tablet-buttons-container,
-#проекты-tablet-buttons-container {
+.projects-tablet-btn-container,
+.projekte-tablet-btn-container,
+.проекты-tablet-btn-container {
   width: 100%;
   padding: 1rem;
   display: flex;

@@ -60,7 +60,6 @@
   font-family: var(--easy-to-read);
   width: 50%;
   background-color: var(--primary-color);
-  border: none;
   padding: .5rem;
   align-self: center;
   color: var(--font-color);

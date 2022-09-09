@@ -12,15 +12,21 @@ import './desktop/section-project.css';
 // context
 import { LangContext } from "../../context/LangContext";
 
+// data
+import { specialCaseProjects, specialCaseProjectsObj } from '../../data/specialCaseProjects'
+
 const Profile = ({ id, device, profile }) => {
   const { fixUmlaut } = useContext(LangContext);
-  const [categories, setCategories] = useState([]);
+  const [projectsCat, setProjectsCat] = useState([]);
+  const [techCat, setTechCat] = useState([]);
   const [projects, setProjects] = useState([]);
   const [heading, setHeading] = useState("");
   const [projectState, setProjectState] = useState('all');
+  const [techState, setTechState] = useState('all');
 
   useEffect(() => {
-    setCategories(profile.projectCategories);
+    setProjectsCat(profile.projectCategories);
+    setTechCat(profile.techCategory);
 
     const octokit = new Octokit({
       auth: process.env.REACT_APP_GITHUB_ACCESS_TOKEN,
@@ -28,14 +34,21 @@ const Profile = ({ id, device, profile }) => {
     (async () => {
       try {
         const data = (await octokit.request(`GET /user/repos`, {})).data;
+
         let filteredData;
         switch(true) {
           case ( 
-            projectState === 'my own' || 
+            projectState === 'my own' ||
             projectState === 'eigene' ||
             projectState === 'собственные'
           ): 
-          filteredData = data.filter( d => d.topics.includes('own'));
+          filteredData = data.filter( d => {
+            if(techState === 'all'){
+              return d.topics.includes('own');
+            } else {
+              return d.topics.includes('own') && d.topics.includes(techState);
+            }
+          });
           setProjects( prev => filteredData);
 
           break;
@@ -44,11 +57,26 @@ const Profile = ({ id, device, profile }) => {
             projectState === 'durchs lernen' ||
             projectState === 'через обучение'
           ):
-          filteredData = data.filter( d => d.topics.includes('tutorial'));
+          filteredData = data.filter( d => {
+            if(techState === 'all'){
+              return  d.topics.includes('tutorial');
+            } else {
+              return d.topics.includes('tutorial') && d.topics.includes(techState);
+            }
+          });
           setProjects( prev => filteredData);
           break;
           default:
-          filteredData = data.filter( d => d.topics.includes('tutorial') ||  d.topics.includes('own'))
+          filteredData = data.filter( d => {
+            if(techState === 'all'){
+              return (d.topics.includes('tutorial')) ||  (d.topics.includes('own'));
+            } else {
+              return ( 
+                ( d.topics.includes('tutorial') && d.topics.includes(techState) ) ||
+                ( d.topics.includes('own') && d.topics.includes(techState) )
+                )
+            }
+          })
           setProjects( prev => filteredData);
         }
       } catch (error) {
@@ -56,7 +84,7 @@ const Profile = ({ id, device, profile }) => {
       }
     })();
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [projectState]);
+  }, [projectState, techState]);
 
   useEffect(() => {
     setHeading(fixUmlaut(id)[0].toUpperCase() + fixUmlaut(id).slice(1));
@@ -66,8 +94,8 @@ const Profile = ({ id, device, profile }) => {
   return (
     <>
       <h2>{heading}</h2>
-      <div id={`${id}-${device}-buttons-container`}>
-        {categories.map((category) => (
+      <div className={`${id}-${device}-btn-container`}>
+        {projectsCat.map((category) => (
           <button 
             key={category} 
             id={category} 
@@ -75,6 +103,18 @@ const Profile = ({ id, device, profile }) => {
             onClick={e => setProjectState(e.target.innerHTML)}
           >
             {category}
+          </button>
+        ))}
+      </div>
+      <div className={`${id}-${device}-btn-container`}>
+        {techCat.map((tech) => (
+          <button
+            key={tech}
+            id={tech}
+            className={`${id}-${device}-buttons`}
+            onClick={e => setTechState(e.target.innerHTML)}
+          >
+            {tech}
           </button>
         ))}
       </div>
@@ -102,7 +142,11 @@ const Profile = ({ id, device, profile }) => {
                     github
                   </a>
                   <a
-                    href={`https://${_name.toLowerCase()}.github.io/${_project}`}
+                    href={
+                      specialCaseProjects.includes(_project) ? 
+                      specialCaseProjectsObj[_project] :
+                      `https://${_name.toLowerCase()}.github.io/${_project}`
+                    }
                     target='_blank'
                     rel="noopener noreferrer"
                   >

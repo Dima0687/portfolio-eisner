@@ -127,6 +127,13 @@ const skills = [
   },
 ]
 
+const techCategory = [
+  "react",
+  "html",
+  "javascript",
+  "express"
+]
+
 const profile = {
   en:{
     identifiers: [
@@ -179,6 +186,7 @@ const profile = {
       "by learning",
       "my own"
     ],
+    techCategory: ['all', ...techCategory],
     noProjects: 'No projects at the moment!',
     copy
   },
@@ -233,6 +241,7 @@ const profile = {
       "durchs lernen",
       "eigene"
     ],
+    techCategory: ["alle", ...techCategory],
     noProjects: 'Noch keine Projekte',
     copy
   },
@@ -287,6 +296,7 @@ const profile = {
       "через обучение",
       "собственные"
     ],
+    techCategory: ["все", ...techCategory],
     noProjects: 'Пока нет проектов',
     copy
   }
