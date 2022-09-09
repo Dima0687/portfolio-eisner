@@ -23,6 +23,19 @@ body, #root, #app {
   color: var(--font-color, white);
 }
 
+h2 {
+  background-color: var(--primary-color);
+  color: var(--font-color);
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+#filler-tablet {
+  height: 6%;
+  width: 100%;
+  background-color: var(--primary-color);
+}
 /* 
   colors
   sizes

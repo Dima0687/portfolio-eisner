@@ -13,7 +13,7 @@
 #ueber-mich-tablet-heading,
 #обо-мне-tablet-heading {
   justify-self: flex-start;
-  margin: 2rem 0 0 0;
+  font-size: 1.5em;
 }
 
 #about-tablet-text-container,

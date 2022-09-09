@@ -20,9 +20,9 @@
   padding: 1.1rem;
 }
 
-.skills-mobile,
-.faehigkeiten-mobile,
-.навыки-mobile {
+.skills-mobile-figure,
+.faehigkeiten-mobile-figure,
+.навыки-mobile-figure {
   flex: 1 1 45%;
   display: flex;
   justify-content: space-around;
@@ -35,9 +35,9 @@
   border-radius: .4rem;
 }
 
-.skills-mobile h3,
-.faehigkeiten-mobile h3,
-.навыки-mobile h3{
+.skills-mobile-figure h3,
+.faehigkeiten-mobile-figure h3,
+.навыки-mobile-figure h3{
   font-family: var(--easy-to-read);
 }
 
@@ -45,5 +45,5 @@
 #faehigkeiten-mobile-heading,
 #навыки-mobile-heading {
   padding-bottom: 1rem;
-  font-size: 1em;
+  font-size: 1.5em;
 }

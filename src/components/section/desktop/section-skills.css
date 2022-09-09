@@ -10,7 +10,7 @@
 #faehigkeiten-desktop-container,
 #навыки-desktop-container  {
   width: 100%;
-  height: 90%;
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -19,12 +19,12 @@
   padding: 1.1rem;
 }
 
-.skills-desktop,
-.faehigkeiten-desktop,
-.навыки-desktop {
+.skills-desktop-figure,
+.faehigkeiten-desktop-figure,
+.навыки-desktop-figure {
+  display: flex;
   flex: 1 1 20%;
   height: 12.5rem;
-  display: flex;
   justify-content: space-around;
   align-items: center;
   padding: .5rem;
@@ -35,19 +35,19 @@
   border-radius: .4rem;
 }
 
-.skills-desktop h3,
-.faehigkeiten-desktop h3,
-.навыки-desktop h3{
+.skills-desktop-figure h3,
+.faehigkeiten-desktop-figure h3,
+.навыки-desktop-figure h3{
   font-family: var(--easy-to-read);
 }
 
 #skills-desktop-heading,
 #faehigkeiten-desktop-heading {
-  font-size: 1em;
+  font-size: 1.5em;
 }
 
 #навыки-desktop-heading {
-  font-size: .9em;
+  font-size: 1.2em;
 }
 
 #skills-desktop-heading,

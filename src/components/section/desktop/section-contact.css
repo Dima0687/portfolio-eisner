@@ -9,14 +9,15 @@
   font-size: var(--heading-size);
 }
 
-#contact-desktop-info h2,
-#kontakt-desktop-info h2,
-#контакт-desktop-info h2 {
+#contact-desktop-heading,
+#kontakt-desktop-heading,
+#контакт-desktop-heading {
   padding: 2rem;
+  font-size: 1.5em;
 }
 
-#контакт-desktop-info h2 {
-  font-size: .999em;
+#контакт-desktop-heading {
+  font-size: 1.1em;
   padding: 2rem 2rem 3rem 2rem;
 }
 

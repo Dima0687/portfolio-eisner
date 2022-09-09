@@ -31,7 +31,7 @@ const Skills = ({ id, device, profile }) => {
           skills.map( skill => (
             <figure 
               key={skill.title}
-              className={`${id}-${device}`}
+              className={`${id}-${device}-figure`}
             >
               <h3>{skill.title}</h3>
               {skill.icon}

@@ -6,14 +6,14 @@
   flex-direction: column;
   align-items: center;
   background-color: var(--secondary-color);
+  font-size: var(--heading-size);
 }
 
 #about-desktop-heading,
 #ueber-mich-desktop-heading,
 #обо-мне-desktop-heading {
   justify-self: flex-start;
-  margin: 2rem 0 0 0;
-  font-size: var(--heading-size)
+  font-size: 1.5em;
 }
 
 #about-desktop-text-container,

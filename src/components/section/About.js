@@ -40,6 +40,7 @@ const About = ({ id, device, profile }) => {
           ))
         }
       </div>
+      <div id={`filler-${device}`}></div>
     </>
   );
 }

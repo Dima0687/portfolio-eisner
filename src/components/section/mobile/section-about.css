@@ -13,7 +13,8 @@
 #ueber-mich-mobile-heading,
 #обо-мне-mobile-heading {
   justify-self: flex-start;
-  margin: 2rem 0;
+  margin: 0;
+  font-size: 1.5em;
 }
 
 #about-mobile-text-container,

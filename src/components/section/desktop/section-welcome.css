@@ -84,7 +84,9 @@
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
+  
 }
+
 
 #welcome-desktop-social-media,
 #willkommen-desktop-social-media,
@@ -104,7 +106,7 @@
   width: 50%;
   background-color: var(--font-color);
   border: none;
-  padding: .5rem;
+  padding: .8rem;
   align-self: center;
   color: var(--primary-color);
   border-radius: .8rem;

@@ -19,9 +19,9 @@
   padding: 1.1rem;
 }
 
-.skills-tablet,
-.faehigkeiten-tablet,
-.навыки-tablet {
+.skills-tablet-figure,
+.faehigkeiten-tablet-figure,
+.навыки-tablet-figure {
   flex: 1 1 45%;
   height: 12.5rem;
   display: flex;
@@ -35,19 +35,19 @@
   border-radius: .4rem;
 }
 
-.skills-tablet h3,
-.faehigkeiten-tablet h3,
-.навыки-tablet h3{
+.skills-tablet-figure h3,
+.faehigkeiten-tablet-figure h3,
+.навыки-tablet-figure h3{
   font-family: var(--easy-to-read);
 }
 
 #skills-tablet-heading,
 #faehigkeiten-tablet-heading {
-  font-size: 1em;
+  font-size: 1.5em;
 }
 
 #навыки-tablet-heading {
-  font-size: .9em;
+  font-size: 1.2em;
 }
 
 #skills-tablet-heading,

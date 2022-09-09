@@ -9,14 +9,15 @@
   font-size: var(--heading-size);
 }
 
-#contact-tablet-info h2,
-#kontakt-tablet-info h2,
-#контакт-tablet-info h2 {
+#contact-tablet-heading,
+#kontakt-tablet-heading,
+#контакт-tablet-heading {
   padding: 2rem;
+  font-size: 1.5em;
 }
 
-#контакт-tablet-info h2 {
-  font-size: .999em;
+#контакт-tablet-heading {
+  font-size: 1em;
   padding: 2rem 2rem 3rem 2rem;
 } 
 

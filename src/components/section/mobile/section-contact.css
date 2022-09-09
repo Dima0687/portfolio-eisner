@@ -9,19 +9,19 @@
   font-size: var(--heading-size);
 }
 
-#contact-mobile-info h2,
-#kontakt-mobile-info h2,
-#контакт-mobile-info h2 {
+#contact-mobile-heading,
+#kontakt-mobile-heading,
+#контакт-mobile-heading {
   padding: 2rem 1rem;
 }
 
-#contact-mobile-info h2,
-#kontakt-mobile-info h2{
-  font-size: 1em;
+#contact-mobile-heading,
+#kontakt-mobile-heading{
+  font-size: 1.5em;
 }
 
-#контакт-mobile-info h2 {
-  font-size: .8em;
+#контакт-mobile-heading {
+  font-size: 1em;
   padding: 2rem 1rem 2.2rem 1rem;
 }
 

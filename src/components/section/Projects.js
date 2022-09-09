@@ -93,7 +93,7 @@ const Profile = ({ id, device, profile }) => {
 
   return (
     <>
-      <h2>{heading}</h2>
+      <h2 id={`${id}-${device}-heading`}>{heading}</h2>
       <div className={`${id}-${device}-btn-container`}>
         {projectsCat.map((category) => (
           <button 
@@ -160,6 +160,7 @@ const Profile = ({ id, device, profile }) => {
         : <p id='empty-projects'>{profile.noProjects}</p>
       }
       </div>
+      <div id={`filler-${device}`}></div>
     </>
   );
 };

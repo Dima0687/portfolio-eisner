@@ -30,7 +30,7 @@ const Contact = ({id, device, profile}) => {
     <div id={`${id}-${device}-info`}>
       { 
         (id === 'contact' || id === 'kontakt' || id === 'контакт') &&
-          <h2>{callToAction}</h2>
+          <h2 id={`${id}-${device}-heading`}>{callToAction}</h2>
       }
       <address id={`${id}-${device}-info-address`}>
       { 

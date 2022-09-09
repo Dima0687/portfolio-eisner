@@ -53,7 +53,7 @@
 #navbar-container-mobile::after {
   content: "Portfolio";
   position: absolute;
-  top: .5rem;
+  top: 1.3rem;
   left: 38%;
   color: var(--font-color, white);
   font-size: 3rem;
@@ -81,7 +81,7 @@
 .menu-button {
   grid-area: burger;
   font-size: var(--heading-size);
-  margin: 1rem 1rem;
+  margin: 2rem 1rem;
   color: var(--font-color, white);
 }
 
@@ -98,12 +98,13 @@
   width: fit-content;
   border: .1rem solid transparent;
   border-radius: .8rem;
+  height: 4rem;
 }
 
 #language-picker-mobile option,
 #language-picker-tablet option,
 #language-picker-desktop option {
-  padding: .5rem;
+  padding: .8rem;
   background-color: var(--primary-color, #5569dc);
 }
 
