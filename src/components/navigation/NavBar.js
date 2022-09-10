@@ -67,7 +67,7 @@ const NavBar = () => {
 
   return (
     <div id={`navbar-container-${device}`}>
-      <nav id={`navbar-${device}`} ref={burgerMenu}>
+      <nav id={`navbar-${device}`} className={`${lang}`} ref={burgerMenu}>
         { 
           Object.keys(linkNames).map( link => <CustomLink
             key={ link }

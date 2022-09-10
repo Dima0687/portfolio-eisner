@@ -5,12 +5,12 @@ import { useContext } from 'react';
 import { BsLinkedin, BsGithub } from 'react-icons/bs';
 
 // portfolio data
-import portfolio from '../data/portfolioData';
+import portfolio from '../../data/portfolioData';
 
 // css
 
 // context
-import { LangContext } from '../context/LangContext';
+import { LangContext } from '../../context/LangContext';
 
 const Contact = ({sectionName, device }) => {
   const { lang } = useContext(LangContext);
@@ -38,7 +38,7 @@ const Contact = ({sectionName, device }) => {
     <div id={`${sectionName}-${device}-info`}>
       { 
         ( sectionName === 'contact' ) &&
-          <h2 id={`${sectionName}-${device}-heading`}>{callToAction[lang]}</h2>
+          <h2 id={`${sectionName}-${device}-${lang}-heading`}>{callToAction[lang]}</h2>
       }
       <address id={`${sectionName}-${device}-info-address`}>
       { 
@@ -48,20 +48,22 @@ const Contact = ({sectionName, device }) => {
             {`${address.zip} ${address.city}`}
           </p>
       }
-        <a 
-          href={`mailto:${ email }`}
-          id={`${sectionName}-${device}-info-mailto`}
-          rel='noopener noreferrer'
-        >
-          { email }
-        </a>
-        <a 
-          href={`tel:${ tel }`}
-          id={`${sectionName}-${device}-info-tel`}
-          rel='noopener noreferrer'
-        >
-          { telAsString }
-        </a>
+        <div  id={`${sectionName}-${device}-info-contact-container`}>
+          <a 
+            href={`mailto:${ email }`}
+            id={`${sectionName}-${device}-info-mailto`}
+            rel='noopener noreferrer'
+          >
+            { email }
+          </a>
+          <a 
+            href={`tel:${ tel }`}
+            id={`${sectionName}-${device}-info-tel`}
+            rel='noopener noreferrer'
+          >
+            { telAsString }
+          </a>
+        </div>
         <div id={`${sectionName}-${device}-social-media`}>
           <a 
             href={ linkedIn }

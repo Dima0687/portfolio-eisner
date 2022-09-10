@@ -2,12 +2,13 @@
 import { useContext, useEffect, useState } from 'react';
 
 // css
+import './about.css';
 
 // portfolio data
-import portfolio from '../data/portfolioData';
+import portfolio from '../../data/portfolioData';
 
 // context
-import { LangContext } from '../context/LangContext';
+import { LangContext } from '../../context/LangContext';
 
 const About = ({ sectionName, device }) => {
   const { 
@@ -28,16 +29,18 @@ const About = ({ sectionName, device }) => {
 
   return (
     <>
-      <h2 id={`${sectionName}-${device}-heading`}> { heading } </h2>
-      <div id={`${sectionName}-${device}-text-container`}>
+      <h2 id={`${sectionName}-${device}-${lang}-heading`}> { heading } </h2>
+      <div id={`${sectionName}-${device}-${lang}-text-container`}>
         {
           aboutMe[lang].map( (text, i) => (
-            <p
-              key={i}
-              className={`${sectionName}-${device}-text`}
-            >
-              {text}
-            </p>
+            <div className={`${sectionName}-${device}-text-border`}>
+              <p
+                key={i}
+                className={`${sectionName}-${device}-${lang}-text`}
+              >
+                {text}
+              </p>
+            </div>
           ))
         }
       </div>

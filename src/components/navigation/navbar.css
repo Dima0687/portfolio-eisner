@@ -1,6 +1,6 @@
-#navbar-mobile .selected,
-#navbar-tablet .selected,
-#navbar-desktop .selected {
+#navbar-mobile .active,
+#navbar-tablet .active,
+#navbar-desktop .active {
   text-decoration: underline wavy var(--font-color, white);
 }
 
@@ -9,7 +9,7 @@
 #navbar-container-desktop {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr;
   height: 100%;
   gap: .25rem;
   font-size: var(--heading-size);
@@ -68,6 +68,17 @@
   justify-content: space-evenly;
   align-items: center;
   z-index: 1;
+  font-size: 1.6em;
+}
+
+#navbar-mobile a::first-letter,
+#navbar-tablet a::first-letter,
+#navbar-desktop a::first-letter {
+  text-transform: uppercase;
+}
+
+#navbar-mobile.ru {
+  font-size: 1.2em;
 }
 
 #navbar-tablet,
@@ -90,15 +101,21 @@
 #language-picker-desktop {
   grid-area: lang;
   position: static;
-  margin: 1rem 1rem;
-  border: none;
   background: transparent;
   outline: none;
   color: var(--font-color, white);
   width: fit-content;
   border: .1rem solid transparent;
   border-radius: .8rem;
-  height: 4rem;
+  height: 3rem;
+  align-self: center;
+  font-size: .8em;
+  cursor: pointer;
+}
+
+#language-picker-mobile {
+  margin: 1.8rem 0rem 4rem 2rem;
+  font-size: .9em;
 }
 
 #language-picker-mobile option,
@@ -114,6 +131,8 @@
   border: .1rem solid var(--font-color, white);
   border-radius: .8rem;
 }
+
+
 
 .menu-button,
 #language-picker-mobile {

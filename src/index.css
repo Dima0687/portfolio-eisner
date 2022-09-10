@@ -34,9 +34,12 @@ body, #root, #app {
   --secondary-color: #eef0fc;
   --button-clicked: #8592de;
   --font-color: #fff;
+  --welcome-background-img: rgba(36, 51, 74, 0.5);
   --welcome-text-shadow: #000;
+  --welcome-container-background: #4d4a4a90;
   --box-shadow-color1: rgba(0, 0, 0, .3);
   --box-shadow-color2: rgba(159, 157, 157, 0.55);
+  --about-odd-shadow-color: #1c286a;
   --heading-size: 2.2rem;
   --easy-to-read: 'Playfair Display';
   --anim-duration: 3.5s;

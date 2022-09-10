@@ -11,7 +11,7 @@ import Page from '../page/Page';
 
 
 // pages
-import Welcome from '../../pages/Welcome';
+import Welcome from '../../pages/welcome/Welcome';
 
 // context
 import { DeviceContextProvider } from '../../context/DeviceContext';
@@ -35,19 +35,6 @@ const App = () => {
                 <Page />
               </Main>
             }/>
-            {/* {
-              Object.keys(pages).map( pageName => {
-                const upperCasePageName = pageName[0].toUpperCase() + pageName.slice(1);
-                
-                return <Route
-                  key={pageName}
-                  path={`/${pageName}`} 
-                  element={
-                    {upperCasePageName}
-                  }
-                />
-              })
-            } */}
             <Route path='*' element={<h1 style={{
               width: '100%',
               color: "black"

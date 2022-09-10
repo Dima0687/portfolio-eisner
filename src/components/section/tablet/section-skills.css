@@ -30,7 +30,7 @@
   padding: .5rem;
   background-color: var(--primary-color);
   background: transparent;
-  box-shadow: .4rem .6rem 1.6rem 0 var(--box-shadow-color1),
+  box-shadow: .4rem .6rem 1.6rem 0 var(--box-shadow-color2),
     -.4rem -.4rem 1.4rem 0 var(--box-shadow-color2);
   border-radius: .4rem;
 }

@@ -2,12 +2,13 @@
 import { useContext, useEffect, useState } from 'react';
 
 // css
+import './skills.css';
 
 // portfolio data
-import portfolio from '../data/portfolioData';
+import portfolio from '../../data/portfolioData';
 
 // context
-import { LangContext } from '../context/LangContext';
+import { LangContext } from '../../context/LangContext';
 
 
 const Skills = ({ sectionName, device }) => {
@@ -25,7 +26,7 @@ const Skills = ({ sectionName, device }) => {
 
   return (
     <>
-      <h2 id={`${sectionName}-${device}-heading`}>{heading}</h2>
+      <h2 id={`${sectionName}-${device}-${lang}-heading`}>{heading}</h2>
       <div  id={`${sectionName}-${device}-container`}>
         {
           skills.map( skill => (

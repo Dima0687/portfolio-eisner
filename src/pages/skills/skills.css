@@ -1,0 +1,95 @@
+#skills-mobile,
+#skills-tablet,
+#skills-desktop {
+  background-color: var(--primary-color, #5569dc);
+  font-size: var(--heading-size);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#skills-mobile-en-heading,
+#skills-mobile-ger-heading,
+#skills-mobile-ru-heading,
+#skills-tablet-en-heading,
+#skills-tablet-ger-heading,
+#skills-tablet-ru-heading,
+#skills-desktop-en-heading,
+#skills-desktop-ger-heading,
+#skills-desktop-ru-heading {
+  justify-self: flex-start;
+  margin: 2rem 0 1rem;
+  font-size: 1.5em;
+  text-shadow: .4rem .4rem 0rem var(--about-odd-shadow-color);
+}
+
+#skills-mobile-ru-heading {
+  font-size: 1.41em;
+}
+
+#skills-mobile-en-heading::first-letter,
+#skills-mobile-ger-heading::first-letter,
+#skills-mobile-ru-heading::first-letter,
+#skills-tablet-en-heading::first-letter,
+#skills-tablet-ger-heading::first-letter,
+#skills-tablet-ru-heading::first-letter,
+#skills-desktop-en-heading::first-letter,
+#skills-desktop-ger-heading::first-letter,
+#skills-desktop-ru-heading::first-letter {
+  text-transform: capitalize;
+}
+
+#skills-mobile-container,
+#skills-tablet-container,
+#skills-desktop-container {
+  flex: 0 1 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-content: space-between;
+  overflow-y: scroll;
+  font-size: .6em;
+  padding: 2rem;
+}
+
+#skills-desktop-container,
+#skills-tablet-container {
+  gap: 2rem;
+}
+
+.skills-mobile-figure,
+.skills-tablet-figure,
+.skills-desktop-figure {
+  flex: 1 1 45%;
+  background-color: var(--font-color);
+  color: var(--primary-color);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: .5rem;
+  border-radius: .4rem;
+  box-shadow: .4rem .4rem .7rem var(--about-odd-shadow-color),
+  -.4rem -.4rem .7rem var(--about-odd-shadow-color),
+  inset .1rem .1rem .2rem var(--about-odd-shadow-color),
+  inset -.1rem -.1rem .2rem var(--about-odd-shadow-color);
+}
+
+.skills-tablet-figure {
+  height: 8rem;
+}
+
+.skills-desktop-figure {
+  height: 12.5rem;
+  flex: 1 1 20%;
+}
+
+.skills-mobile-figure h3,
+.skills-tablet-figure h3,
+.skills-desktop-figure h3 {
+  font-family: var(--easy-to-read);
+}
+
+.skills-tablet-figure h3,
+.skills-desktop-figure h3 {
+  font-size: 1.6em;
+}

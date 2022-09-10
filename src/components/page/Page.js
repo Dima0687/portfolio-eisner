@@ -3,11 +3,11 @@ import { useContext } from "react";
 import { useParams } from "react-router-dom";
 
 // pages
-import Welcome from "../../pages/Welcome";
-import About from '../../pages/About'
-import Skills from '../../pages/Skills'
-import Projects from '../../pages/Projects';
-import Contact from "../../pages/Contact";
+import Welcome from "../../pages/welcome/Welcome";
+import About from '../../pages/about/About';
+import Skills from '../../pages//skills/Skills';
+import Projects from '../../pages/projects/Projects';
+import Contact from "../../pages/contact/Contact";
 
 // context
 import { DeviceContext } from "../../context/DeviceContext";

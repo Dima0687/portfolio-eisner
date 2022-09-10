@@ -1,17 +1,21 @@
 // hooks
 import { useState, useEffect, useContext } from "react";
 
+// icons
+import { TbWorld } from 'react-icons/tb';
+import { FaGithub } from 'react-icons/fa';
+
 // library
 import { Octokit } from "octokit";
 
-
 // portfolio data
-import portfolio from "../data/portfolioData";
+import portfolio from "../../data/portfolioData";
 
 // css
+import './projects.css';
 
 // context
-import { LangContext } from "../context/LangContext";
+import { LangContext } from "../../context/LangContext";
 
 const Projects = ({ sectionName , device }) => {
   const {
@@ -96,8 +100,8 @@ const Projects = ({ sectionName , device }) => {
 
   return (
     <>
-      <h2 id={`${sectionName}-${device}-heading`}>{heading}</h2>
-      <div className={`${sectionName}-${device}-btn-container`}>
+      <h2 id={`${sectionName}-${device}-${lang}-heading`}>{heading}</h2>
+      <div className={`${sectionName}-${device}-${lang}-btn-container`}>
         {projectsCat.map((category) => (
           <button 
             key={category} 
@@ -109,13 +113,13 @@ const Projects = ({ sectionName , device }) => {
           </button>
         ))}
       </div>
-      <div className={`${sectionName}-${device}-btn-container`}>
+      <div className={`${sectionName}-${device}-${lang}-btn-container`}>
         {techCat.map((tech) => (
           <button
             key={tech}
             id={tech}
             className={`${sectionName}-${device}-buttons`}
-            onClick={e => setTechFilter(e.target.innerHTML)}
+            onClick={e => setTechFilter(e.target.innerHTML.toLowerCase())}
           >
             {tech}
           </button>
@@ -125,7 +129,17 @@ const Projects = ({ sectionName , device }) => {
         { projects.length > 0 ? projects.map((project) => {
           const splittedFullname = project.full_name.split("/");
           const [_name, _project] = splittedFullname;
-          
+          const projectName = project.name.split('-').join(' ').toLowerCase();
+          const description = truncateText(project.description, 100);
+
+          function truncateText(word, length){
+            if(word.length <= length) {
+              return word
+            }
+
+            return `${word.slice(0, length)} \u2026`
+          }
+
           return (
             <figure key={project.name} className={`${sectionName}-${device}-figure`}>
               <img 
@@ -134,15 +148,15 @@ const Projects = ({ sectionName , device }) => {
                 className={`${sectionName}-${device}-figure-img`} 
               />
               <figcaption className={`${sectionName}-${device}-figure-text`}>
-                <h3>{project.name}</h3>
-                <p>{project.description}</p>
-                <div className={`${sectionName}-figure-button-container`}>
+                <h3>{projectName}</h3>
+                <p>{description}</p>
+                <div className={`${sectionName}-figure-btn-container`}>
                   <a
                     href={project.html_url}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    github
+                    <FaGithub />
                   </a>
                   <a
                     href={
@@ -153,7 +167,7 @@ const Projects = ({ sectionName , device }) => {
                     target='_blank'
                     rel="noopener noreferrer"
                   >
-                    deployment
+                     <TbWorld />
                   </a>
                 </div>
               </figcaption>

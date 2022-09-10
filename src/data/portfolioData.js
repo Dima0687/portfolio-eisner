@@ -132,12 +132,12 @@ const identifiers = {
   welcome: {
     en: 'welcome',
     ger: 'willkommen',
-    ru: 'добро-пожаловать'
+    ru: 'добро пожаловать'
   },
   about: {
     en: 'about',
     ger: 'über mich',
-    ru: 'обо-мне'
+    ru: 'обо мне'
   },
   skills: {
     en: 'skills',
@@ -158,9 +158,9 @@ const identifiers = {
 
 const whoAmI = {
   en: [
-    'employee',
-    'web developer',
-    'collegue'
+    'Employee',
+    'Web developer',
+    'Collegue'
   ],
   ger: [
     'Mitarbeiter',
@@ -168,9 +168,9 @@ const whoAmI = {
     'Kollege'
   ],
   ru: [
-    "Сотрудник",
-    "веб-разработчик",
-    "коллега"
+    "Cотрудник",
+    "Веб-разработчик",
+    "Коллега"
   ]
 }
 
@@ -182,8 +182,8 @@ const welcomeText = {
   },
   name,
   sentencePart1: {
-    en: 'your new',
-    ger: 'dein neuer',
+    en: 'Your new',
+    ger: 'Dein neuer',
     ru: 'Твой новый'
   },
   sentencePart2: { 
@@ -288,8 +288,8 @@ const projectCategories = {
 
 const techInternational = [
   "react",
-  "html",
-  "javascript",
+  "html5",
+  "javaScript",
   "express"
 ]
 
