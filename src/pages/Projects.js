@@ -1,76 +1,80 @@
-// library
-import { Octokit } from "octokit";
-
 // hooks
 import { useState, useEffect, useContext } from "react";
 
+// library
+import { Octokit } from "octokit";
+
+
+// portfolio data
+import portfolio from "../data/portfolioData";
+
 // css
-import "./mobile/section-project.css";
-import './tablet/section-project.css';
-import './desktop/section-project.css';
 
 // context
-import { LangContext } from "../../context/LangContext";
+import { LangContext } from "../context/LangContext";
 
-const Profile = ({ id, device, profile }) => {
-  const { fixUmlaut } = useContext(LangContext);
+const Projects = ({ sectionName , device }) => {
+  const {
+    identifiers,
+    projectCategories,
+    specialCaseProjectsObj,
+    techCategory,
+    noProjects
+  } = portfolio;
+  const { lang } = useContext(LangContext);
+  const [heading, setHeading] = useState("");
   const [projectsCat, setProjectsCat] = useState([]);
   const [techCat, setTechCat] = useState([]);
   const [projects, setProjects] = useState([]);
-  const [heading, setHeading] = useState("");
-  const [projectState, setProjectState] = useState('all');
-  const [techState, setTechState] = useState('all');
+  const [projectFilter, setProjectFilter] = useState('all');
+  const [techFilter, setTechFilter] = useState('all');
 
   useEffect(() => {
-    setProjectsCat(profile.projectCategories);
-    setTechCat(profile.techCategory);
-
+    setProjectsCat(projectCategories[lang]);
+    setTechCat(techCategory[lang]);
     const octokit = new Octokit({
       auth: process.env.REACT_APP_GITHUB_ACCESS_TOKEN,
     });
+
+    const projectConditionOwn = projectFilter === 'my own' || projectFilter === 'eigene' || projectFilter === 'собственные';
+    const projectConditionLearn = projectFilter === 'by learning' || projectFilter === 'durchs lernen' || projectFilter === 'через обучение';
+    const techCondition = techFilter === 'all' || techFilter === 'alle' || techFilter === 'все';
+
     (async () => {
       try {
         const data = (await octokit.request(`GET /user/repos`, {})).data;
 
         let filteredData;
         switch(true) {
-          case ( 
-            projectState === 'my own' ||
-            projectState === 'eigene' ||
-            projectState === 'собственные'
-          ): 
+          case ( projectConditionOwn ): 
           filteredData = data.filter( d => {
-            if(techState === 'all'){
+            if( techCondition ){
               return d.topics.includes('own');
             } else {
-              return d.topics.includes('own') && d.topics.includes(techState);
+              return d.topics.includes('own') && d.topics.includes(techFilter);
             }
           });
           setProjects( prev => filteredData);
 
           break;
-          case (
-            projectState === 'by learning' ||
-            projectState === 'durchs lernen' ||
-            projectState === 'через обучение'
-          ):
+          case ( projectConditionLearn ):
           filteredData = data.filter( d => {
-            if(techState === 'all'){
+            if( techCondition ){
               return  d.topics.includes('tutorial');
             } else {
-              return d.topics.includes('tutorial') && d.topics.includes(techState);
+              return d.topics.includes('tutorial') && d.topics.includes(techFilter);
             }
           });
           setProjects( prev => filteredData);
           break;
           default:
           filteredData = data.filter( d => {
-            if(techState === 'all'){
+            if( techCondition ){
               return (d.topics.includes('tutorial')) ||  (d.topics.includes('own'));
             } else {
               return ( 
-                ( d.topics.includes('tutorial') && d.topics.includes(techState) ) ||
-                ( d.topics.includes('own') && d.topics.includes(techState) )
+                ( d.topics.includes('tutorial') && d.topics.includes(techFilter) ) ||
+                ( d.topics.includes('own') && d.topics.includes(techFilter) )
                 )
             }
           })
@@ -81,56 +85,58 @@ const Profile = ({ id, device, profile }) => {
       }
     })();
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [projectState, techState]);
+  }, [projectFilter, techFilter]);
 
   useEffect(() => {
-    setHeading(fixUmlaut(id)[0].toUpperCase() + fixUmlaut(id).slice(1));
+    setHeading(
+      identifiers[sectionName][lang]
+    );
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [id]);
+  }, [lang]);
 
   return (
     <>
-      <h2 id={`${id}-${device}-heading`}>{heading}</h2>
-      <div className={`${id}-${device}-btn-container`}>
+      <h2 id={`${sectionName}-${device}-heading`}>{heading}</h2>
+      <div className={`${sectionName}-${device}-btn-container`}>
         {projectsCat.map((category) => (
           <button 
             key={category} 
             id={category} 
-            className={`${id}-${device}-buttons`}
-            onClick={e => setProjectState(e.target.innerHTML)}
+            className={`${sectionName}-${device}-buttons`}
+            onClick={e => setProjectFilter(e.target.innerHTML)}
           >
             {category}
           </button>
         ))}
       </div>
-      <div className={`${id}-${device}-btn-container`}>
+      <div className={`${sectionName}-${device}-btn-container`}>
         {techCat.map((tech) => (
           <button
             key={tech}
             id={tech}
-            className={`${id}-${device}-buttons`}
-            onClick={e => setTechState(e.target.innerHTML)}
+            className={`${sectionName}-${device}-buttons`}
+            onClick={e => setTechFilter(e.target.innerHTML)}
           >
             {tech}
           </button>
         ))}
       </div>
-      <div id={`${id}-${device}-container`}>
+      <div id={`${sectionName}-${device}-container`}>
         { projects.length > 0 ? projects.map((project) => {
           const splittedFullname = project.full_name.split("/");
           const [_name, _project] = splittedFullname;
-
+          
           return (
-            <figure key={project.name} className={`${id}-${device}-figure`}>
+            <figure key={project.name} className={`${sectionName}-${device}-figure`}>
               <img 
                 src={`https://raw.githubusercontent.com/${_name}/${_project}/main/${_project}.png`}
                 alt="" 
-                className={`${id}-${device}-figure-img`} 
+                className={`${sectionName}-${device}-figure-img`} 
               />
-              <figcaption className={`${id}-${device}-figure-text`}>
+              <figcaption className={`${sectionName}-${device}-figure-text`}>
                 <h3>{project.name}</h3>
                 <p>{project.description}</p>
-                <div className={`${id}-figure-button-container`}>
+                <div className={`${sectionName}-figure-button-container`}>
                   <a
                     href={project.html_url}
                     target="_blank"
@@ -140,8 +146,8 @@ const Profile = ({ id, device, profile }) => {
                   </a>
                   <a
                     href={
-                      /* specialCaseProjects.includes(_project) ? 
-                      specialCaseProjectsObj[_project] : */
+                      specialCaseProjectsObj.hasOwnProperty(_project) ? 
+                      specialCaseProjectsObj[_project] :
                       `https://${_name.toLowerCase()}.github.io/${_project}`
                     }
                     target='_blank'
@@ -154,12 +160,11 @@ const Profile = ({ id, device, profile }) => {
             </figure>
           );
         })
-        : <p id='empty-projects'>{profile.noProjects}</p>
+        : <p id='empty-projects'>{noProjects[lang]}</p>
       }
       </div>
-      <div id={`filler-${device}`}></div>
     </>
   );
 };
 
-export default Profile;
+export default Projects;

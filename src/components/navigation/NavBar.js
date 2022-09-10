@@ -9,19 +9,19 @@ import { VscChromeClose } from 'react-icons/vsc';
 import './navbar.css';
 
 // component
-import Link from '../links/Link';
+import CustomLink from '../links/CustomLink';
 
 // context
 import { DeviceContext } from '../../context/DeviceContext';
 import { LangContext } from '../../context/LangContext';
 
-// util
-import { mediaQuerys } from '../../data/mediaQuery';
+// portfolio data
+import portfolio from '../../data/portfolioData';
 
 const NavBar = () => {
+  const { mediaQuerys, identifiers:linkNames } = portfolio;
   const { device, setDevice } = useContext(DeviceContext);
-  const { language, setLanguage, filteredProfile:profile } = useContext(LangContext);
-  const [nameOfActiveLink, setNameOfActiveLink] = useState('');
+  const { lang, setLang } = useContext(LangContext);
   const [show, setShow] = useState(false);
   const burgerMenu = useRef();
 
@@ -34,7 +34,7 @@ const NavBar = () => {
   }
 
   function handleSelect(e){
-    setLanguage(e.target.value);
+    setLang(e.target.value);
   }
 
   function handleResize(){
@@ -69,16 +69,13 @@ const NavBar = () => {
     <div id={`navbar-container-${device}`}>
       <nav id={`navbar-${device}`} ref={burgerMenu}>
         { 
-          profile?.identifiers.map( id => <Link
-            key={ id }
-            id={ id }
-            lang={language}
-            state={{ 
-              nameOfActiveLink, 
-              setNameOfActiveLink, 
-              setShow 
-            }}
+          Object.keys(linkNames).map( link => <CustomLink
+            key={ link }
+            link={ link }
             device={device}
+            lang={lang}
+            linkNames={linkNames}
+            setShow={ setShow }
           />)
         }
       </nav>
@@ -94,7 +91,7 @@ const NavBar = () => {
       }
       <select 
         id={`language-picker-${device}`}
-        value={language}
+        value={lang}
         onChange={ e => handleSelect(e)}
       >
           <option 

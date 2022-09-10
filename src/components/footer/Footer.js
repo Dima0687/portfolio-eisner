@@ -5,13 +5,14 @@ import './footer.css';
 import { useContext, useState, useEffect } from 'react'; 
 
 // context
-import { LangContext } from '../../context/LangContext';
 import { DeviceContext } from '../../context/DeviceContext';
 
+// portfolio data
+import portfolio from '../../data/portfolioData';
+
 const Footer = () => {
-  const { filteredProfile: profile } = useContext(LangContext);
+  const { copy:sinceYear, welcomeText } = portfolio;
   const { device } = useContext(DeviceContext);
-  const sinceYear = profile.copy;
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
   const [showYear, setShowYear] = useState(sinceYear);
 
@@ -32,7 +33,7 @@ const Footer = () => {
 
   return ( 
     <footer>
-      <h3 id={`footer-h3-${device}`}>&copy; {showYear} {profile.welcomeText.name}</h3>
+      <h3 id={`footer-h3-${device}`}>&copy; {showYear} {welcomeText.name}</h3>
     </footer>
   );
 }

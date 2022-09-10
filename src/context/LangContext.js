@@ -1,36 +1,12 @@
-import { useState, useEffect } from "react";
-import { createContext } from "react";
-import { profile } from "../data/profileData";
-
+import { useState, createContext  } from "react";
 export const LangContext = createContext(); 
 export const LangContextProvider = ({ children }) => {
-  const [language, setLanguage] = useState('en');
-  const [filteredProfile, setFilteredProfile] = useState(profile[language]);
-  
-  function fixUmlaut(id) {
-    if(language === 'ger'){
-      const aUmlaut = new RegExp(/ae/gi);
-      const uUmlaut = new RegExp(/ue/gi);
-      let gerId = id.replace(aUmlaut, 'ä');
-      gerId = gerId.replace(uUmlaut, 'ü');
-      gerId = gerId.split('-').join(' ');
-      return gerId
-    } else if( language === 'ru'){
-      const ruId = id.split('-').join(' ');
-      return ruId
-    } else {
-      return id
-    }
-  }
-  useEffect(() => {
-    setFilteredProfile(profile[language]);
-  }, [language]);
+  const [lang, setLang] = useState('en');
+
   return (
     <LangContext.Provider value={{ 
-      language, 
-      setLanguage,
-      filteredProfile,
-      fixUmlaut
+      lang, 
+      setLang
     }}>
       { children }
     </LangContext.Provider>

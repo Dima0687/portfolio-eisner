@@ -1,13 +1,17 @@
 // hooks
 import { useContext, useState, useEffect } from 'react';
 
+// portfolio data
+import portfolio from '../../data/portfolioData';
+
 // context
 import { LangContext } from '../../context/LangContext';
 
 const WhoAmI = () => {
-  const { language, filteredProfile: profile } = useContext(LangContext);
+  const { lang } = useContext(LangContext);
+  const { whoAmI } = portfolio;
   const [num, setNum] = useState(0);
-  const [whoAmI, setWhoAmI] = useState(profile?.whoAmI[num]);
+  const [whoAmIWord, setWhoAmIWord] = useState(whoAmI[lang][num]);
   // eslint-disable-next-line no-unused-vars
   const [timeInMs, setTimeInMs] = useState(3500);
 
@@ -16,21 +20,21 @@ const WhoAmI = () => {
     root.style.setProperty('--anim-duration', `${timeInMs/1000}s`);
     
     let interval = null;
-    if( num < profile?.whoAmI.length){
+    if( num < whoAmI[lang].length){
       interval = setInterval(() => {
         setNum(num => num + 1);
-      }, timeInMs);
+      }, timeInMs); /* This is why i set the time in ms */
     } else {
       setNum(0);
     }
 
-    setWhoAmI(prev => profile?.whoAmI[num]);
+    setWhoAmIWord(prev => whoAmI[lang][num]);
     return () => clearInterval(interval);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [num, language]);
+  }, [num, lang]);
 
   return (
-    <span id="who-am-i"> {whoAmI} </span>
+    <span id="who-am-i"> {whoAmIWord} </span>
   );
 }
  
