@@ -34,8 +34,7 @@ const Projects = ({ sectionName , device }) => {
   const [techFilter, setTechFilter] = useState('all');
 
   useEffect(() => {
-    setProjectsCat(projectCategories[lang]);
-    setTechCat(techCategory[lang]);
+   
     const octokit = new Octokit({
       auth: process.env.REACT_APP_GITHUB_ACCESS_TOKEN,
     });
@@ -92,6 +91,8 @@ const Projects = ({ sectionName , device }) => {
   }, [projectFilter, techFilter]);
 
   useEffect(() => {
+    setProjectsCat(projectCategories[lang]);
+    setTechCat(techCategory[lang]);
     setHeading(
       identifiers[sectionName][lang]
     );
