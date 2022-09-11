@@ -1,6 +1,9 @@
 // hooks
 import { useState, useEffect, useRef, useContext } from 'react';
 
+// api
+import { Link } from 'react-router-dom';
+
 // icons
 import { FaBars } from 'react-icons/fa';
 import { VscChromeClose } from 'react-icons/vsc';
@@ -67,7 +70,11 @@ const NavBar = () => {
 
   return (
     <div id={`navbar-container-${device}`}>
-      <nav id={`navbar-${device}`} className={`${lang}`} ref={burgerMenu}>
+      <nav 
+        id={`navbar-${device}`} 
+        className={`${lang}`} 
+        ref={burgerMenu}
+      >
         { 
           Object.keys(linkNames).map( link => <CustomLink
             key={ link }
@@ -82,7 +89,10 @@ const NavBar = () => {
       {
         device === 'mobile' && 
         !show &&
+        <>
         <FaBars className="menu-button" onClick={e => setShow(true)}/>
+        <Link id='landing-page-link' to='/welcome' />
+        </>
       }
       {
         device === 'mobile' && 

@@ -33,7 +33,10 @@ const About = ({ sectionName, device }) => {
       <div id={`${sectionName}-${device}-${lang}-text-container`}>
         {
           aboutMe[lang].map( (text, i) => (
-            <div className={`${sectionName}-${device}-text-border`}>
+            <div 
+              className={`${sectionName}-${device}-text-border`}
+              key={text}
+            >
               <p
                 key={i}
                 className={`${sectionName}-${device}-${lang}-text`}

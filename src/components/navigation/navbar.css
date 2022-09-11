@@ -17,7 +17,12 @@
 
 #navbar-container-mobile{
   grid-template-areas:
-  "lang . . . . . . . . . . burger";
+  "lang link link link link link link link link link . burger";
+}
+
+#landing-page-link {
+  grid-area: link;
+  z-index: 1;
 }
 
 #navbar-container-tablet,
@@ -58,6 +63,7 @@
   color: var(--font-color, white);
   font-size: 3rem;
   z-index: 0;
+  text-shadow: .2rem .2rem .4rem var(--about-odd-shadow-color);
 }
 
 #navbar-mobile {
