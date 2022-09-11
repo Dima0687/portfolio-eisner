@@ -48,8 +48,6 @@ const Projects = ({ sectionName , device }) => {
         btn.classList.remove('focus');
       }
     }
-    
-    console.log(e.target.id === e.target.innerHTML);
   }
 
   useEffect(() => {
@@ -127,7 +125,13 @@ const Projects = ({ sectionName , device }) => {
           <button 
             key={category} 
             id={category.toLowerCase()} 
-            className={`${sectionName}-${device}-buttons  ${category === 'all' ? 'focus': null }`}
+            className={
+              `${sectionName}-${device}-buttons ${
+                category === 'all' || category === 'alle' || category === 'все' ? 
+                'focus': 
+                null 
+              }`
+            }
             onClick={ e => handleClick(e, 'category') }
           >
             {category}
@@ -140,7 +144,13 @@ const Projects = ({ sectionName , device }) => {
           <button
             key={tech}
             id={tech.toLowerCase()}
-            className={`${sectionName}-${device}-buttons ${tech === 'all' ? 'focus': null }`}
+            className={
+              `${sectionName}-${device}-buttons ${
+                tech === 'all' || tech === 'alle' || tech === 'все'  ? 
+                'focus': 
+                null 
+              }`
+            }
             onClick={ e => handleClick(e, 'stack') }
           >
             {tech}
