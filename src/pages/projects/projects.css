@@ -64,11 +64,17 @@
 .projects-desktop-ger-btn-container,
 .projects-desktop-ru-btn-container {
   width: 100%;
+  padding: .5rem;
   display: flex;
-  gap: 1rem;
   justify-content: center;
   align-items: center;
-  padding: .5rem;
+  gap: 1.5rem;
+}
+
+.projects-mobile-en-btn-container,
+.projects-mobile-ger-btn-container,
+.projects-mobile-ru-btn-container {
+  gap: .8rem;
 }
 
 .projects-mobile-buttons,
@@ -77,17 +83,23 @@
   padding: .5rem;
   color: var(--font-color);
   background-color: var(--primary-color);
-  border: none;
   font-size: .8em;
   box-shadow: .2rem .2rem .6rem var(--about-odd-shadow-color),
     -.2rem -.2rem .6rem var(--about-odd-shadow-color);
-}
-
-.projects-mobile-buttons,
-.projects-tablet-buttons,
-.projects-desktop-buttons {
   font-family: var(--easy-to-read);
   cursor: pointer;
+  border: .1rem solid transparent;
+  border-radius: .5rem;
+}
+
+
+.projects-mobile-buttons.focus,
+.projects-tablet-buttons.focus,
+.projects-desktop-buttons.focus {
+  background-color: var(--font-color);
+  color: var(--primary-color);
+  box-shadow: .2rem .2rem .6rem var(--primary-color),
+    -.2rem -.2rem .6rem var(--primary-color);
 }
 
 #projects-mobile-container,

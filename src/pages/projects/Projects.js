@@ -32,6 +32,25 @@ const Projects = ({ sectionName , device }) => {
   const [projects, setProjects] = useState([]);
   const [projectFilter, setProjectFilter] = useState('all');
   const [techFilter, setTechFilter] = useState('all');
+  function handleClick(e, filter){
+    if(filter === 'category'){
+      setProjectFilter(prev => e.target.innerHTML.toLowerCase());
+    } else if(filter === 'stack'){
+      setTechFilter(prev => e.target.innerHTML.toLowerCase());
+    }
+
+    const btnCollection = e.target.parentNode.children;
+
+    for(let btn of btnCollection) {
+      if(btn.id === e.target.innerHTML.toLowerCase()){
+        btn.classList.add('focus');
+      } else {
+        btn.classList.remove('focus');
+      }
+    }
+    
+    console.log(e.target.id === e.target.innerHTML);
+  }
 
   useEffect(() => {
    
@@ -102,25 +121,27 @@ const Projects = ({ sectionName , device }) => {
   return (
     <>
       <h2 id={`${sectionName}-${device}-${lang}-heading`}>{heading}</h2>
+      {/* Categories */}
       <div className={`${sectionName}-${device}-${lang}-btn-container`}>
         {projectsCat.map((category) => (
           <button 
             key={category} 
-            id={category} 
-            className={`${sectionName}-${device}-buttons`}
-            onClick={e => setProjectFilter(e.target.innerHTML)}
+            id={category.toLowerCase()} 
+            className={`${sectionName}-${device}-buttons  ${category === 'all' ? 'focus': null }`}
+            onClick={ e => handleClick(e, 'category') }
           >
             {category}
           </button>
         ))}
       </div>
+        {/* Stack */}
       <div className={`${sectionName}-${device}-${lang}-btn-container`}>
         {techCat.map((tech) => (
           <button
             key={tech}
-            id={tech}
-            className={`${sectionName}-${device}-buttons`}
-            onClick={e => setTechFilter(e.target.innerHTML.toLowerCase())}
+            id={tech.toLowerCase()}
+            className={`${sectionName}-${device}-buttons ${tech === 'all' ? 'focus': null }`}
+            onClick={ e => handleClick(e, 'stack') }
           >
             {tech}
           </button>

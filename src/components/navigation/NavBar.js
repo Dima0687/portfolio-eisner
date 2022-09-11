@@ -93,6 +93,7 @@ const NavBar = () => {
         id={`language-picker-${device}`}
         value={lang}
         onChange={ e => handleSelect(e)}
+        name='language'
       >
           <option 
             value="en"
