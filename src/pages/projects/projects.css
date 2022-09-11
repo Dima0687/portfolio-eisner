@@ -54,15 +54,15 @@
   text-transform: capitalize;
 }
 
-.projects-mobile-en-btn-container,
-.projects-mobile-ger-btn-container,
-.projects-mobile-ru-btn-container,
-.projects-tablet-en-btn-container,
-.projects-tablet-ger-btn-container,
-.projects-tablet-ru-btn-container,
-.projects-desktop-en-btn-container,
-.projects-desktop-ger-btn-container,
-.projects-desktop-ru-btn-container {
+.projects-mobile-btn-container,
+.projects-mobile-btn-container,
+.projects-mobile-btn-container,
+.projects-tablet-btn-container,
+.projects-tablet-btn-container,
+.projects-tablet-btn-container,
+.projects-desktop-btn-container,
+.projects-desktop-btn-container,
+.projects-desktop-btn-container {
   width: 100%;
   padding: .5rem;
   display: flex;
@@ -71,9 +71,9 @@
   gap: 1.5rem;
 }
 
-.projects-mobile-en-btn-container,
-.projects-mobile-ger-btn-container,
-.projects-mobile-ru-btn-container {
+.projects-mobile-btn-container,
+.projects-mobile-btn-container,
+.projects-mobile-btn-container {
   gap: .8rem;
 }
 

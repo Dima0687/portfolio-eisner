@@ -315,6 +315,25 @@ const specialCaseProjectsObj = {
   "final-projekt": "https://eventlookup-frontend.onrender.com/"
 }
 
+const filterFor = {
+  all: {
+    compare: 'all',
+    query: 'all'
+  }, 
+  learn: {
+    compare: 'by-learning',
+    query: 'tutorial'
+  },
+  own: {
+    compare: 'my-own',
+    query: 'own'
+  },
+}
+
+const requestFromGithub = {
+  repos: '/user/repos'
+}
+
 const portfolio = {
   identifiers,
   whoAmI,
@@ -329,7 +348,9 @@ const portfolio = {
   noProjects,
   mediaQuerys,
   copy,
-  pdfUrl
+  pdfUrl,
+  filterFor,
+  requestFromGithub
 }
 
 export default portfolio
