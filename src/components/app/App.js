@@ -7,7 +7,6 @@ import './app.css';
 import Header from '../header/Header';
 import Main from '../main/Main';
 import Footer from '../footer/Footer';
-import Page from '../page/Page';
 
 // context
 import { DeviceContextProvider } from '../../context/DeviceContext';
@@ -22,11 +21,7 @@ const App = () => {
           <Header />
           <Routes>
             <Route path='/' element={<Navigate to="/welcome" replace />}/>
-            <Route path='/:page' element={
-              <Main>
-                <Page />
-              </Main>
-            }/>
+            <Route path='/:page' element={<Main />}/>
             <Route path='*' element={<h1 style={{
               width: '100%',
               color: "black"

@@ -1,6 +1,5 @@
 // hooks
 import { useContext } from "react";
-import { useParams } from "react-router-dom";
 
 // pages
 import Welcome from "../../pages/welcome/Welcome";
@@ -12,9 +11,8 @@ import Contact from "../../pages/contact/Contact";
 // context
 import { DeviceContext } from "../../context/DeviceContext";
 
-const Page = () => {
+const Page = ({ page }) => {
   const { device } = useContext(DeviceContext);
-  const { page } = useParams();
   const pageName = page[0].toUpperCase() + page.slice(1);
   const queue = [ 
     <Welcome 
