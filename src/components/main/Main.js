@@ -11,7 +11,7 @@ import { DeviceContext } from '../../context/DeviceContext';
 function Main({ children }) {
   const { device } = useContext(DeviceContext);
   const { page:sectionName } = useParams();
-
+  console.log('main', sectionName);
   return (
     <main className="main">
       <section id={`${sectionName}-${device}`}>
