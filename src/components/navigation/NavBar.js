@@ -70,7 +70,6 @@ const NavBar = () => {
 
   return (
     <div id={`navbar-container-${device}`}>
-      {console.log(device)}
       <nav 
         id={`navbar-${device}`} 
         className={`${lang}`} 

@@ -2,7 +2,7 @@
 import { useContext } from 'react';
 
 // components
-import WhoAmI  from '../../components/rotatingWords/WhoAmI';
+import WhoAmI  from '../../components/rotating-words/WhoAmI';
 import Contact from '../contact/Contact';
 
 // data

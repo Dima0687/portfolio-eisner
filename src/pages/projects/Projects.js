@@ -7,7 +7,7 @@ import {
 } from 'react';
 
 // components
-import ButtonContainer from '../../components/btnContainer/ButtonContainer';
+import ButtonContainer from '../../components/btn-container/ButtonContainer';
 import Figure from '../../components/figure/Figure';
 
 // library
