@@ -1,5 +1,5 @@
 // hooks
-import { useContext, useRef } from "react";
+import { useContext } from "react";
 
 // pages
 import Welcome from "../../pages/welcome/Welcome";
@@ -12,7 +12,6 @@ import Contact from "../../pages/contact/Contact";
 import { DeviceContext } from "../../context/DeviceContext";
 
 const Page = ({ page }) => {
-  const about = useRef();
   const { device } = useContext(DeviceContext);
   const pageName = page[0].toUpperCase() + page.slice(1);
   const queue = [ 
@@ -23,7 +22,6 @@ const Page = ({ page }) => {
     <About 
       sectionName={page}
       device={device}
-      ref={about}
     />, 
     <Skills 
       sectionName={page}
@@ -40,9 +38,9 @@ const Page = ({ page }) => {
   ];
 
   console.log(queue);
-  console.log(queue.find( p => p.ref === pageName ));
+  console.log(queue.find( p => p.props.sectionName === page));
   
-  return queue.find( p => p.type.name === pageName );
+  return queue.find( p => p.props.sectionName === page );
 }
  
 export default Page;
