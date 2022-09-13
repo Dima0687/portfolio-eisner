@@ -38,6 +38,7 @@ const Page = () => {
       device={device}
     /> 
   ];
+  console.log(queue.find( p => p.type.name === pageName ));
   
   return queue.find( p => p.type.name === pageName );
 }

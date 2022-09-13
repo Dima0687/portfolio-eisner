@@ -17,7 +17,6 @@ const App = () => {
   
   return ( 
     <div id='app'>
-      {console.log( 'app', <Page/>)}
       <LangContextProvider>
         <DeviceContextProvider>
           <Header />
