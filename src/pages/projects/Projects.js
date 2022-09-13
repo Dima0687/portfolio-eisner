@@ -64,7 +64,6 @@ const Projects = ({ sectionName, device }) => {
   }
 
   useEffect(() => {
-
     const octokit = new Octokit({
       auth: process.env.REACT_APP_GITHUB_ACCESS_TOKEN
     });
@@ -160,7 +159,7 @@ const Projects = ({ sectionName, device }) => {
             setProjects( prev => filteredGithubRepos);
         }
       } catch (error) {
-        console.error(error.status, error);
+        console.error(error);
       }
     })()
   // eslint-disable-next-line react-hooks/exhaustive-deps

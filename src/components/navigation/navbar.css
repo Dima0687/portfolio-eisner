@@ -58,12 +58,12 @@
 #navbar-container-mobile::after {
   content: "Portfolio";
   position: absolute;
-  top: 1.3rem;
+  top: 1rem;
   left: 38%;
   color: var(--font-color, white);
-  font-size: 3rem;
+  font-size: 1.4em;
   z-index: 0;
-  text-shadow: .2rem .2rem .4rem var(--about-odd-shadow-color);
+  text-shadow: .2rem .2rem 0 var(--about-odd-shadow-color);
 }
 
 #navbar-mobile {
@@ -98,7 +98,7 @@
 .menu-button {
   grid-area: burger;
   font-size: var(--heading-size);
-  margin: 2rem 1rem;
+  margin: auto 1rem auto 0;
   color: var(--font-color, white);
 }
 
@@ -120,7 +120,7 @@
 }
 
 #language-picker-mobile {
-  margin: 1.8rem 0rem 4rem 2rem;
+  margin: auto 0 auto 1rem;
   font-size: .9em;
 }
 

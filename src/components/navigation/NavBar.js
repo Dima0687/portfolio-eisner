@@ -91,7 +91,7 @@ const NavBar = () => {
         !show &&
         <>
         <FaBars className="menu-button" onClick={e => setShow(true)}/>
-        <Link id='landing-page-link' to='/welcome' />
+        <Link id='landing-page-link' to={ `/${Object.keys(linkNames)[0]}`}/>
         </>
       }
       {

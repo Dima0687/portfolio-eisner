@@ -30,14 +30,30 @@ const address = {
 }
 
 const info = {
-  tel: +4915150470411,
-  telAsString: '(+49)151/504 704 11',
-  email: 'eis0687.dietmar@gmail.com',
+  tel: {
+    prefixTel: '15194+',
+    firstThree: '405',
+    middleThree: '407',
+    lastTwo: '11'
+  },
+  email: {
+    first: 'eis0687' ,
+    last: 'dietmar',
+    at: '64',
+    provider: 'gmail',
+    domain: 'com'
+  },
   linkedIn: 'https://www.linkedin.com/in/dietmar-eisner/',
   github: 'https://github.com/Dima0687',
   facebook: '',
   twitter: '',
   xing: ''
+}
+
+const click = {
+  en: 'click here for reveal the contact information',
+  ger: 'klicke hier, um die Kontaktinformationen anzuzeigen',
+  ru: 'нажми здесь для просмотра контактной информации'
 }
 
 const fontSize = '2.5rem';
@@ -199,7 +215,57 @@ const contact = {
     ger: 'Ich freue mich von dir zu hören.',
     ru: 'Я с нетерпением жду ответа от тебя.'
   },
-  info
+  info,
+  formInputData: {
+    en: {
+      name: 'name*:',
+      company: 'company:',
+      email: 'e-mail*:',
+      message: 'message*:',
+      pHolder: {
+        name: 'your name...',
+        company: 'your company...',
+        email: 'your e-mail...',
+        message: 'your message...'
+      },
+      submit: {
+        send: 'sending...',
+        initial: 'submit'
+      }
+    },
+    ger: {
+      name: 'name*:',
+      company: 'unternehmen:',
+      email: 'e-mail*:',
+      message: 'nachricht*:',
+      pHolder: {
+        name: 'dein name...',
+        company: 'dein unternehmen...',
+        email: 'deine e-mail...',
+        message: 'deine nachricht...'
+      },
+      submit: {
+        send: 'sende...',
+        initial: 'abschicken'
+      }
+    },
+    ru: {
+      name: 'имя*:',
+      company: 'компания:',
+      email: 'e-mail*:',
+      message: 'сообщение*:',
+      pHolder: {
+        name: 'твоё имя...',
+        company: 'твоя компания...',
+        email: 'твой e-mail...',
+        message: 'твоё сообщение...'
+      },
+      submit: {
+        send: 'посылаю...',
+        initial: 'отправить'
+      }
+    },
+  }
 }
 
 const aboutMe = {
@@ -334,6 +400,12 @@ const requestFromGithub = {
   repos: '/user/repos'
 }
 
+const linkToContactTxt = {
+  en: 'contact me',
+  ger: 'kontaktiere mich',
+  ru: 'свяжись со мной'
+}
+
 const portfolio = {
   identifiers,
   whoAmI,
@@ -350,7 +422,9 @@ const portfolio = {
   copy,
   pdfUrl,
   filterFor,
-  requestFromGithub
+  requestFromGithub,
+  click,
+  linkToContactTxt
 }
 
 export default portfolio

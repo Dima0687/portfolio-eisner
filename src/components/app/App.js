@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
 // css
 import './app.css';
@@ -9,19 +9,11 @@ import Main from '../main/Main';
 import Footer from '../footer/Footer';
 import Page from '../page/Page';
 
-
-// pages
-import Welcome from '../../pages/welcome/Welcome';
-
 // context
 import { DeviceContextProvider } from '../../context/DeviceContext';
 import { LangContextProvider } from '../../context/LangContext';
 
-// data
-/* import portfolio from '../../data/portfolioData' */
-
 const App = () => {
-  /* const { identifiers:pages } = portfolio; */
 
   return ( 
     <div id='app'>
@@ -29,7 +21,7 @@ const App = () => {
         <DeviceContextProvider>
           <Header />
           <Routes>
-            <Route path='/' element={<Welcome />}/>
+            <Route path='/' element={<Navigate to="/welcome" replace />}/>
             <Route path='/:page' element={
               <Main>
                 <Page />
