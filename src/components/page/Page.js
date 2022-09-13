@@ -38,7 +38,7 @@ const Page = ({ page }) => {
   ];
 
   console.log(queue);
-  console.log(queue.find( p => p.type.name === pageName ));
+  console.log(queue.find( p => p.props.sectionName === pageName ));
   
   return queue.find( p => p.type.name === pageName );
 }
