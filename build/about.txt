@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Niconne
+- Font Author: Copyright (c) 2011 by vernon adams (vern@newtypography.co.uk), with Reserved Font Name Niconne.
+- Font Source: http://fonts.gstatic.com/s/niconne/v15/w8gaH2QvRug1_rTfrQut2F4OuOo.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
