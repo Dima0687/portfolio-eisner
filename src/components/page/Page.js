@@ -14,11 +14,11 @@ import { DeviceContext } from "../../context/DeviceContext";
 const Page = ({ page }) => {
   const { device } = useContext(DeviceContext);
   const queue = [ 
-    <Welcome 
+    <About 
       sectionName={page}
       device={device}
     />, 
-    <About 
+    <Welcome 
       sectionName={page}
       device={device}
     />, 
