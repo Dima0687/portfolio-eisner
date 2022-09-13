@@ -14,7 +14,7 @@ import { DeviceContextProvider } from '../../context/DeviceContext';
 import { LangContextProvider } from '../../context/LangContext';
 
 const App = () => {
-
+  
   return ( 
     <div id='app'>
       <LangContextProvider>

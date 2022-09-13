@@ -373,7 +373,7 @@ const noProjects = {
 
 const mediaQuerys = {
   mobile: 320,
-  tablet: 768,
+  tablet: 768, /* 768 */
   desktop: 1200
 }
 

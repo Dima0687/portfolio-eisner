@@ -1,10 +1,23 @@
 #app {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 8% 86% 6%;
+  grid-template-rows: 8vh 86vh 6vh;
   grid-template-areas:
   'header'
   'main'
   'footer'
   ;
+}
+
+@media screen and (min-width: 720px) and (max-width: 768px) {
+  #app {
+    grid-template-rows: 10vh 85vh 5vh;
+  }
+}
+
+
+@media screen and (min-width: 720px) and (max-height: 200px) {
+  #app {
+    grid-template-rows: 5rem 50rem 2rem;
+  }
 }

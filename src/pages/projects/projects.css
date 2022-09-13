@@ -215,3 +215,39 @@
   gap: 10rem;
   margin-bottom: 1rem;
 }
+
+
+@media screen and (min-width: 720px) and (max-width: 768px) {
+  #projects-mobile-en-heading,
+  #projects-mobile-ger-heading,
+  #projects-mobile-ru-heading {
+    margin: 0;  
+  }
+
+
+  #projects-mobile {
+    gap: .3rem;
+  }
+
+  .projects-mobile-btn-container {
+    padding: .3rem;
+  }
+
+  #projects-mobile-container {
+    padding: .5rem 0;
+  }
+
+  .projects-mobile-buttons {
+    font-size: .6em;
+  }
+
+  #projects-mobile-en-heading, 
+  #projects-mobile-ger-heading, 
+  #projects-mobile-ru-heading {
+    font-size:  1.3em;
+  }
+
+  .projects-mobile-figure {
+    height: 20em;
+  }
+}

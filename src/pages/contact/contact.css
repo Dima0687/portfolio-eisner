@@ -1,5 +1,4 @@
 /* welcome contact */
-
 #welcome-info-container {
   position: relative;
   width: 100%;
@@ -41,9 +40,9 @@
   padding: 2rem;
 }
 
-#click-container p#ru {
-  font-size: 1.2em;
-  text-align: center;
+#click-container p#ru,
+#click-container p#ger {
+  font-size: 1.3em;
 }
 
 #link {
@@ -129,6 +128,45 @@
   border: .1rem solid black;
 }
 
+@media screen and (min-width: 720px) and (max-width: 768px) {
+  #welcome-mobile-info-address {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20% 1fr;
+    grid-template-areas:
+    "city city"
+    "contact social";
+    gap: .5rem;
+  }
+
+  #welcome-mobile-info-city {
+    grid-area: city;
+  }
+
+  #welcome-mobile-info-contact-container {
+    grid-area: contact;
+    line-height: 1.4em;
+  }
+
+  #welcome-mobile-social-media {
+    grid-area: social;
+    align-items: flex-start;
+    margin-top: 1rem;
+  }
+
+  #welcome-mobile-download-button {
+    grid-area: social;
+    justify-self: center;
+    margin-top: auto;
+    align-self: flex-end;
+  }
+}
+
+
+
+
 /* FORM */
 
 #contact-info-container {
@@ -163,7 +201,8 @@
   width: 90%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: stretch;
+  overflow-y: scroll;
   align-items: center;
   padding: 2rem;
   gap: 1rem;
@@ -257,4 +296,20 @@
   height: 0;
   width: 0;
   z-index: 1;
+}
+
+
+@media screen and (min-width: 720px) and (max-width: 768px) {
+  #contact-form {
+    margin: 1rem 0;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  #contact-form div {
+    flex-direction: row;
+    gap: 0;
+    height: initial;
+  }
+
 }
