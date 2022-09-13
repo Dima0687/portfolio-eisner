@@ -13,7 +13,6 @@ import { DeviceContext } from "../../context/DeviceContext";
 
 const Page = ({ page }) => {
   const { device } = useContext(DeviceContext);
-  const pageName = page[0].toUpperCase() + page.slice(1);
   const queue = [ 
     <Welcome 
       sectionName={page}
