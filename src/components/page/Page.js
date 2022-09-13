@@ -14,32 +14,37 @@ import { DeviceContext } from "../../context/DeviceContext";
 const Page = ({ page }) => {
   const { device } = useContext(DeviceContext);
   const queue = [ 
-    <About 
-      sectionName={page}
-      device={device}
-    />, 
     <Welcome 
       sectionName={page}
       device={device}
+      id='welcome'
+    />, 
+    <About 
+      sectionName={page}
+      device={device}
+      id='about'
     />, 
     <Skills 
       sectionName={page}
       device={device}
+      id='skills'
     />, 
     <Projects 
       sectionName={page}
       device={device}
+      id='projects'
     />, 
     <Contact 
       sectionName={page}
       device={device}
+      id='contact'
     /> 
   ];
 
   console.log(queue);
-  console.log(queue.find( p => p.props.sectionName === page));
+  console.log(queue.find( p => p.props.id === page));
   
-  return queue.find( p => p.props.sectionName === page );
+  return queue.find( p => p.props.id === page );
 }
  
 export default Page;
