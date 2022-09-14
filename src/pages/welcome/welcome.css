@@ -209,7 +209,7 @@ section#welcome-desktop {
   animation: whoAmI var(--anim-duration, 3.5s) ease-in-out 0s infinite;
 }
 
-@media screen and (min-width: 720px) and (max-width: 768px) {
+@media screen and (orientation: landscape) {
   #welcome-mobile-pic{
     background-position: 50% 65%;
   }
