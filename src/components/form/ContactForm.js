@@ -57,13 +57,14 @@ const ContactForm = ({ portfolio, device, lang, sectionName}) => {
         }).then(function(response){
           setBtnDisabled(false);
           setBtnMsg(formInputData[lang].submit.initial);
-          setFormData({
+          setFormData(prev => ({
+            ...prev,
             name: '',
             company: '',
             email: '',
             subject: '',
             message: ''
-          })
+          }))
         }, function(error) {
           console.error('Sending mail failed ...',error);
         });
