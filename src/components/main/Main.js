@@ -11,13 +11,19 @@ import './main.css';
 // context
 import { DeviceContext } from '../../context/DeviceContext';
 
+// portfolio data
+import portfolio from '../../data/portfolioData';
+
 function Main() {
   const { device } = useContext(DeviceContext);
   const { page } = useParams();
-  console.log('main', page);
+  const { identifiers } = portfolio;
+
+  const pages = [...Object.keys(identifiers)];
+
   return (
     <main className="main">
-      <section id={`${page}-${device}`}>
+      <section id={`${pages.includes(page) ? `${page}-${device}` : 'not-found' }`}>
         <Page page={page} />
       </section>
     </main>

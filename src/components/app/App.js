@@ -22,11 +22,6 @@ const App = () => {
           <Routes>
             <Route path='/' element={<Navigate to="/welcome" replace />}/>
             <Route path='/:page' element={<Main />}/>
-            <Route path='*' element={<h1 style={{
-              width: '100%',
-              color: "black"
-              }}> 404</h1>}
-            />
           </Routes>
           <Footer />
         </DeviceContextProvider>

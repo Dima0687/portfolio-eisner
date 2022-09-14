@@ -406,6 +406,18 @@ const linkToContactTxt = {
   ru: 'свяжись со мной'
 }
 
+const notFound = {
+  en: {
+    text: 'Oops, I guess you took a wrong turn somewhere!'
+  },
+  ger: {
+    text: 'Ups, ich schätze du bist irgendwo falsch abgebogen!'
+  },
+  ru: {
+    text: 'Ой, кажется, ты где-то свернул не туда!'
+  }
+}
+
 const portfolio = {
   identifiers,
   whoAmI,
@@ -424,7 +436,8 @@ const portfolio = {
   filterFor,
   requestFromGithub,
   click,
-  linkToContactTxt
+  linkToContactTxt,
+  notFound
 }
 
 export default portfolio
