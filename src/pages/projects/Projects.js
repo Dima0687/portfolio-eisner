@@ -46,10 +46,12 @@ const Projects = ({ sectionName, device }) => {
   const [techFilter, setTechFilter] = useState('all');
 
   function truncateText(word, length){
-    if(word.length <= length) {
+    if(!word) return 'no description yet ...';
+    
+    if(word?.length <= length) {
       return word
     }
-    return `${word.slice(0, length)} \u2026`
+    return `${word?.slice(0, length)} \u2026`
   }
 
   function handleChangeFilter(e, container) {
