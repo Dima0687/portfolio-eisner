@@ -37,10 +37,9 @@ const info = {
     lastTwo: '11'
   },
   email: {
-    first: 'eis0687' ,
-    last: 'dietmar',
+    first: 'dietmar',
     at: '64',
-    provider: 'gmail',
+    provider: 'eisner-developer',
     domain: 'com'
   },
   linkedIn: 'https://www.linkedin.com/in/dietmar-eisner/',

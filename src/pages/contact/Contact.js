@@ -59,7 +59,7 @@ const Contact = ({ sectionName, device }) => {
     setTel(tel => tel+`${_tel.prefix}${_tel.first}${_tel.middle}${_tel.last}`);
 
     setTelString(`+${_tel.prefix} ${_tel.first} ${_tel.middle} ${_tel.last}`.replace('49','(49) '));
-    let _mail = `${email.first}.${email.last}${String.fromCharCode(email.at)}${email.provider}.${email.domain}`;
+    let _mail = `${email.first}${String.fromCharCode(email.at)}${email.provider}.${email.domain}`;
     
     setMail(prevMail => prevMail.slice(0,7) + _mail);
     setMailOutput(_mail);

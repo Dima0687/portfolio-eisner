@@ -28,15 +28,17 @@ const Welcome = ({ sectionName, device }) => {
   return (
     <>
       <div id={`${sectionName}-${device}-pic`}></div>
-      <div id={`${sectionName}-${device}-${lang}-text-container`}>
-        <p>{ hello[lang] }</p>
-        <h1>{ name }.</h1>
-        <p id={`who-am-i-text`}>
-          { sentencePart1[lang] }
-            <WhoAmI/>          
-          { sentencePart2[lang] }
-        </p> 
-      </div>
+      <a href="/contact" id={`${sectionName}-anchor`}>
+        <div id={`${sectionName}-${device}-${lang}-text-container`}>
+          <p>{ hello[lang] }</p>
+          <h1>{ name }.</h1>
+          <p id={`who-am-i-text`}>
+            { sentencePart1[lang] }
+              <WhoAmI/>          
+            { sentencePart2[lang] }
+          </p> 
+        </div>
+      </a>
       <Contact 
         sectionName={sectionName}
         device={device}

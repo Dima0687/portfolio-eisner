@@ -36,6 +36,11 @@ section#welcome-desktop {
   grid-area: pic;
 }
 
+#welcome-anchor {
+  grid-area: pic;
+  display: flex;
+}
+
 #welcome-mobile-pic,
 #welcome-tablet-pic,
 #welcome-desktop-pic {
