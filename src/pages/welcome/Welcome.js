@@ -1,6 +1,8 @@
 // hooks
 import { useContext } from 'react';
 
+import { Link } from 'react-router-dom';
+
 // components
 import WhoAmI  from '../../components/rotating-words/WhoAmI';
 import Contact from '../contact/Contact';
@@ -16,7 +18,8 @@ import './welcome.css';
 
 const Welcome = ({ sectionName, device }) => {
   const { lang } = useContext(LangContext);
-  const { 
+  const {
+    identifiers:pages,
     welcomeText: {
       hello,
       name,
@@ -28,7 +31,7 @@ const Welcome = ({ sectionName, device }) => {
   return (
     <>
       <div id={`${sectionName}-${device}-pic`}></div>
-      <a href="/contact" id={`${sectionName}-anchor`}>
+      <Link to={`/${Object.keys(pages)[Object.keys(pages).length - 1]}`} id={`${sectionName}-anchor`}>
         <div id={`${sectionName}-${device}-${lang}-text-container`}>
           <p>{ hello[lang] }</p>
           <h1>{ name }.</h1>
@@ -38,7 +41,7 @@ const Welcome = ({ sectionName, device }) => {
             { sentencePart2[lang] }
           </p> 
         </div>
-      </a>
+      </Link>
       <Contact 
         sectionName={sectionName}
         device={device}

@@ -14,13 +14,15 @@ import astronaut from '../../images/astronaut-only.png'
 
 // context 
 import { LangContext } from '../../context/LangContext';
+import { DeviceContext } from '../../context/DeviceContext';
 
 // portfolio data
 import portfolio from '../../data/portfolioData';
 
-const NotFound = ({ device }) => {
+const NotFound = () => {
   const astronautRef = useRef();
   const { lang } = useContext(LangContext);
+  const { device } = useContext(DeviceContext);
   const { notFound } = portfolio;
   const [spinning, setSpinning] = useState([
     {

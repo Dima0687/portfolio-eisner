@@ -1,13 +1,15 @@
 // hooks
 import { useContext } from "react";
 
+// react router dom
+import { Navigate } from 'react-router-dom';
+
 // pages
 import Welcome from "../../pages/welcome/Welcome";
 import About from '../../pages/about/About';
 import Skills from '../../pages//skills/Skills';
 import Projects from '../../pages/projects/Projects';
 import Contact from "../../pages/contact/Contact";
-import NotFound from '../../pages/not-found/NotFound';
 
 // context
 import { DeviceContext } from "../../context/DeviceContext";
@@ -44,9 +46,7 @@ const Page = ({ page }) => {
 
   const component = queue.find( p => p.props.id === page )
   
-  return !component ? <NotFound
-    device={device}
-  /> : component;
+  return component ? component : <Navigate to='/not-found'/>;
 }
  
 export default Page;

@@ -1,6 +1,9 @@
 // hooks
 import { useContext, useState } from 'react';
 
+// link router dom
+import { Link } from 'react-router-dom';
+
 // icons
 import { BsLinkedin, BsGithub } from 'react-icons/bs';
 
@@ -94,12 +97,11 @@ const Contact = ({ sectionName, device }) => {
             >
               { telString }
             </a>
-            <a 
-              href={ `/${Object.keys(linkNames)[Object.keys(linkNames).length - 1]}` }
+            <Link to={ `/${Object.keys(linkNames)[Object.keys(linkNames).length - 1]}` }
               id='link' className={lang}
             >
               { linkToContactTxt[lang] }
-            </a>
+            </Link>
           </div>
           <div id={ `${sectionName}-${device}-social-media` }>
             <a 
