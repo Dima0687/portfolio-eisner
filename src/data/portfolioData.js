@@ -376,8 +376,10 @@ const mediaQuerys = {
   desktop: 1200
 }
 
+// needed when not hosting on github
 const specialCaseProjectsObj = {
-  "final-projekt": "https://eventlookup-frontend.onrender.com/"
+  "final-projekt": "https://eventlookup-frontend.onrender.com/",
+  "portfolio-eisner": "https://eisner-developer.com"
 }
 
 const filterFor = {
