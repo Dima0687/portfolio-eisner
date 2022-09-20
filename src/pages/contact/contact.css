@@ -231,7 +231,6 @@
   gap: .5rem;
   padding: 0 .5rem;
   border-radius: .8rem;
-  justify-content: space-evenly;
 }
 
 #contact-form div label,
@@ -279,6 +278,34 @@
 #contact-form div textarea {
   width: 100%;
   height: 15ch;
+}
+
+#contact-form #chkbox-container {
+  flex-direction: row;
+  padding: 0;
+  align-items: center;
+}
+
+#contact-form #chkbox-container input{
+  width: 2rem;
+  margin: 0 .5rem 0 1rem;
+}
+
+#contact-form #chkbox-container label{
+  text-transform: lowercase;
+  width: 100%;
+  height: fit-content;
+}
+
+#contact-form #chkbox-container label::first-letter,
+#contact-form #chkbox-container label.ger a::first-letter {
+  text-transform: uppercase;
+}
+
+#contact-form #chkbox-container label a {
+  display: inline-block;
+  text-decoration: underline;
+  font-size: 2.4rem;
 }
 
 #contact-form div button {
@@ -333,4 +360,10 @@
     height: initial;
   }
 
+  #contact-form #chkbox-container label {
+    width: fit-content;
+  }
+  #contact-form #chkbox-container {
+    justify-content: space-evenly;
+  }
 }

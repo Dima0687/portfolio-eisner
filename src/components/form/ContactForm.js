@@ -1,6 +1,9 @@
 // hooks
 import { useEffect, useState } from "react";
 
+// router
+import { Link } from 'react-router-dom';
+
 // sdk
 import emailjs from '@emailjs/browser';
 
@@ -17,6 +20,7 @@ const ContactForm = ({ portfolio, device, lang, sectionName}) => {
   const [btnDisabled, setBtnDisabled] = useState(false);
   const [btnMsg, setBtnMsg] = useState(formInputData[lang].submit.initial);
   const [formData, setFormData] = useState({
+    privacyAccepted: false,
     name: '',
     company: '',
     email: '',
@@ -43,6 +47,8 @@ const ContactForm = ({ portfolio, device, lang, sectionName}) => {
 
     if( _fake.length > 0 || _fake ) {
       console.error('BOT');
+      return false;
+    } else if (!formData.privacyAccepted){
       return false;
     } else {
       try {
@@ -167,6 +173,26 @@ const ContactForm = ({ portfolio, device, lang, sectionName}) => {
               message: e.target.value
             }))}
           ></textarea>
+        </div>
+        <div id="chkbox-container">
+          <input
+            type="checkbox" 
+            name="chkbox"
+            required
+            id="chkbox"
+            value={formData.privacyAccepted}
+            onChange= { e => setFormData( prevObj => ({
+              ...prevObj,
+              privacyAccepted: e.target.checked,
+            }))}
+          />
+          <label htmlFor="chkbox" className={lang}>
+            { formInputData[lang].inputLabelTxt1 }
+              <Link to='/privacy' id="chkbox-link"> 
+                {formInputData[lang].inputLabelLink}
+              </Link>
+            { formInputData[lang].inputLabelTxt2}
+          </label>
         </div>
   
         <div>

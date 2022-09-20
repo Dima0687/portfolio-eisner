@@ -227,6 +227,9 @@ const contact = {
         email: 'your e-mail...',
         message: 'your message...'
       },
+      inputLabelTxt1: 'I agree to the',
+      inputLabelLink: ' privacy policy',
+      inputLabelTxt2: ' !',
       submit: {
         send: 'sending...',
         initial: 'submit'
@@ -243,6 +246,9 @@ const contact = {
         email: 'deine e-mail...',
         message: 'deine nachricht...'
       },
+      inputLabelTxt1: 'Ich stimme der',
+      inputLabelLink: ' Datenschutzverodnung ',
+      inputLabelTxt2: ' zu!',
       submit: {
         send: 'sende...',
         initial: 'abschicken'
@@ -259,6 +265,9 @@ const contact = {
         email: 'твой e-mail...',
         message: 'твоё сообщение...'
       },
+      inputLabelTxt1: 'Я согласен с',
+      inputLabelLink: ' правилами защиты данных',
+      inputLabelTxt2: ' !',
       submit: {
         send: 'посылаю...',
         initial: 'отправить'
