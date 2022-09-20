@@ -41,7 +41,7 @@
 }
 
 #click-container p#ru,
-#click-container p#ger {
+#click-container p#de {
   font-size: 1.3em;
 }
 
@@ -193,13 +193,13 @@
 }
 
 #contact-heading-en,
-#contact-heading-ger,
+#contact-heading-de,
 #contact-heading-ru {
   text-align: center;
   text-shadow: .1rem .1rem 0 var(--about-odd-shadow-color);
 }
 
-#contact-heading-ger {
+#contact-heading-de {
   font-size: 1.3em;
 }
 
@@ -298,7 +298,7 @@
 }
 
 #contact-form #chkbox-container label::first-letter,
-#contact-form #chkbox-container label.ger a::first-letter {
+#contact-form #chkbox-container label.de a::first-letter {
   text-transform: uppercase;
 }
 

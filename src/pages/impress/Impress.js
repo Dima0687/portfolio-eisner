@@ -17,13 +17,13 @@ const Impress = () => {
     <article>
       <h1>
       { lang === 'en' && 'Impress' }
-      { lang === 'ger' && 'Impressum' }
+      { lang === 'de' && 'Impressum' }
       { lang === 'ru' && 'Импрессум' }
       </h1>
       <address>
         <h2>
           { lang === 'en' && 'Information according to § 5 TMG' }
-          { lang === 'ger' && 'Angaben gemäß § 5 TMG' }
+          { lang === 'de' && 'Angaben gemäß § 5 TMG' }
           { lang === 'ru' && 'Инфо. в соответствии с § 5 TMG' }
         </h2>
         <p>{name}</p>
@@ -31,7 +31,7 @@ const Impress = () => {
         <p>{address.city} {address.zip}</p>
         <h2>
           { lang === 'en' && 'Contact' }
-          { lang === 'ger' && 'Kontakt' }
+          { lang === 'de' && 'Kontakt' }
           { lang === 'ru' && 'Контакт' }
         </h2>
         <p>{info.tel.lastTwo} {info.tel.middleThree} {info.tel.firstThree} {info.tel.prefixTel} :nofeleT</p>

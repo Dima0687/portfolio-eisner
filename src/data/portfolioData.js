@@ -51,7 +51,7 @@ const info = {
 
 const click = {
   en: 'click here for reveal the contact information',
-  ger: 'klicke hier, um die Kontaktinformationen anzuzeigen',
+  de: 'klicke hier, um die Kontaktinformationen anzuzeigen',
   ru: 'нажми здесь для просмотра контактной информации'
 }
 
@@ -146,27 +146,27 @@ const skills = [
 const identifiers = {
   welcome: {
     en: 'welcome',
-    ger: 'willkommen',
+    de: 'willkommen',
     ru: 'добро пожаловать'
   },
   about: {
     en: 'about',
-    ger: 'über mich',
+    de: 'über mich',
     ru: 'обо мне'
   },
   skills: {
     en: 'skills',
-    ger: 'fähigkeiten',
+    de: 'fähigkeiten',
     ru: 'навыки'
   },
   projects: {
     en: 'projects',
-    ger: 'projekte',
+    de: 'projekte',
     ru: 'проекты'
   },
   contact: {
     en: 'contact',
-    ger: 'kontakt',
+    de: 'kontakt',
     ru: 'контакт'
   }
 }
@@ -177,7 +177,7 @@ const whoAmI = {
     'Web developer',
     'Collegue'
   ],
-  ger: [
+  de: [
     'Mitarbeiter',
     'Web Entwickler',
     'Kollege'
@@ -192,18 +192,18 @@ const whoAmI = {
 const welcomeText = {
   hello: {
     en: 'HELLO, I\'M',
-    ger: 'HALLO, ICH HEIßE',
+    de: 'HALLO, ICH HEIßE',
     ru: 'Привет, меня зовут'
   },
   name,
   sentencePart1: {
     en: 'Your new',
-    ger: 'Dein neuer',
+    de: 'Dein neuer',
     ru: 'Твой новый'
   },
   sentencePart2: { 
     en: 'is just a click away!',
-    ger: 'nur einen Klick entfernt!',
+    de: 'nur einen Klick entfernt!',
     ru: 'только один клик!'
   }
 }
@@ -211,7 +211,7 @@ const welcomeText = {
 const contact = {
   callToAction: {
     en: 'I\'d love to hear from you.',
-    ger: 'Ich freue mich von dir zu hören.',
+    de: 'Ich freue mich von dir zu hören.',
     ru: 'Я с нетерпением жду ответа от тебя.'
   },
   info,
@@ -235,7 +235,7 @@ const contact = {
         initial: 'submit'
       }
     },
-    ger: {
+    de: {
       name: 'name*:',
       company: 'unternehmen:',
       email: 'e-mail*:',
@@ -298,7 +298,7 @@ const aboutMe = {
   
   'My intention to catch up on my high school diploma in order to then study robotics engineering unfortunately failed miserably because after several attempts to attend a night school, the minimum number of students never materialized. Undeterred by this, I looked for alternatives that might be suitable for me and finally, in retrospect, came to the obvious one, namely software developer. August 2022 was then the time, I completed my one-year training at the Digital Career Institute in the remote and am full of anticipation to apply my learned knowledge!'
   ],
-  ger: [ 
+  de: [ 
     'Ich bin kein Designer, aber wenn du mir ein Design Layout vorlegst. Dann bin ich dein passender Webentwickler.',
 
     'Ich habe Spaß daran, deine Vision von deiner Webseite zu realisieren und der Welt zugänglich zu machen.',
@@ -348,7 +348,7 @@ const projectCategories = {
     "by learning",
     "my own"
   ],
-  ger: [
+  de: [
     "alle",
     "durchs lernen",
     "eigene"
@@ -369,13 +369,13 @@ const techInternational = [
 
 const techCategory = {
   en: ['all', ...techInternational],
-  ger: ['alle', ...techInternational],
+  de: ['alle', ...techInternational],
   ru: ['все', ...techInternational]
 }
 
 const noProjects = {
   en: 'No projects at the moment!',
-  ger: 'Noch keine Projekte',
+  de: 'Noch keine Projekte',
   ru: 'Пока нет проектов'
 }
 
@@ -412,7 +412,7 @@ const requestFromGithub = {
 
 const linkToContactTxt = {
   en: 'contact me',
-  ger: 'kontaktiere mich',
+  de: 'kontaktiere mich',
   ru: 'свяжись со мной'
 }
 
@@ -420,7 +420,7 @@ const notFound = {
   en: {
     text: 'Oops, I guess you took a wrong turn somewhere!'
   },
-  ger: {
+  de: {
     text: 'Ups, ich schätze du bist irgendwo falsch abgebogen!'
   },
   ru: {

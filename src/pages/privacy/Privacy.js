@@ -23,7 +23,7 @@ const Privacy = () => {
     <>
       <article>
         { lang === 'en' && <EnPrivacy info={info} name={name} address={address}/> }
-        { lang === 'ger' && <GerPrivacy info={info} name={name} address={address}/> }
+        { lang === 'de' && <GerPrivacy info={info} name={name} address={address}/> }
         { lang === 'ru' && <RuPrivacy info={info} name={name} address={address}/> }
       </article> 
     </>

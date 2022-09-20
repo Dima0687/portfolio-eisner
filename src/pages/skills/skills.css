@@ -9,13 +9,13 @@
 }
 
 #skills-mobile-en-heading,
-#skills-mobile-ger-heading,
+#skills-mobile-de-heading,
 #skills-mobile-ru-heading,
 #skills-tablet-en-heading,
-#skills-tablet-ger-heading,
+#skills-tablet-de-heading,
 #skills-tablet-ru-heading,
 #skills-desktop-en-heading,
-#skills-desktop-ger-heading,
+#skills-desktop-de-heading,
 #skills-desktop-ru-heading {
   justify-self: flex-start;
   margin: 2rem 0 1rem;
@@ -28,13 +28,13 @@
 }
 
 #skills-mobile-en-heading::first-letter,
-#skills-mobile-ger-heading::first-letter,
+#skills-mobile-de-heading::first-letter,
 #skills-mobile-ru-heading::first-letter,
 #skills-tablet-en-heading::first-letter,
-#skills-tablet-ger-heading::first-letter,
+#skills-tablet-de-heading::first-letter,
 #skills-tablet-ru-heading::first-letter,
 #skills-desktop-en-heading::first-letter,
-#skills-desktop-ger-heading::first-letter,
+#skills-desktop-de-heading::first-letter,
 #skills-desktop-ru-heading::first-letter {
   text-transform: capitalize;
 }

@@ -44,15 +44,15 @@ section#welcome-desktop {
 #welcome-desktop-pic,
 /* mobile */
 #welcome-mobile-en-text-container,
-#welcome-mobile-ger-text-container,
+#welcome-mobile-de-text-container,
 #welcome-mobile-ru-text-container,
 /* tablet */
 #welcome-tablet-en-text-container,
-#welcome-tablet-ger-text-container,
+#welcome-tablet-de-text-container,
 #welcome-tablet-ru-text-container,
 /* desktop */
 #welcome-desktop-en-text-container,
-#welcome-desktop-ger-text-container,
+#welcome-desktop-de-text-container,
 #welcome-desktop-ru-text-container {
   grid-area: pic;
 }
@@ -95,15 +95,15 @@ section#welcome-desktop {
 
 /* mobile */
 #welcome-mobile-en-text-container,
-#welcome-mobile-ger-text-container,
+#welcome-mobile-de-text-container,
 #welcome-mobile-ru-text-container,
 /* tablet */
 #welcome-tablet-en-text-container,
-#welcome-tablet-ger-text-container,
+#welcome-tablet-de-text-container,
 #welcome-tablet-ru-text-container,
 /* desktop */
 #welcome-desktop-en-text-container,
-#welcome-desktop-ger-text-container,
+#welcome-desktop-de-text-container,
 #welcome-desktop-ru-text-container {
   display: flex;
   flex-direction: column;
@@ -113,7 +113,7 @@ section#welcome-desktop {
 
 /* mobile */
 #welcome-mobile-en-text-container,
-#welcome-mobile-ger-text-container,
+#welcome-mobile-de-text-container,
 #welcome-mobile-ru-text-container {
   position: absolute;
   inset: 0;
@@ -128,11 +128,11 @@ section#welcome-desktop {
 
 /* tablet */
 #welcome-tablet-en-text-container,
-#welcome-tablet-ger-text-container,
+#welcome-tablet-de-text-container,
 #welcome-tablet-ru-text-container,
 /* desktop */
 #welcome-desktop-en-text-container,
-#welcome-desktop-ger-text-container,
+#welcome-desktop-de-text-container,
 #welcome-desktop-ru-text-container {
   flex-direction: column;
   justify-content: flex-end;
@@ -143,22 +143,22 @@ section#welcome-desktop {
 /* mobile */
 #welcome-mobile-en-text-container p,
 #welcome-mobile-en-text-container h1,
-#welcome-mobile-ger-text-container p,
-#welcome-mobile-ger-text-container h1,
+#welcome-mobile-de-text-container p,
+#welcome-mobile-de-text-container h1,
 #welcome-mobile-ru-text-container p,
 #welcome-mobile-ru-text-container h1,
 /* tablet */
 #welcome-tablet-en-text-container p,
 #welcome-tablet-en-text-container h1,
-#welcome-tablet-ger-text-container p,
-#welcome-tablet-ger-text-container h1,
+#welcome-tablet-de-text-container p,
+#welcome-tablet-de-text-container h1,
 #welcome-tablet-ru-text-container p,
 #welcome-tablet-ru-text-container h1,
 /* desktop */
 #welcome-desktop-en-text-container p,
 #welcome-desktop-en-text-container h1,
-#welcome-desktop-ger-text-container p,
-#welcome-desktop-ger-text-container h1,
+#welcome-desktop-de-text-container p,
+#welcome-desktop-de-text-container h1,
 #welcome-desktop-ru-text-container p,
 #welcome-desktop-ru-text-container h1 {
   word-wrap: break-word;
@@ -169,11 +169,11 @@ section#welcome-desktop {
 
 /* tablet */
 #welcome-tablet-en-text-container p:first-child,
-#welcome-tablet-ger-text-container p:first-child,
+#welcome-tablet-de-text-container p:first-child,
 #welcome-tablet-ru-text-container p:first-child,
 /* desktop */
 #welcome-desktop-en-text-container p:first-child,
-#welcome-desktop-ger-text-container p:first-child,
+#welcome-desktop-de-text-container p:first-child,
 #welcome-desktop-ru-text-container p:first-child { 
   justify-self: flex-start;
   margin-bottom: 5rem;
@@ -181,22 +181,22 @@ section#welcome-desktop {
 
 /* tablet */
 #welcome-tablet-en-text-container h1,
-#welcome-tablet-ger-text-container h1,
+#welcome-tablet-de-text-container h1,
 #welcome-tablet-ru-text-container h1,
 /* desktop */
 #welcome-desktop-en-text-container h1,
-#welcome-desktop-ger-text-container h1,
+#welcome-desktop-de-text-container h1,
 #welcome-desktop-ru-text-container h1 {
   align-self: center;
 }
 
 /* tablet */
 #welcome-tablet-en-text-container p:last-child,
-#welcome-tablet-ger-text-container p:last-child,
+#welcome-tablet-de-text-container p:last-child,
 #welcome-tablet-ru-text-container p:last-child,
 /* desktop */
 #welcome-desktop-en-text-container p:last-child,
-#welcome-desktop-ger-text-container p:last-child,
+#welcome-desktop-de-text-container p:last-child,
 #welcome-desktop-ru-text-container p:last-child {
   align-items: center;
   margin-bottom: 26rem;
@@ -205,15 +205,15 @@ section#welcome-desktop {
 
 /* mobile */
 #welcome-mobile-en-text-container #who-am-i-text,
-#welcome-mobile-ger-text-container #who-am-i-text,
+#welcome-mobile-de-text-container #who-am-i-text,
 #welcome-mobile-ru-text-container #who-am-i-text,
 /* tablet */
 #welcome-tablet-en-text-container #who-am-i-text,
-#welcome-tablet-ger-text-container #who-am-i-text,
+#welcome-tablet-de-text-container #who-am-i-text,
 #welcome-tablet-ru-text-container #who-am-i-text,
 /* desktop */
 #welcome-desktop-en-text-container #who-am-i-text,
-#welcome-desktop-ger-text-container #who-am-i-text,
+#welcome-desktop-de-text-container #who-am-i-text,
 #welcome-desktop-ru-text-container #who-am-i-text {
   font-style: italic;
   text-align: center;
@@ -221,15 +221,15 @@ section#welcome-desktop {
 
 /* mobile */
 #welcome-mobile-en-text-container #who-am-i-text #who-am-i,
-#welcome-mobile-ger-text-container #who-am-i-text #who-am-i,
+#welcome-mobile-de-text-container #who-am-i-text #who-am-i,
 #welcome-mobile-ru-text-container #who-am-i-text #who-am-i,
 /* tablet */
 #welcome-tablet-en-text-container #who-am-i-text #who-am-i,
-#welcome-tablet-ger-text-container #who-am-i-text #who-am-i,
+#welcome-tablet-de-text-container #who-am-i-text #who-am-i,
 #welcome-tablet-ru-text-container #who-am-i-text #who-am-i,
 /* desktop */
 #welcome-desktop-en-text-container #who-am-i-text #who-am-i,
-#welcome-desktop-ger-text-container #who-am-i-text #who-am-i,
+#welcome-desktop-de-text-container #who-am-i-text #who-am-i,
 #welcome-desktop-ru-text-container #who-am-i-text #who-am-i {
   display: block;
   animation: whoAmI var(--anim-duration, 3.5s) ease-in-out 0s infinite;
@@ -242,8 +242,8 @@ section#welcome-desktop {
 
   #welcome-mobile-en-text-container p,
   #welcome-mobile-en-text-container h1,
-  #welcome-mobile-ger-text-container p,
-  #welcome-mobile-ger-text-container h1,
+  #welcome-mobile-de-text-container p,
+  #welcome-mobile-de-text-container h1,
   #welcome-mobile-ru-text-container p,
   #welcome-mobile-ru-text-container h1 {
     font-size: 1em;

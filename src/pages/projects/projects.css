@@ -11,13 +11,13 @@
 }
 
 #projects-mobile-en-heading,
-#projects-mobile-ger-heading,
+#projects-mobile-de-heading,
 #projects-mobile-ru-heading,
 #projects-tablet-en-heading,
-#projects-tablet-ger-heading,
+#projects-tablet-de-heading,
 #projects-tablet-ru-heading,
 #projects-desktop-en-heading,
-#projects-desktop-ger-heading,
+#projects-desktop-de-heading,
 #projects-desktop-ru-heading {
   justify-self: flex-start;
   font-size: 1.5em;
@@ -25,13 +25,13 @@
 }
 
 #projects-mobile-en-heading,
-#projects-mobile-ger-heading,
+#projects-mobile-de-heading,
 #projects-mobile-ru-heading,
 #projects-tablet-en-heading,
-#projects-tablet-ger-heading,
+#projects-tablet-de-heading,
 #projects-tablet-ru-heading,
 #projects-desktop-en-heading,
-#projects-desktop-ger-heading,
+#projects-desktop-de-heading,
 #projects-desktop-ru-heading,
 .projects-mobile-figure-text h3,
 .projects-tablet-figure-text h3,
@@ -40,13 +40,13 @@
 }
 
 #projects-mobile-en-heading::first-letter,
-#projects-mobile-ger-heading::first-letter,
+#projects-mobile-de-heading::first-letter,
 #projects-mobile-ru-heading::first-letter,
 #projects-tablet-en-heading::first-letter,
-#projects-tablet-ger-heading::first-letter,
+#projects-tablet-de-heading::first-letter,
 #projects-tablet-ru-heading::first-letter,
 #projects-desktop-en-heading::first-letter,
-#projects-desktop-ger-heading::first-letter,
+#projects-desktop-de-heading::first-letter,
 #projects-desktop-ru-heading::first-letter,
 .projects-mobile-buttons::first-letter,
 .projects-tablet-buttons::first-letter,
@@ -219,7 +219,7 @@
 
 @media screen and (min-width: 720px) and (max-width: 768px) {
   #projects-mobile-en-heading,
-  #projects-mobile-ger-heading,
+  #projects-mobile-de-heading,
   #projects-mobile-ru-heading {
     margin: 0;  
   }
@@ -242,7 +242,7 @@
   }
 
   #projects-mobile-en-heading, 
-  #projects-mobile-ger-heading, 
+  #projects-mobile-de-heading, 
   #projects-mobile-ru-heading {
     font-size:  1.3em;
   }

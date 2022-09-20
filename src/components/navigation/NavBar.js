@@ -109,8 +109,8 @@ const NavBar = () => {
             value="en"
           >EN</option>
           <option 
-            value="ger"
-          >GER</option>
+            value="de"
+          >DE</option>
           <option
            value="ru"
           >RU</option>

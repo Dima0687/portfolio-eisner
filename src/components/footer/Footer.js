@@ -38,12 +38,12 @@ const Footer = () => {
       <h3 id={`footer-h3-${device}`} className={lang}>&copy; {showYear} {welcomeText.name}</h3>
       <a href="/impress" className={lang}>
         { lang === 'en' && 'Impress' }
-        { lang === 'ger' && 'Impressum' }
+        { lang === 'de' && 'Impressum' }
         { lang === 'ru' && 'Импрессум' }
       </a>
       <a href="/privacy" className={lang}>
         { lang === 'en' && 'Privacy' }
-        { lang === 'ger' && 'Datenschutz' }
+        { lang === 'de' && 'Datenschutz' }
         { lang === 'ru' && 'Приватность' }
       </a>
     </footer>
