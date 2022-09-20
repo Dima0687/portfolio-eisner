@@ -1,0 +1,57 @@
+#impress-mobile,
+#impress-tablet,
+#impress-desktop,
+#impress-mobile article,
+#impress-tablet article,
+#impress-desktop article {
+  width: 100%;
+  height: 100%;
+}
+
+#impress-mobile article address,
+#impress-tablet article address,
+#impress-desktop article address {
+  width: 100%;
+  height: calc(100% - 1.2em - 4rem - .6rem - .2rem);
+  padding: 0 1rem;
+}
+
+#impress-mobile,
+#impress-tablet,
+#impress-desktop {
+  background-color: var(--secondary-color);
+  text-align: left;
+  font-size: var(--heading-size);
+}
+
+#impress-mobile *,
+#impress-tablet *,
+#impress-desktop * {
+  font-family: var(--easy-to-read);
+  text-shadow: 0 0 .2rem var(--about-odd-shadow-color);
+  line-height: 2em;
+  color: var(--primary-color);
+}
+
+#impress-mobile article h1,
+#impress-tablet article h1,
+#impress-desktop article h1 {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 1.2em;
+}
+
+#impress-mobile article address h2,
+#impress-desktop article address h2 {
+  font-size: 1.2em;
+}
+
+#impress-mobile article address p {
+  font-size: .9em;
+}
+
+#impress-mobile article address p:not(:first-of-type),
+#impress-tablet article address p:not(:first-of-type){
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}

@@ -56,6 +56,14 @@ const NotFound = () => {
         className={device}
       >
         <div id={`not-found-${device}-images-container`}>
+          <a 
+            href="https://unsplash.com/license"
+            target='_blank'
+            rel='noopener noreferrer'
+            className='license'
+          >
+            unsplash.com
+          </a>
           <img 
             src={
               device === 'mobile' ?

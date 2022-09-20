@@ -6,6 +6,7 @@ import { useContext, useState, useEffect } from 'react';
 
 // context
 import { DeviceContext } from '../../context/DeviceContext';
+import { LangContext } from '../../context/LangContext';
 
 // portfolio data
 import portfolio from '../../data/portfolioData';
@@ -13,6 +14,7 @@ import portfolio from '../../data/portfolioData';
 const Footer = () => {
   const { copy:sinceYear, welcomeText } = portfolio;
   const { device } = useContext(DeviceContext);
+  const { lang } = useContext(LangContext);
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
   const [showYear, setShowYear] = useState(sinceYear);
 
@@ -33,7 +35,17 @@ const Footer = () => {
 
   return ( 
     <footer>
-      <h3 id={`footer-h3-${device}`}>&copy; {showYear} {welcomeText.name}</h3>
+      <h3 id={`footer-h3-${device}`} className={lang}>&copy; {showYear} {welcomeText.name}</h3>
+      <a href="/impress" className={lang}>
+        { lang === 'en' && 'Impress' }
+        { lang === 'ger' && 'Impressum' }
+        { lang === 'ru' && 'Импрессум' }
+      </a>
+      <a href="/privacy" className={lang}>
+        { lang === 'en' && 'Privacy' }
+        { lang === 'ger' && 'Datenschutz' }
+        { lang === 'ru' && 'Приватность' }
+      </a>
     </footer>
   );
 }

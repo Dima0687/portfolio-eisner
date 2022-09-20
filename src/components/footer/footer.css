@@ -5,16 +5,25 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
 }
 
+footer a,
 #footer-h3-mobile {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
+footer a.ru,
+#footer-h3-mobile.ru {
+  font-size: 1.5rem;
+}
+
+footer a,
 #footer-h3-tablet {
   font-size: 2.1rem;
 }
 
+footer a,
 #footer-h3-desktop {
   font-size: 2.3rem;
 }

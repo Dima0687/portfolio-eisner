@@ -18,16 +18,9 @@ import { LangContext } from '../../context/LangContext';
 import ContactForm from '../../components/form/ContactForm';
 
 const Contact = ({ sectionName, device }) => {
-  const [revealed, setRevealed] = useState(false);
-  const [tel, setTel] = useState('tel:+');
-  const [telString, setTelString] = useState('');
-  const [mail, setMail] = useState('mailto:bb@bot.com');
-  const [mailOutput, setMailOutput] = useState('');
-
-  const { lang } = useContext(LangContext);
   const {
     identifiers:linkNames,
-    address,
+    address:addressObj,
     contact: {
       info: {
         tel:{
@@ -45,6 +38,14 @@ const Contact = ({ sectionName, device }) => {
    click,
    linkToContactTxt
   } = portfolio;
+  const [revealed, setRevealed] = useState(false);
+  const [tel, setTel] = useState('tel:+');
+  const [telString, setTelString] = useState('');
+  const [mail, setMail] = useState('mailto:bb@bot.com');
+  const [mailOutput, setMailOutput] = useState('');
+  const [address, setAddress] = useState(addressObj);
+
+  const { lang } = useContext(LangContext);
 
   function handleDownload() {
     const url = pdfUrl;
@@ -59,13 +60,26 @@ const Contact = ({ sectionName, device }) => {
       middle: Number(middleThree.split('').reverse().join('')),
       last: Number(lastTwo.split('').reverse().join(''))
     }
+    const _address = {
+      ...addressObj,
+      street: addressObj.street.split('').reverse().join(''),
+      zip: addressObj.zip.toString().split('').reverse().join(''),
+      city: addressObj.city.split('').reverse().join('')
+    }
+    const _email = {
+      first: email.first.split('').reverse().join(''),
+      at: email.at,
+      provider: email.provider.split('').reverse().join(''),
+      domain: email.domain.split('').reverse().join('')
+    }
+    const reversedMail =  `${_email.first}${String.fromCharCode(_email.at)}${_email.provider}.${_email.domain}`;
+    setAddress(prev => _address);
     setTel(tel => tel+`${_tel.prefix}${_tel.first}${_tel.middle}${_tel.last}`);
 
     setTelString(`+${_tel.prefix} ${_tel.first} ${_tel.middle} ${_tel.last}`.replace('49','(49) '));
-    let _mail = `${email.first}${String.fromCharCode(email.at)}${email.provider}.${email.domain}`;
     
-    setMail(prevMail => prevMail.slice(0,7) + _mail);
-    setMailOutput(_mail);
+    setMail(prevMail => prevMail.slice(0,7) +  reversedMail);
+    setMailOutput(reversedMail);
   }
 
   return (

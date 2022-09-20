@@ -4,6 +4,27 @@ section#welcome-desktop {
   display: grid;
   position: relative;
   font-size: var(--heading-size);
+  position: relative;
+  border: 1px solid blue;
+}
+
+section#welcome-mobile .license,
+section#welcome-tablet .license,
+section#welcome-desktop .license {
+  position: absolute;
+  color: black;
+}
+
+section#welcome-mobile .license {
+  right: .5rem;
+  bottom: 46%;
+  font-size: 1.5rem;
+}
+
+section#welcome-desktop .license,
+section#welcome-tablet .license {
+  bottom: 0;
+  right: 32%;
 }
 
 section#welcome-mobile {

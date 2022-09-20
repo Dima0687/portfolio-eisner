@@ -23,7 +23,11 @@ function Main() {
 
   return (
     <main className="main">
-      <section id={`${pages.includes(page) ? `${page}-${device}` : 'not-found' }`}>
+      <section id={`${
+          pages.includes(page) || page === 'impress' || page === 'privacy' ? 
+            `${page}-${device}` : 
+            'not-found' 
+        }`}>
         <Page page={page} />
       </section>
     </main>

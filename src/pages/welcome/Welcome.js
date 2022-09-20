@@ -42,6 +42,12 @@ const Welcome = ({ sectionName, device }) => {
           </p> 
         </div>
       </Link>
+      <a 
+        className='license'
+        href="https://unsplash.com/license" 
+        rel='noopener noreferrer' 
+        target='_blank'
+      >unsplash.com</a>
       <Contact 
         sectionName={sectionName}
         device={device}

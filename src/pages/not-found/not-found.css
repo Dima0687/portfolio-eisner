@@ -50,6 +50,31 @@
   width: 100%;
 }
 
+#not-found-mobile-images-container .license,
+#not-found-tablet-images-container .license,
+#not-found-desktop-images-container .license {
+  z-index: 1;
+  position: absolute;
+}
+
+#not-found-mobile-images-container .license {
+  bottom: .5rem;
+  left: 35%;
+}
+
+#not-found-tablet-images-container .license,
+#not-found-desktop-images-container .license {
+  bottom: 1rem;
+}
+
+#not-found-tablet-images-container .license {
+  left: 40%;
+}
+
+#not-found-desktop-images-container .license {
+  left: 45%;
+}
+
 #not-found-pic-mobile,
 #not-found-pic-tablet,
 #not-found-pic-desktop {
@@ -111,6 +136,9 @@
     gap: 4rem;
     padding: 8rem;
   }
+  #not-found-container.desktop {
+    padding: 4rem;
+  }
   #not-found-mobile-images-container {
     margin: 0 0 1rem 0;
     width: 70%;
@@ -121,6 +149,9 @@
   } 
   #not-found-pic-tablet {
     object-position: 50% 65%;
+  }
+  #not-found-pic-desktop {
+    object-position: 50% 70%;
   }
   #not-found-mobile-text {
     font-size: .8em;

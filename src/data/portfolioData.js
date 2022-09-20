@@ -23,10 +23,10 @@ const copy = "2022";
 const pdfUrl = './pdf/Dietmar_Eisner_CV_Web_Dev.pdf';
 
 const address = {
-  street: 'Hinrich-Wilhelm-Kopf-Straße',
+  street: 'eßartS-fpoK-mlehliW-hcirniH',
   streetNr: 3,
-  zip: 21337,
-  city: 'Lüneburg'
+  zip: 73312,
+  city: 'grubenüL'
 }
 
 const info = {
@@ -37,10 +37,10 @@ const info = {
     lastTwo: '11'
   },
   email: {
-    first: 'dietmar',
+    first: 'ramteid',
     at: '64',
-    provider: 'eisner-developer',
-    domain: 'com'
+    provider: 'repoleved-rensie',
+    domain: 'moc'
   },
   linkedIn: 'https://www.linkedin.com/in/dietmar-eisner/',
   github: 'https://github.com/Dima0687',
