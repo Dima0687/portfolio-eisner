@@ -51,7 +51,8 @@
 }
 
 #impress-mobile article address p:not(:first-of-type),
-#impress-tablet article address p:not(:first-of-type){
+#impress-tablet article address p:not(:first-of-type),
+#impress-desktop article address p:not(:first-of-type){
   unicode-bidi: bidi-override;
   direction: rtl;
 }
