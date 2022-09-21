@@ -1,4 +1,4 @@
-const GerPrivacy = ({info, name, address}) => {
+const GerPrivacy = ({ info, name, address }) => {
   return (
     <>
       <h1>Datenschutz</h1>
@@ -10,10 +10,21 @@ const GerPrivacy = ({info, name, address}) => {
       <address>
         <p>{name}</p>
         <p>Web und Softwareentwickler</p>
-        <p>{address.streetNr} {address.street}</p>
-        <p>{address.city} {address.zip}</p>
-        <p>{info.tel.lastTwo} {info.tel.middleThree} {info.tel.firstThree} {info.tel.prefixTel}</p>
-        <p>{info.email.domain}.{info.email.provider}{String.fromCharCode(info.email.at)}{info.email.first}</p>
+        <p>
+          {address.streetNr} {address.street}
+        </p>
+        <p>
+          {address.city} {address.zip}
+        </p>
+        <p>
+          {info.tel.lastTwo} {info.tel.middleThree} {info.tel.firstThree}{" "}
+          {info.tel.prefixTel}
+        </p>
+        <p>
+          {info.email.domain}.{info.email.provider}
+          {String.fromCharCode(info.email.at)}
+          {info.email.first}
+        </p>
       </address>
       <p>
         Dem Datenschutz messe ich große Bedeutung bei. Ihre personenbezogenen
@@ -33,6 +44,33 @@ const GerPrivacy = ({info, name, address}) => {
         Ihre Kontaktdaten speichere ich, um Ihre Anfrage zu bearbeiten und
         mögliche Anschlussfragen stellen zu können.
       </p>
+      <h2>Externes Hosting</h2> 
+      <p>Diese Website wird bei einem externen
+        Dienstleister gehostet (Hoster). Die personenbezogenen Daten, die auf
+        dieser Website erfasst werden, werden auf den Servern des Hosters
+        gespeichert. Hierbei kann es sich v. a. um IP-Adressen,
+        Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen,
+        Websitezugriffe und sonstige Daten, die über eine Website generiert
+        werden, handeln. Der Einsatz des Hosters erfolgt im Interesse einer sicheren, schnellen
+        und effizienten Bereitstellung meines Online-Angebots durch einen
+        professionellen Anbieter (Art. 6 Abs. 1 lit. f DSGVO). Sofern eine
+        entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung
+        ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs.
+        1 TTDSG, soweit die Einwilligung die Speicherung von Cookies oder den
+        Zugriff auf Informationen im Endgerät des Nutzers (z. B.
+        Device-Fingerprinting) im Sinne des TTDSG umfasst. Die Einwilligung ist
+        jederzeit widerrufbar. Mein Hoster wird Ihre Daten nur insoweit
+        verarbeiten, wie dies zur Erfüllung seiner Leistungspflichten erforderlich
+        ist und meine Weisungen in Bezug auf diese Daten befolgen. Ich setze
+        folgenden Hoster ein: </p> 
+          <address>
+            <p>Render</p>
+            <p>525 Brannan St</p>
+            <p>300, San Francisco</p>
+            <p>California 94107, US</p>
+            <a href="https://render.com">Webseite</a>
+          </address>
+
       <h2>Nutzung von Google Fonts</h2>
       <p>
         Auf dieser Webseite werden für eine ansprechende Darstellung von
@@ -64,8 +102,8 @@ const GerPrivacy = ({info, name, address}) => {
         Zwecke der Kontaktaufnahme im Wege des Kontaktformulars erfolgt nach
         Art. 6 Abs. 1 S. 1 lit. a DSGVO auf Grundlage Ihrer freiwillig erteilten
         Einwilligung. Die Datenverarbeitung über die bereitgestellte
-        E-Mail-Adresse erfolgt auf der Grundlage von Art. 6 Abs. 1 Satz 1 lit.
-        f DSGVO. Das berechtigte Interesse an der Verarbeitung der Daten liegt
+        E-Mail-Adresse erfolgt auf der Grundlage von Art. 6 Abs. 1 Satz 1 lit. f
+        DSGVO. Das berechtigte Interesse an der Verarbeitung der Daten liegt
         darin, Anfragen beantworten zu können. Zielt der Kontakt im Übrigen auf
         den Abschluss eines Vertrages ab, so ist zusätzliche Rechtsgrundlage für
         die Verarbeitung Art. 6 Abs. 1 lit. b DSGVO. Die personenbezogenen Daten
@@ -95,7 +133,6 @@ const GerPrivacy = ({info, name, address}) => {
         Die vollständige Deaktivierung von Cookies kann jedoch dazu führen, dass
         Sie nicht alle Funktionen meiner Website ordnungsgemäß nutzen können.
       </p>
-
       <h2>Änderungen:</h2>
       <p>
         Damit diese Datenschutzerklärung immer die jeweils gültigen gesetzlichen

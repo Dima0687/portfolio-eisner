@@ -43,14 +43,38 @@ const EnPrivacy = ({ info, name, address }) => {
         process your request and to be able to to be able to ask possible
         follow-up questions.
       </p>
-      <h2>Use of Google Fonts</h2>.
+      <h2>External hosting</h2> 
+      <p>This website is hosted by an external
+        Service Provider hosted (hoster). The personal data collected on
+        this website will be stored on the servers of the hoster. This can be IP addresses,
+        meta and communication data, contract data, contact data, names,
+        website accesses and other data generated via a website. The use of the hoster is in the interest of a secure, 
+        fast and efficient provision of my online offer by a professional provider (Article
+        professional provider (Art. 6 para. 1 lit. f DSGVO). If a
+        consent has been requested, the processing is based exclusively on Art. 6 para. 1 lit. a DSGVO and § 25 para.
+        1 TTDSG, insofar as the consent allows the storage of cookies or the
+        access to information in the user's terminal device (e.g.
+        Device-Fingerprinting) in the sense of the TTDSG. The consent can be
+        revocable at any time. My hoster will only process your data to the extent that this is
+        process your data only to the extent necessary for the fulfillment of its service obligations
+        and follow our instructions regarding this data. I use
+        the following hoster: </p>
+        <address>
+            <p>Render</p>
+            <p>525 Brannan St</p>
+            <p>300, San Francisco</p>
+            <p>California 94107, US</p>
+            <a href="https://render.com">website</a>
+          </address>
+
+      <h2>Use of Google Fonts</h2>
       <p>
         On this website, for an appealing representation of content are Google
         Fonts used, but these are integrated locally. This means that the Google
         Fonts are loaded directly from the server and not via the Fonts API.
         This means that no user data is passed on to reach Google in this way.
       </p>
-      <h2>When using the contact form and email contact</h2>.
+      <h2>When using the contact form and email contact</h2>
       <p>
         For questions of any kind, I offer you the opportunity to contact me via
         a form provided on the website. With the use of the contact form, the

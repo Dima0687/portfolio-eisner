@@ -15,7 +15,6 @@
 #privacy-tablet *,
 #privacy-desktop * {
   font-family: var(--easy-to-read);
-  text-shadow: 0 0 .2rem var(--about-odd-shadow-color);
 }
 
 #privacy-mobile article,
@@ -24,7 +23,7 @@
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 4rem;
   padding: 0 2rem;
 }
 
@@ -32,7 +31,25 @@
 #privacy-tablet article h1,
 #privacy-desktop article h1 {
   padding: 2rem 0;
-  align-self: center;
+  font-weight: bolder;
+}
+
+#privacy-mobile article p,
+#privacy-tablet article p,
+#privacy-desktop article p,
+#privacy-mobile article address,
+#privacy-tablet article address,
+#privacy-desktop article address {
+  font-weight: 500;
+  background-color: white;
+  padding: 2rem;
+  border-radius: .8rem;
+}
+
+#privacy-mobile article address p,
+#privacy-tablet article address p,
+#privacy-desktop article address p {
+  padding: 0;
 }
 
 #privacy-mobile article h2,
@@ -42,9 +59,19 @@
   padding: 2rem 0;
 }
 
-#privacy-mobile address p:not(:first-of-type):not(:nth-of-type(2)),
-#privacy-tablet address p:not(:first-of-type):not(:nth-of-type(2)),
-#privacy-desktop address  p:not(:first-of-type):not(:nth-of-type(2)) {
+#privacy-mobile article h1,
+#privacy-tablet article h1,
+#privacy-desktop article h1,
+#privacy-mobile article h2,
+#privacy-tablet article h2,
+#privacy-desktop article h2 {
+  align-self: center;
+}
+
+
+#privacy-mobile address:not(:nth-of-type(2)) p:not(:first-of-type):not(:nth-of-type(2)),
+#privacy-tablet address:not(:nth-of-type(2)) p:not(:first-of-type):not(:nth-of-type(2)),
+#privacy-desktop address:not(:nth-of-type(2)) p:not(:first-of-type):not(:nth-of-type(2)) {
   unicode-bidi: bidi-override;
   direction: rtl;
   text-align: left;
