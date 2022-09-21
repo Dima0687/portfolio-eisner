@@ -247,7 +247,7 @@ const contact = {
         message: 'deine nachricht...'
       },
       inputLabelTxt1: 'Ich stimme der',
-      inputLabelLink: ' Datenschutzverodnung ',
+      inputLabelLink: ' Datenschutzerklärung ',
       inputLabelTxt2: ' zu!',
       submit: {
         send: 'sende...',
