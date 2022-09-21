@@ -13,7 +13,7 @@ import { DeviceContextProvider } from '../../context/DeviceContext';
 import { LangContextProvider } from '../../context/LangContext';
 
 const App = () => {
-  
+  window.addEventListener('contextmenu', e => e.preventDefault());
   return ( 
     <div id='app'>
       <LangContextProvider>

@@ -9,6 +9,12 @@
   color: var(--primary-color);
 }
 
+#about-mobile:hover,
+#about-tablet:hover,
+#about-desktop:hover {
+  cursor: url('../../images/scroll-solid.svg'), n-resize;
+}
+
 #about-mobile-en-heading,
 #about-mobile-de-heading,
 #about-mobile-ru-heading,

@@ -1,7 +1,7 @@
 #navbar-mobile .active,
 #navbar-tablet .active,
 #navbar-desktop .active {
-  text-decoration: underline wavy var(--font-color, white);
+  text-decoration: underline var(--font-color, white);
 }
 
 #navbar-container-mobile,
