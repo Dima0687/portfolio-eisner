@@ -34,8 +34,8 @@ const Footer = () => {
   }, [currentYear]);
 
   return ( 
-    <footer>
-      <h3 id={`footer-h3-${device}`} className={lang}>&copy; {showYear} {welcomeText.name}</h3>
+    <footer className={device}>
+      <h3 id={`footer-h3-${device}`} className={ lang }>&copy; {showYear} {welcomeText.name}</h3>
       <a href="/impress" className={lang}>
         { lang === 'en' && 'Impress' }
         { lang === 'de' && 'Impressum' }

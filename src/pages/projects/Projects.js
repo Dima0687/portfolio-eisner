@@ -23,6 +23,10 @@ import './projects.css';
 import { LangContext } from '../../context/LangContext';
 
 const Projects = ({ sectionName, device }) => {
+  const { lang } = useContext(LangContext);
+  lang === 'en' && (document.title = `Dietmar Eisner Portfolio | Projects`);
+  lang === 'de' && (document.title = `Dietmar Eisner Portfolio | Projekte`);
+  lang === 'ru' && (document.title = `Dietmar Eisner Portfolio | проекты`);
   const projectsDiv = useRef();
   const {
     identifiers,
@@ -35,7 +39,6 @@ const Projects = ({ sectionName, device }) => {
     }
   } = portfolio;
 
-  const { lang } = useContext(LangContext);
   const [heading, setHeading] = useState('');
   const [projects, setProjects] = useState([]);
   const [projectsBtnText, setProjectsBtnText] = useState([]);

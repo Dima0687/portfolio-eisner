@@ -7,7 +7,10 @@ import { Link } from 'react-router-dom';
 // sdk
 import emailjs from '@emailjs/browser';
 
-const ContactForm = ({ portfolio, device, lang, sectionName}) => {
+const ContactForm = ({ portfolio, device, lang, sectionName}) => { 
+  lang === 'en' && (document.title = 'Dietmar Eisner Portfolio | Contact');
+  lang === 'de' && (document.title = 'Dietmar Eisner Portfolio | Kontakt');
+  lang === 'ru' && (document.title = 'Dietmar Eisner Portfolio | контакт');
 
   const {
     contact: {

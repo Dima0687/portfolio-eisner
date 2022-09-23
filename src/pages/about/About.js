@@ -11,11 +11,14 @@ import portfolio from '../../data/portfolioData';
 import { LangContext } from '../../context/LangContext';
 
 const About = ({ sectionName, device }) => {
+  const { lang } = useContext(LangContext);
+  lang && (document.title = 'Dietmar Eisner Portfolio | About');
+  lang && (document.title = 'Dietmar Eisner Portfolio | Über mich');
+  lang && (document.title = 'Dietmar Eisner Portfolio | обо мне');
   const { 
     identifiers,
     aboutMe
   } = portfolio;
-  const { lang } = useContext(LangContext);
   const [heading, setHeading] = useState(sectionName);
 
   useEffect(() => {

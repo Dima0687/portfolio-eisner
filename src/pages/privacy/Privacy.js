@@ -17,6 +17,9 @@ import RuPrivacy from "./RuPrivacy";
 
 const Privacy = () => {
   const { lang } = useContext(LangContext);
+  lang && (document.title = 'Dietmar Eisner Portfolio | Privacy');
+  lang && (document.title = 'Dietmar Eisner Portfolio | Datenschutz');
+  lang && (document.title = 'Dietmar Eisner Portfolio | Приватность');
   const { contact:{ info }, welcomeText: { name }, address} = portfolio;
 
   return (

@@ -197,14 +197,7 @@
 #contact-heading-ru {
   text-align: center;
   text-shadow: .1rem .1rem 0 var(--about-odd-shadow-color);
-}
-
-#contact-heading-de {
   font-size: 1.3em;
-}
-
-#contact-heading-ru {
-  font-size: .93em;
 }
 
 #contact-form {

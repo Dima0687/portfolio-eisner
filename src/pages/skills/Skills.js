@@ -12,11 +12,14 @@ import { LangContext } from '../../context/LangContext';
 
 
 const Skills = ({ sectionName, device }) => {
+  const { lang } = useContext(LangContext);
+  lang && (document.title = 'Dietmar Eisner Portfolio | Skills');
+  lang && (document.title = 'Dietmar Eisner Portfolio | Fähigkeiten');
+  lang && (document.title = 'Dietmar Eisner Portfolio | навыки');
   const { 
     identifiers,
     skills 
   } = portfolio;
-  const { lang } = useContext(LangContext);
   const [heading, setHeading] = useState(sectionName);
   
   useEffect(() => {

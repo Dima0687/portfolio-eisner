@@ -12,13 +12,20 @@ import { LangContext } from "../../context/LangContext";
 
 const Impress = () => {
   const { lang } = useContext(LangContext);
+  const engWord = 'Impress';
+  const gerWord = 'Impressum';
+  const ruWord = 'Импрессум';
+  lang === 'en' && (document.title = `Dietmar Eisner Portfolio | ${engWord}`);
+  lang === 'de' && (document.title = `Dietmar Eisner Portfolio | ${gerWord}`);
+  lang === 'ru' && (document.title = `Dietmar Eisner Portfolio | ${ruWord}`);
+  
   const { welcomeText: { name }, address, contact:{ info } } = portfolio;
   return (
     <article>
       <h1>
-      { lang === 'en' && 'Impress' }
-      { lang === 'de' && 'Impressum' }
-      { lang === 'ru' && 'Импрессум' }
+      { lang === 'en' && engWord }
+      { lang === 'de' && gerWord }
+      { lang === 'ru' && ruWord }
       </h1>
       <address>
         <h2>

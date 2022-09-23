@@ -20,6 +20,7 @@ import { DeviceContext } from '../../context/DeviceContext';
 import portfolio from '../../data/portfolioData';
 
 const NotFound = () => {
+  document.title = 'Dietmar Eisner Portfolio | 404';
   const astronautRef = useRef();
   const { lang } = useContext(LangContext);
   const { device } = useContext(DeviceContext);

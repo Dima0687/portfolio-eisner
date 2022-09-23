@@ -8,13 +8,8 @@ footer {
   gap: 1rem;
 }
 
-footer a,
+footer.mobile a,
 #footer-h3-mobile {
-  font-size: 1.6rem;
-}
-
-footer a.ru,
-#footer-h3-mobile.ru {
   font-size: 1.5rem;
 }
 

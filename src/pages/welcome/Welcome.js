@@ -18,6 +18,9 @@ import './welcome.css';
 
 const Welcome = ({ sectionName, device }) => {
   const { lang } = useContext(LangContext);
+  lang === 'en' && (document.title = 'Dietmar Eisner Portfolio | Welcome');
+  lang === 'de' && (document.title = 'Dietmar Eisner Portfolio | Willkommen');
+  lang === 'ru' && (document.title = 'Dietmar Eisner Portfolio | добро пожаловать');
   const {
     identifiers:pages,
     welcomeText: {
