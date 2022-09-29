@@ -82,6 +82,7 @@
 .about-desktop-de-text,
 .about-desktop-ru-text {
   font-family: var(--easy-to-read);
+  line-height: 3em;
 }
 
 .about-mobile-text-border,

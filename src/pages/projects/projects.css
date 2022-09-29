@@ -209,7 +209,6 @@
 .projects-desktop-figure-text {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   padding-left: 1rem;
 }
 
@@ -229,7 +228,6 @@
   padding-left: .8rem;
   color: var(--font-color);
   text-transform: capitalize;
-  justify-self: flex-start;
   margin-left: -1rem;
   margin-top: 1rem;
   margin-bottom: auto;
@@ -244,7 +242,7 @@
 .projects-mobile-figure-text p,
 .projects-tablet-figure-text p,
 .projects-desktop-figure-text p {
-  height: 100%;
+  margin-bottom: auto;
 }
 
 .projects-figure-btn-container {
